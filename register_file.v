@@ -2,8 +2,7 @@
 
 module register_file
   (input clk,							// clock
-	input res_in,						// output into res
-	input mem_write,					// write into res from memory data
+   input copyout,						// are we copying value from a res into a register
 	input [2:0] reg_sel,			   // select a register
 	output [15:0] res_val,		   // value of res
 	output [15:0] reg_val,			// value of specified register
@@ -23,8 +22,7 @@ module register_file
 						  reg_sel == 8 ? reg8 : 0;
 	
 	always @(posedge clk) begin
-		if (mem_write)
-			res <= write_data;
+		res <= write_data;
 	end
 
   
