@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 d\\psf\Home\Documents\cse141L
+vALU
+Z1 IbWNX^35k77OEaRFz_H^gO3
+Z2 V9RGnF[lY8lCV?L3o_HZ7E0
+Z3 d\\psf\Home\Documents\cse141L
+Z4 w1359955162
+Z5 8//psf/Home/Documents/cse141L/ALU.v
+Z6 F//psf/Home/Documents/cse141L/ALU.v
+L0 8
+Z7 OP;L;10.1d;51
+r1
+31
+Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
+Z9 n@a@l@u
+!i10b 1
+Z10 !s100 f9B4`H>W^Ja:OlHg1X8>Z3
+!s85 0
+Z11 !s108 1359960296.196000
+Z12 !s107 //psf/Home/Documents/cse141L/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/ALU.v|
+!s101 -O0
+vregister_file
+!i10b 1
+!s100 Oz8R6K3i;ikZfAK]d`UPk1
+Ia<jaaJ^X3;<ON<CNM10B[0
+VhI]>fOgEN>Q=ZT4h3S]?F1
+R3
+w1359953787
+8//psf/Home/Documents/cse141L/register_file.v
+F//psf/Home/Documents/cse141L/register_file.v
+L0 4
+R7
+r1
+!s85 0
+31
+!s108 1359960296.265000
+!s107 //psf/Home/Documents/cse141L/register_file.v|
+!s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/register_file.v|
+!s101 -O0
+R8
