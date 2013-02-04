@@ -1,14 +1,18 @@
+`timescale 1ns / 1ps
+
 `define op_add 2'b00
 `define op_sub 2'b01
 `define op_and 2'b10
 `define op_or  2'b11
 
 module ALU
-  (input [15:0] input_a
-   input [15:0] input_b
-   output [15:0] out
+(
+	input clk,
+	input [15:0] input_a,
+   input [15:0] input_b,
+   output [15:0] out,
    input [3:0] op
-  )
+)
 
   always @ (op or input_a or input_b)
   begin
