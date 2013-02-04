@@ -2,22 +2,16 @@
 
 module ALU_TB;
 	reg clock;
-	wire [15:0] input_a;
-	wire [15:0] input_b;
-	wire [3:0] op;
-	wire [15:0] out;
+	reg [15:0] input_a;
+	reg [15:0] input_b;
+	reg [3:0] op;
+	reg [15:0] out;
 	
-	ALU alu (
-	.clock	(clock),
-	.input_a (input_a),
-	.input_b (input_b),
-	.op		(op)
-	.out		(out)
-	);
+	ALU alu (clock, input_a, input_b, op, out);
 	
 	initial
 	begin
-		$monitor($time, , input_a, input_b, op, out)
+		$monitor($time, , input_a, input_b, op, out);
 		clock = 0; input_a = 0; input_b = 0; op=0;	// add
 		#10 input_a = 1; input_b = 0;    // 0-1 = -1
 		
@@ -32,8 +26,9 @@ module ALU_TB;
 	end
 	
 	always
+	begin
 		clock = !clock;
-		
+	end
 	
 	
 endmodule

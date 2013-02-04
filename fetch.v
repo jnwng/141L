@@ -9,21 +9,10 @@ module fetch
 	input taken,
 	output instruction_data,
 	output instruction_addr
-)
+);
 
-	logic pc;
-	logic pc_next;
-	
-	always @(posedge clk) begin
+	always @(posedge clock) begin
 		
 	end
 	
 endmodule
-
-module instruction_rom
-(
-)
-
-module pc
-(
-)
