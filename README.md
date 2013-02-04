@@ -21,6 +21,13 @@ Our ISA supports a very simple circuit design, relying on  a single implicit $re
 
 **Branch: ** Handles all branching, generally can check for less than, greater than, or equal to. Uses two special 'comparison' registers to do this.
 
+** LSBTOG ** This will change the least significant bit of the of the register specified in the instruction depending on what is in $res using a combination of NOT and AND operations.
+
+** Cpin ** This copies the value of the specified register into $res.
+
+** Cpout ** This copies the values of $res into the specified register.
+
+** Comp ** This compares whatever is in the specified register with whatever is in $res, and sets $res to 0 if $res is less than the speficied register, otherwise #res is set to 1.
 
 …
 
@@ -31,4 +38,6 @@ We expect ____ ALU operations?
 - Add
 - Subtract (or signed add)
 - OR
+- AND
+- NOT
 - ...
