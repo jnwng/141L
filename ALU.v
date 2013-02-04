@@ -24,6 +24,7 @@ module ALU
 		`op_sub: temp_out = input_a - input_b;
 	   `op_and: temp_out = input_a & input_b;
 		`op_or:  temp_out = input_a | input_b;
+		`op_not:  temp_out = ~input_a;
     endcase
   end
 
