@@ -3,9 +3,9 @@
 module next_pc_logic
 (
 	input restart,
-	input pc_in,
+	input [15:0] pc_in,
 	input clock,
-	output reg next_pc
+	output reg [15:0] next_pc
 );
 
 always @(posedge clock)

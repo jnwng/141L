@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 136 128)
+	(rect 16 16 184 128)
 	(text "mux" (rect 5 0 22 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -33,25 +33,25 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "in1" (rect 0 0 9 12)(font "Arial" ))
-		(text "in1" (rect 21 43 30 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
+		(text "in1[15..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "in1[15..0]" (rect 21 43 54 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "in0" (rect 0 0 10 12)(font "Arial" ))
-		(text "in0" (rect 21 59 31 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
+		(text "in0[15..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "in0[15..0]" (rect 21 59 55 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
-		(pt 120 32)
+		(pt 168 32)
 		(output)
-		(text "out" (rect 0 0 11 12)(font "Arial" ))
-		(text "out" (rect 88 27 99 39)(font "Arial" ))
-		(line (pt 120 32)(pt 104 32)(line_width 1))
+		(text "out[15..0]" (rect 0 0 35 12)(font "Arial" ))
+		(text "out[15..0]" (rect 112 27 147 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 104 96)(line_width 1))
+		(rectangle (rect 16 16 152 96)(line_width 1))
 	)
 )

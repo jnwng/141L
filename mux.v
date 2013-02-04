@@ -3,9 +3,9 @@
 module mux
 (
 	input sel,
-	input in1,
-	input in0,
-	output reg out
+	input [15:0] in1,
+	input [15:0] in0,
+	output reg [15:0] out
 );
 
 always
