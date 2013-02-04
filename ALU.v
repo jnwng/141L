@@ -1,15 +1,22 @@
+`define op_add 2'b00
+`define op_sub 2'b01
+`define op_and 2'b10
+`define op_or  2'b11
+
 module ALU
   (input [15:0] input_a
    input [15:0] input_b
    output [15:0] out
-   input [1:0] op
+   input [3:0] op
   )
 
   always @ (op or input_a or input_b)
   begin
     case(op)
-      `add:  out =
-      `sub:  out =
+      `op_add: out = input_a + input_b
+		`op_sub: out = input_a - input_b
+	   `op_and: out = input_a & input_b
+		`op_or:  out = input_a | input_b
     endcase
   end
 
