@@ -2,22 +2,21 @@
 
 module NEXT_PC_TB;
 	
-	input branch,
-	input target,
-	input restart,
-	input clock,
-	input [15:0] pc_in,
-	output reg [15:0] out
+	reg [15:0] branch;
+	reg [15:0] target;
+	reg [15:0] restart;
+	reg clock;
+	reg [15:0] pc_in;
+	wire [15:0] out;
 	
 	next_pc_logic npl (branch, target, restart, clock, pc_in, out);
-	
 	
 	initial
 		$monitor(branch, target, restart, $time, pc_in, out);
 			
 	initial
 	begin
-		branch = 1; target = 10; restart = 0;    // should branch to address 10
+		branch = 1; target = 10; restart = 0; pc_in = 1;    // should branch to address 10
 		#10 branch = 0; restart = 0;             // should just increment pc by 1
 		#10 branch = 1; restart = 0; target = 8; // should branch to address 10
 		#10 branch = 1; restart = 1;             // should restart

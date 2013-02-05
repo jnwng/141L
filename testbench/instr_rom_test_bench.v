@@ -2,7 +2,7 @@
  
 module INSTR_ROM_TB;
 	reg [15:0] pc_in;
-	reg [9:0] instr_out;
+	wire [9:0] instr_out;
 	reg clock;
 	instr_rom rom (pc_in, instr_out);
 	
