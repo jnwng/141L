@@ -4,7 +4,8 @@
 module register_file
 (
 	input clk,							// clock
-   input copyout,						// are we copying value from a res into a register
+   input cpyin,						// are we copying value from a res into a register
+	input cpyout,						// are we copying a value out?
 	input [2:0] reg_sel,			   // select a register
 	output [15:0] res_val,		   // value of res
 	output [15:0] reg_val,			// value of specified register
@@ -21,11 +22,10 @@ module register_file
 						  reg_sel == 4 ? reg4 :
 						  reg_sel == 5 ? reg5 :
 						  reg_sel == 6 ? reg6 :
-						  reg_sel == 7 ? reg7 :
-						  reg_sel == 8 ? reg8 : 0;
+						  reg_sel == 7 ? reg7 : 0;
 	
 	always @(posedge clk) begin
 		res <= write_data;
 	end
 
-endmodule
+endmodule	

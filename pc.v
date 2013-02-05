@@ -3,8 +3,8 @@
 module pc
 (
 	input in,
-	output reg out,
-)
+	output reg out
+);
 
 always
 begin
