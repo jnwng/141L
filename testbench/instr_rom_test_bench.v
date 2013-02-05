@@ -1,9 +1,9 @@
 `timescale 1ns / 1ns
  
 module INSTR_ROM_TB;
-	input [15:0] pc_in;
-	output [9:0] instr_out;
-	
+	reg [15:0] pc_in;
+	reg [9:0] instr_out;
+	reg clock;
 	instr_rom rom (pc_in, instr_out);
 	
 	initial
