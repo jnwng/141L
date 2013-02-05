@@ -12,8 +12,8 @@ module next_pc_logic
 
 always @(posedge clock)
 begin
-	out = restart ? 0 ;
-			branch ? target ;
+	out = restart ? 0 :
+			branch ? target :
 			pc_in + 1;
 end
 
