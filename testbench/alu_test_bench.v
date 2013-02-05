@@ -28,6 +28,12 @@ module ALU_TB;
 		#10 input_a = 1; input_b = 1;		// should be 1
 		
 		#10 op=1; // subtract
+		#10 input_a = 1; input_b = 0;		// should be 1
+		#10 input_a = 1; input_b = 1;		// should be 0
+		
+		#10 op=4; // epar
+		#10 input_a = 2; 		// should be 1
+		#10 input_a = 1; 		// should be 0
 	end
 	
 	
