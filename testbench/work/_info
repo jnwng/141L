@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d\\psf\Home\Documents\cse141L\testbench
+vALU
+!i10b 1
+Z1 !s100 Gg^_IkRR>oo00Y8lDM=L31
+Z2 I0fg9VGgZSgk?hDW2fB5:l1
+Z3 VG8IZfWbEG3Tig35<:=4C[0
+Z4 d\\psf\Home\Documents\cse141L\testbench
+w1360022340
+Z5 8//psf/Home/Documents/cse141L/ALU.v
+Z6 F//psf/Home/Documents/cse141L/ALU.v
+L0 8
+Z7 OP;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1360022399.333000
+!s107 //psf/Home/Documents/cse141L/ALU.v|
+Z8 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/ALU.v|
+!s101 -O0
+Z9 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
+Z10 n@a@l@u
+vALU_TB
+Z11 IF=`onDRV0PKL2Ezk`iZKi2
+Z12 VT3H70N^;JzGPBGC?M:B<n3
+R4
+Z13 w1360022392
+Z14 8//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
+Z15 F//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
+L0 3
+R7
+r1
+31
+Z16 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
+R9
+Z17 n@a@l@u_@t@b
+!i10b 1
+Z18 !s100 U77i0VAjJDVKSklliVc`10
+!s85 0
+Z19 !s108 1360022399.255000
+Z20 !s107 //psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
+!s101 -O0
