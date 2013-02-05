@@ -3,7 +3,7 @@
 module instr_rom
 (
 	input [15:0] pc_in,
-	output [15:0] instr_out
+	output [9:0] instr_out
 );
 
 	reg [9:0] rom [0:54];
