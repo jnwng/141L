@@ -1,0 +1,58 @@
+res 1               # set $res to 1
+load $s0            # load value at address 1 into $s0
+
+
+res 16              # set $res to 15 (pos 30), loop will inc
+cpin $s1            # keep track of array index in $s1
+
+loop:
+// increment index and check end conditions
+res 1               # $res = 1
+add 1, $s1             # $res = index + 1
+cpout $s1           $ index = index + 1
+
+res 48              # set $res to 48 (pos 96) our end index
+cpout $c1           # set $c1 to 48
+cpin $s1
+cpout $c2           # set $c2 to our current index
+res end2
+branch >            # if we are at index > 48, then we are done with the array 
+
+cpin $0             # load 0 into c1
+cpout $c1
+cpin $s0            # and load alternate into c2
+cpout $c2
+
+res end1
+branch =            # if our count is 0, then jump to end
+
+// when we check a value in the array for the population count of 1's in bits
+
+res 1               # set a temporary to 0
+cpin $t3
+
+load $t0            # load value at address 32 into $t0
+cpout $t0         # put the value at address 32 into $res
+
+epar $t3           # check even parity of $res, set $t3 to 1 if so, else 0
+
+add 0, $t3         # subtract $t3 from count (if even, count - 1)
+cpin $s0           # load count back into $s0
+
+res loop
+cpout $t2
+jump $t2           # jump back to loop
+
+
+// end1: If our counter is now 0, that means we set memory address 96 to be the index that we finished at.
+// end2: If our counter is > 0 then we set memory address 96 to 127 to signify that we didn't find.
+
+end1:    
+res 96             # set array index to value @ address 96
+store $s0
+
+end2:
+res 127            # set 127 to value @ address 96
+cpin $t3
+res 96
+store $t3
