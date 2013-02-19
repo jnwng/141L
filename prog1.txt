@@ -16,7 +16,7 @@ cpout $c1           # set $c1 to 48
 cpin $s1
 cpout $c2           # set $c2 to our current index
 res end2
-branch 0. >            # if we are at index > 48, then we are done with the array 
+branch 0, >            # if we are at index > 48, then we are done with the array 
 
 cpin $0             # load 0 into c1
 cpout $c1
