@@ -1,0 +1,86 @@
+res 0
+load $s0  # Load the value at address 0, which is also our count register.
+cpout $s1 # Start up the saved accumulator register
+
+factorial:
+cpin $s0
+cpout $c1
+cpin $0
+cpout $c2
+
+res endfac
+branch =        # branch if count is 0
+
+res 1
+cpout $t0
+
+cpin $s0 # Get the count back into $res
+
+add 0, $t0  # subtract 1 from res
+cpout $t0       # Set the number we want to multiply by
+res multiply
+cpout $t3
+cpin $s1        # set $res back to the accumulator value
+jump $t3
+
+fac1:
+cpout $s1       # Save multiply result
+
+res 1
+add 0, $s0
+cpout $s0 # Subtract 1 from the original count
+
+res factorial
+cpout $t2
+jump $t2
+
+endfac:
+res 8
+store $s1
+
+
+multiply:       # multiply the value in $res by the value in $t0
+cpout $t2       # Save original value of $res
+
+res 1
+cpout $c1
+cpin $t0
+cpout $c2
+
+res endmul
+branch =        # if target ($to) is 1, then return original value of $res
+
+res 0
+cpout $c1
+cpin $t0
+cpout $c2
+
+res endmul2
+branch =        # if $t0 is 0, then return 1 in $res
+
+cpin $t2
+add 1, $t2
+cpout $t1       # Accumulator register
+
+res 1
+cpout $t3       # Store 1 in $t3
+cpin $t0        # Get count
+add 0, $t3  # Subtract one from count
+cpout $t0       # Set count to result
+
+res multiply
+cpout $t3
+cpin $t1
+jump $t3
+
+endmul: 
+res fac1
+cpout $t3
+cpin $t0
+jump $t3
+
+endmul2:
+res fac1
+cpout $t3
+res 1
+jump $t3

@@ -8,7 +8,7 @@ cpin $s1            # keep track of array index in $s1
 loop:
 // increment index and check end conditions
 res 1               # $res = 1
-add 1, $s1             # $res = index + 1
+add $s1             # $res = index + 1
 cpout $s1           $ index = index + 1
 
 res 48              # set $res to 48 (pos 96) our end index
