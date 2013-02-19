@@ -1,4 +1,4 @@
-﻿res 64              # beginning address of our hash table - 1
+res 64              # beginning address of our hash table - 1
 cpout $s1
 res 128             # store last index of hash table
 cpout $c2           # put in $c2 for comparison later

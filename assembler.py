@@ -31,7 +31,7 @@ labels = {}
 register_exp = r'(?P<reg>([0-8]|\$((t[0-3])|(s[0-1])|(c[1-2])|res|0)))'
 halt_regexp = re.compile(r'(?P<instr>(halt))')
 op_regexp = re.compile(r'(?P<instr>(add|shift|store|epar|cpin|cpout|jump|load))\s+((?P<flag>([01])),\s*)?' + register_exp)
-branch_regexp = re.compile(r'(?P<instr>(branch))\s+(?P<equals>=)+(,\s*(?P<comp>[><=]))*')
+branch_regexp = re.compile(r'(?P<instr>(branch))\s+(?P<equals>[01])+(,\s*(?P<comp>[><]))*')
 res_regexp = re.compile(r'(?P<instr>(res))\s+((?P<offset>[-0-9]+)|(?P<label>\w+))')
 comment_regexp = re.compile(r'(^#|^\/{2})')
 label_regexp = re.compile(r'(?P<label>(\w+):)')
@@ -110,14 +110,16 @@ def assemble(infile):
         elif branch:
             opcode = int(opcodes[branch.group('instr')])
             equals_flag = branch.group('equals')
-            comp_flag = 0 if branch.group('comp') == '<' else 1
+            comp_flag = branch.group('comp')
+            if comp_flag:
+                comp_flag = 0 if comp_flag == '<' else 1
 
             instr = (1 << 4) ^ opcode
             instr = (instr << 1) ^ int(equals_flag)
             branch_str = "%(instr)s %(equals)s"
             instr <<= 3
 
-            if equals_flag:
+            if comp_flag:
                 instr ^= int(comp_flag)
                 branch_str +=  ", %(comp)s"
 
