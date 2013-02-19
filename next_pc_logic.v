@@ -2,8 +2,7 @@
 
 module next_pc_logic
 (
-   input branch,
-	input target,
+	input init,
 	input restart,
 	input clock,
 	input [15:0] pc_in,
@@ -12,9 +11,11 @@ module next_pc_logic
 
 always @(posedge clock)
 begin
-	out = restart ? 0 :
-			branch ? target :
-			pc_in + 1;
+	if (init) begin
+		out = 4'b0000;
+	end else begin
+		out = restart ? 0 : pc_in;
+	end
 end
 
 endmodule

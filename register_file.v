@@ -9,7 +9,8 @@ module register_file
 	input [2:0] reg_sel,			   // select a register
 	output [15:0] res_val,		   // value of res
 	output [15:0] reg_val,			// value of specified register
-	input [15:0] write_data			// write data from alu
+	input [15:0] write_data,		// write data from alu
+	input comp
 );
   
    reg [15:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, reg8, res;

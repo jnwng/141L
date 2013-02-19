@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2012 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -20,38 +20,45 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 184 128)
-	(text "mux" (rect 5 0 22 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(rect 16 16 208 144)
+	(text "mux" (rect 5 0 26 12)(font "Arial" ))
+	(text "inst" (rect 8 112 36 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "sel" (rect 0 0 10 12)(font "Arial" ))
-		(text "sel" (rect 21 27 31 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
+		(text "sel[1..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "sel[1..0]" (rect 21 27 84 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "in1[15..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "in1[15..0]" (rect 21 43 54 55)(font "Arial" ))
+		(text "in2[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "in2[15..0]" (rect 21 43 91 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "in0[15..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "in0[15..0]" (rect 21 59 55 71)(font "Arial" ))
+		(text "in1[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "in1[15..0]" (rect 21 59 91 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
-		(pt 168 32)
+		(pt 0 80)
+		(input)
+		(text "in0[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "in0[15..0]" (rect 21 75 91 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 192 32)
 		(output)
-		(text "out[15..0]" (rect 0 0 35 12)(font "Arial" ))
-		(text "out[15..0]" (rect 112 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
+		(text "out[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "out[15..0]" (rect 101 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 96)(line_width 1))
+		(rectangle (rect 16 16 176 112)(line_width 1))
 	)
 )
