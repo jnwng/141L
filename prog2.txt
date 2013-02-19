@@ -9,7 +9,7 @@ cpin $0
 cpout $c2
 
 res endfac
-branch =        # branch if count is 0
+branch 1        # branch if count is 0
 
 res 1
 cpout $t0
@@ -48,7 +48,7 @@ cpin $t0
 cpout $c2
 
 res endmul
-branch =        # if target ($to) is 1, then return original value of $res
+branch 1        # if target ($to) is 1, then return original value of $res
 
 res 0
 cpout $c1
@@ -56,7 +56,7 @@ cpin $t0
 cpout $c2
 
 res endmul2
-branch =        # if $t0 is 0, then return 1 in $res
+branch 1        # if $t0 is 0, then return 1 in $res
 
 cpin $t2
 add 1, $t2
