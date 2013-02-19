@@ -29,9 +29,10 @@ registers = {
 labels = {}
 
 register_exp = r'(?P<reg>([0-8]|\$((t[0-3])|(s[0-1])|(c[1-2])|res|0)))'
-op_regexp = re.compile(r'(?P<instr>(add|shift|store|epar|cpin|cpout|jump|load))\s+((?P<flag>([01])),\s*)?' + register_exp)
+halt_regexp = re.compile(r'(?P<instr>(halt))')
+op_regexp = re.compile(r'(?P<instr>(add|shift|store|epar|cpin|cpout|jump|load))\s+((?P<flag>([02])),\s*)?' + register_exp)
 branch_regexp = re.compile(r'(?P<instr>(branch))\s+(?P<comp>[><=])+(,\s*(?P<equals>=))*')
-res_regexp = re.compile(r'(?P<instr>(res))\s+((?P<offset>[0-9]+)|(?P<label>\w+))')
+res_regexp = re.compile(r'(?P<instr>(res))\s+((?P<offset>[-0-9]+)|(?P<label>\w+))')
 comment_regexp = re.compile(r'(^#|^\/{2})')
 label_regexp = re.compile(r'(?P<label>(\w+):)')
 
@@ -65,6 +66,7 @@ def assemble(infile):
         op = op_regexp.match(line)
         branch = branch_regexp.match(line)
         res = res_regexp.match(line)
+        halt = halt_regexp.match(line)
 
         line = line.rstrip()
 
@@ -73,6 +75,12 @@ def assemble(infile):
 
         elif comment:
             print "Comment"
+
+        elif halt:
+            opcode = int(opcodes[halt.group('instr')])
+            instr = (1 << 4) ^ opcode
+            instr <<= 4
+            print "HALT"
 
         elif op:
             opcode = int(opcodes[op.group('instr')])
@@ -123,12 +131,17 @@ def assemble(infile):
             opcode = opcodes[res_dict['instr']]
 
             instr = 0 << 8
+            offset = int(offset) if offset else offset
             if label is not None:
                 instr ^= labels[label]
                 res_str = label
             else:
-                instr ^= int(offset)
-                res_str = str(offset)
+                if offset < 0:
+                    twos =  (1<<8)-1
+                    offset = (twos ^ offset) + 1
+                    offset *= -1
+                instr ^= offset
+                res_str = res_dict.get('offset')
 
             print "Res %s" % res_str
             print bin(instr)
@@ -143,8 +156,14 @@ def assemble(infile):
             instr = None
 
 if __name__ == "__main__":
-    infile = open('instructions.txt')
-    outfile = open('instructions.hex', 'w')
+    import sys
+    try: 
+        filename = sys.argv[1]
+    except Exception, e:
+        print "You need to specify a file!"
+        sys.exit()
+    infile = open(filename)
+    outfile = open(filename + '.hex', 'w')
     get_labels(infile)
     assemble(infile)
     infile.close()
