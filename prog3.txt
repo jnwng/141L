@@ -1,4 +1,4 @@
-res 64              # beginning address of our hash table - 1
+﻿res 64              # beginning address of our hash table - 1
 cpout $s1
 res 128             # store last index of hash table
 cpout $c2           # put in $c2 for comparison later
@@ -23,7 +23,7 @@ cpin $s1
 cpout $c2
 res end
 cpin $t1
-branch =            # we end if we have
+branch 1            # we end if we have
 cpin $t0            # we want the value of our array’s current index
 load $c1            # load the value at that index into $c1
 cpin $s1            # copy the address of our desired key to be found
@@ -34,12 +34,12 @@ cpout $t2           # copy in the hash key address into $s0
 cpout $s0
 res new_entry       # if $t0 = $s1 we hit the end, make a new entry
 cpin $t1             
-branch =
+branch 1
 cpin $t2
 load $c1            #c1 is the current hash table entry
 res inc     
 cpin $t1           
-branch =            # if the hash table entry is the key, we inc   
+branch 1            # if the hash table entry is the key, we inc   
 res 16
 add $s1
 cpout $s1
@@ -98,7 +98,7 @@ cpin $s1          # res = $s1
 load $c2          # c2 = value at s1
 res return
 cpout $t1         #t1 is the label return
-branch =
+branch 1
 res 1
 add $s0            
 load $c1
@@ -107,7 +107,7 @@ add $s1
 load $c2
 res gt
 cpout $t1
-branch >
+branch 0, >
 res lt
 cpout $t1
 jump $t1

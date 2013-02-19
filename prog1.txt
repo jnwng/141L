@@ -16,7 +16,7 @@ cpout $c1           # set $c1 to 48
 cpin $s1
 cpout $c2           # set $c2 to our current index
 res end2
-branch >            # if we are at index > 48, then we are done with the array 
+branch 0. >            # if we are at index > 48, then we are done with the array 
 
 cpin $0             # load 0 into c1
 cpout $c1
@@ -24,7 +24,7 @@ cpin $s0            # and load alternate into c2
 cpout $c2
 
 res end1
-branch =            # if our count is 0, then jump to end
+branch 1            # if our count is 0, then jump to end
 
 // when we check a value in the array for the population count of 1's in bits
 
