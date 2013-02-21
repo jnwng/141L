@@ -1,6 +1,6 @@
 `timescale 1ns / 1ns
 
-module program_runner_1
+module program_runner_1;
 	reg clock;
 	reg restart;
 	reg one;
@@ -11,7 +11,7 @@ module program_runner_1
 	
 	initial
 	begin
-		init = 1, restart = 1, one = 1, done = 0;
+		init = 1; restart = 1; one = 1; done = 0;
 	end
 	
 	always
