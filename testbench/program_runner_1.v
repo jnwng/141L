@@ -5,13 +5,13 @@ module program_runner_1;
 	reg restart;
 	reg one;
 	reg init;
-	reg done;
+	wire done;
 	
 	processor prog1(clock, restart, one, init, done);
 	
 	initial
 	begin
-		init = 1; restart = 1; one = 1; done = 0;
+		init = 1; restart = 1; one = 1;
 	end
 	
 	always
