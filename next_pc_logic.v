@@ -17,5 +17,4 @@ begin
 		out = restart ? 0 : pc_in;
 	end
 end
-
 endmodule
