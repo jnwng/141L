@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 141L
-Mon Feb 18 19:41:05 2013
+Thu Feb 21 20:40:29 2013
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,14 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,20 +43,20 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Feb 18 19:41:05 2013             ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 21 20:40:29 2013         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 141L                                          ;
-; Top-level Entity Name              ; processor                                     ;
+; Top-level Entity Name              ; mux4                                          ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; N/A until Partition Merge                     ;
-;     Total combinational functions  ; N/A until Partition Merge                     ;
-;     Dedicated logic registers      ; N/A until Partition Merge                     ;
-; Total registers                    ; N/A until Partition Merge                     ;
-; Total pins                         ; N/A until Partition Merge                     ;
-; Total virtual pins                 ; N/A until Partition Merge                     ;
-; Total memory bits                  ; N/A until Partition Merge                     ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
-; Total PLLs                         ; N/A until Partition Merge                     ;
+; Total logic elements               ; 32                                            ;
+;     Total combinational functions  ; 32                                            ;
+;     Dedicated logic registers      ; 0                                             ;
+; Total registers                    ; 0                                             ;
+; Total pins                         ; 82                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -60,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; processor          ; 141L               ;
+; Top-level entity name                                                      ; mux4               ; 141L               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -147,15 +153,100 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+
+; mux4.v                           ; yes             ; User Verilog HDL File  ; D:/Users/Jon/Documents/Homework/141L/mux4.v ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 32     ;
+;                                             ;        ;
+; Total combinational functions               ; 32     ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 32     ;
+;     -- 3 input functions                    ; 0      ;
+;     -- <=2 input functions                  ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 32     ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 0      ;
+;     -- Dedicated logic registers            ; 0      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 82     ;
+; Maximum fan-out node                        ; sel[1] ;
+; Maximum fan-out                             ; 24     ;
+; Total fan-out                               ; 144    ;
+; Average fan-out                             ; 1.26   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |mux4                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |mux4               ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |mux4|out  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 18 19:41:05 2013
+    Info: Processing started: Thu Feb 21 20:40:29 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 141L -c 141L
 Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 1 design units, including 1 entities, in source file processor.v
+    Info: Found entity 1: processor
+Info: Found 1 design units, including 1 entities, in source file data_ram.v
+    Info: Found entity 1: data_ram
 Info: Found 1 design units, including 1 entities, in source file register_file.v
     Info: Found entity 1: register_file
 Info: Found 1 design units, including 1 entities, in source file alu.v
@@ -164,44 +255,43 @@ Info: Found 1 design units, including 1 entities, in source file testbench/alu_t
     Info: Found entity 1: ALU_TB
 Info: Found 1 design units, including 1 entities, in source file adder.v
     Info: Found entity 1: adder
-Warning: Entity "mux" obtained from "mux.v" instead of from Quartus II megafunction library
-Info: Found 1 design units, including 1 entities, in source file mux.v
-    Info: Found entity 1: mux
 Info: Found 1 design units, including 1 entities, in source file next_pc_logic.v
     Info: Found entity 1: next_pc_logic
 Info: Found 1 design units, including 1 entities, in source file pc.v
     Info: Found entity 1: pc
 Info: Found 1 design units, including 1 entities, in source file fetch_unit.bdf
     Info: Found entity 1: fetch_unit
-Warning (10274): Verilog HDL macro warning at control.v(11): overriding existing definition for macro "op_branch", which was defined in "ALU.v", line 9
+Warning (10274): Verilog HDL macro warning at control.v(10): overriding existing definition for macro "op_epar", which was defined in "ALU.v", line 8
+Warning (10274): Verilog HDL macro warning at control.v(14): overriding existing definition for macro "op_branch", which was defined in "ALU.v", line 9
+Warning (10274): Verilog HDL macro warning at control.v(17): overriding existing definition for macro "op_add", which was defined in "ALU.v", line 4
 Info: Found 1 design units, including 1 entities, in source file control.v
     Info: Found entity 1: control
 Info: Found 1 design units, including 1 entities, in source file sign_extender.v
     Info: Found entity 1: sign_extender
-Info: Found 1 design units, including 1 entities, in source file instr_ram.v
-    Info: Found entity 1: instr_ram
 Info: Found 1 design units, including 1 entities, in source file instr_rom_1.v
     Info: Found entity 1: instr_rom_1
 Info: Found 1 design units, including 1 entities, in source file instr_rom_2.v
     Info: Found entity 1: instr_rom_2
 Info: Found 1 design units, including 1 entities, in source file instr_rom_3.v
     Info: Found entity 1: instr_rom_3
-Error (10170): Verilog HDL syntax error at program_runner_1.v(4) near text "reg";  expecting ";" File: D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v Line: 4
-Info: Found 0 design units, including 0 entities, in source file testbench/program_runner_1.v
-Info: Found 3 design units, including 3 entities, in source file processor.v
-    Info: Found entity 1: processor
-    Info: Found entity 2: mux_0
-    Info: Found entity 3: mux_1
-Error: Can't compile duplicate declarations of entity "processor" into library "work"
-    Error: Instance could be entity "processor" in file processor.v File: D:/Users/Jon/Documents/Homework/141L/processor.v Line: 19
-    Error: Instance could be entity "processor" in file processor.bdf
-Info: Found 1 design units, including 1 entities, in source file processor.bdf
+Info: Found 1 design units, including 1 entities, in source file testbench/program_runner_1.v
+    Info: Found entity 1: program_runner_1
+Info: Found 1 design units, including 1 entities, in source file mux2.v
+    Info: Found entity 1: mux2
+Info: Found 1 design units, including 1 entities, in source file mux4.v
+    Info: Found entity 1: mux4
+Info: Elaborating entity "mux4" for the top level hierarchy
 Info: Generated suppressed messages file D:/Users/Jon/Documents/Homework/141L/output_files/141L.map.smsg
-Error: Quartus II Analysis & Synthesis was unsuccessful. 4 errors, 3 warnings
-    Error: Peak virtual memory: 257 megabytes
-    Error: Processing ended: Mon Feb 18 19:41:05 2013
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:00
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 114 device resources after synthesis - the final resource count might be different
+    Info: Implemented 66 input pins
+    Info: Implemented 16 output pins
+    Info: Implemented 32 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 262 megabytes
+    Info: Processing ended: Thu Feb 21 20:40:29 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

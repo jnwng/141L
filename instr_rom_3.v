@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 module instr_rom_3
 (
@@ -8,7 +8,6 @@ module instr_rom_3
 
 	reg [8:0] rom [0:54];
 	
-	// ROM INITIALIZATION
 	always @ (*)
 	begin
 		case(pc_in)

@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 module next_pc_logic
 (
@@ -6,15 +6,20 @@ module next_pc_logic
 	input restart,
 	input clock,
 	input [15:0] pc_in,
-	output reg [15:0] out
+	output wire [15:0] out
 );
 
-always @(posedge clock)
+reg [15:0] temp_out;
+
+always @(negedge clock)
 begin
 	if (init) begin
-		out = 4'b0000;
+		temp_out = 0;
 	end else begin
-		out = restart ? 0 : pc_in;
+		temp_out = pc_in;
 	end
 end
+
+assign out = temp_out;
+
 endmodule

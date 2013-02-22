@@ -14,164 +14,150 @@
 
 // PROGRAM		"Quartus II"
 // VERSION		"Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition"
-// CREATED		"Mon Feb 18 19:41:57 2013"
+// CREATED		"Thu Feb 21 18:59:14 2013"
 
 module processor(
-	clock,
 	restart,
-	one,
 	init,
+	clock,
 	done
 );
 
 
-input wire	clock;
 input wire	restart;
-input wire	one;
 input wire	init;
+input wire	clock;
 output wire	done;
 
+wire	format;
+wire	[7:0] immediate;
 wire	[2:0] instr_out;
+wire	[3:0] opcode;
+wire	[15:0] pcplusone;
 wire	[15:0] res;
+wire	sign;
 wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_1;
-wire	[15:0] SYNTHESIZED_WIRE_25;
+wire	SYNTHESIZED_WIRE_2;
 wire	SYNTHESIZED_WIRE_3;
-wire	[15:0] SYNTHESIZED_WIRE_4;
-wire	SYNTHESIZED_WIRE_26;
-wire	[3:0] SYNTHESIZED_WIRE_27;
+wire	SYNTHESIZED_WIRE_4;
+wire	[15:0] SYNTHESIZED_WIRE_26;
+wire	[15:0] SYNTHESIZED_WIRE_27;
+wire	[15:0] SYNTHESIZED_WIRE_9;
 wire	[15:0] SYNTHESIZED_WIRE_28;
-wire	[15:0] SYNTHESIZED_WIRE_8;
-wire	SYNTHESIZED_WIRE_10;
-wire	SYNTHESIZED_WIRE_11;
-wire	SYNTHESIZED_WIRE_29;
+wire	[15:0] SYNTHESIZED_WIRE_12;
 wire	[15:0] SYNTHESIZED_WIRE_13;
-wire	SYNTHESIZED_WIRE_14;
-wire	[15:0] SYNTHESIZED_WIRE_17;
-wire	[1:0] SYNTHESIZED_WIRE_18;
-wire	[7:0] SYNTHESIZED_WIRE_19;
-wire	SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_21;
-wire	SYNTHESIZED_WIRE_23;
+wire	[15:0] SYNTHESIZED_WIRE_15;
+wire	[1:0] SYNTHESIZED_WIRE_16;
+wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_29;
+wire	[15:0] SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_24;
 
 
 
 
-assign	SYNTHESIZED_WIRE_3 = SYNTHESIZED_WIRE_0 | SYNTHESIZED_WIRE_1;
+assign	SYNTHESIZED_WIRE_2 = SYNTHESIZED_WIRE_0 | SYNTHESIZED_WIRE_1;
 
 
-instr_rom_1	b2v_inst(
-	.pc_in(SYNTHESIZED_WIRE_25),
-	.format(SYNTHESIZED_WIRE_14),
-	.sign(SYNTHESIZED_WIRE_26),
-	.immediate(SYNTHESIZED_WIRE_19),
-	.opcode(SYNTHESIZED_WIRE_27),
-	.operand(instr_out));
+control	b2v_control(
+	.clk(clock),
+	.format(format),
+	.sign(sign),
+	.opcode(opcode),
+	.cpin(SYNTHESIZED_WIRE_17),
+	.cpout(SYNTHESIZED_WIRE_18),
+	.memRead(SYNTHESIZED_WIRE_3),
+	.memWrite(SYNTHESIZED_WIRE_4),
+	.halt(done),
+	.branch(SYNTHESIZED_WIRE_29),
+	.jump(SYNTHESIZED_WIRE_0),
+	.writeSrc(SYNTHESIZED_WIRE_16));
 
 
-mux_0	b2v_inst1(
-	.sel(SYNTHESIZED_WIRE_3),
-	.in0(SYNTHESIZED_WIRE_4),
+mux2	b2v_inst1(
+	.sel(SYNTHESIZED_WIRE_2),
+	.in0(pcplusone),
 	.in1(res),
-	.out(SYNTHESIZED_WIRE_8));
+	.out(SYNTHESIZED_WIRE_9));
+
+
+data_ram	b2v_inst12(
+	.clk(clock),
+	.ReadMem(SYNTHESIZED_WIRE_3),
+	.WriteMem(SYNTHESIZED_WIRE_4),
+	.DataAddress(SYNTHESIZED_WIRE_26),
+	.DataIn(SYNTHESIZED_WIRE_27),
+	.DataOut(SYNTHESIZED_WIRE_12));
 
 
 ALU	b2v_inst2(
 	.clock(clock),
-	.eq(SYNTHESIZED_WIRE_26),
+	.eq(sign),
 	.ltgt(instr_out),
-	.op(SYNTHESIZED_WIRE_27),
-	.register(SYNTHESIZED_WIRE_28),
-	.res(res),
-	.compres(SYNTHESIZED_WIRE_23),
-	.out(res));
+	.op(opcode),
+	.register(SYNTHESIZED_WIRE_27),
+	.res(SYNTHESIZED_WIRE_26),
+	.compres(SYNTHESIZED_WIRE_24),
+	.out(SYNTHESIZED_WIRE_15));
 
 
 next_pc_logic	b2v_inst3(
 	.init(init),
 	.restart(restart),
 	.clock(clock),
-	.pc_in(SYNTHESIZED_WIRE_8),
-	.out(SYNTHESIZED_WIRE_25));
+	.pc_in(SYNTHESIZED_WIRE_9),
+	.out(SYNTHESIZED_WIRE_28));
 
 
 adder	b2v_inst4(
-	
-	.a(SYNTHESIZED_WIRE_25),
-	.out(SYNTHESIZED_WIRE_4));
-	
+	.a(SYNTHESIZED_WIRE_28),
+	.out(pcplusone));
 
 
-register_file	b2v_inst5(
+instr_rom_1	b2v_instr_rom(
+	.pc_in(SYNTHESIZED_WIRE_28),
+	.format(format),
+	.sign(sign),
+	.immediate(immediate),
+	.opcode(opcode),
+	.operand(instr_out));
+
+
+mux4	b2v_mux4(
+	.in0(SYNTHESIZED_WIRE_12),
+	.in1(SYNTHESIZED_WIRE_13),
+	.in2(SYNTHESIZED_WIRE_26),
+	.in3(SYNTHESIZED_WIRE_15),
+	.sel(SYNTHESIZED_WIRE_16),
+	.out(SYNTHESIZED_WIRE_20));
+
+
+register_file	b2v_register_file(
 	.clk(clock),
-	.cpyin(SYNTHESIZED_WIRE_10),
-	.cpyout(SYNTHESIZED_WIRE_11),
+	.cpyin(SYNTHESIZED_WIRE_17),
+	.cpyout(SYNTHESIZED_WIRE_18),
 	.comp(SYNTHESIZED_WIRE_29),
 	.reg_sel(instr_out),
-	.write_data(SYNTHESIZED_WIRE_13),
-	.reg_val(SYNTHESIZED_WIRE_28),
-	.res_val(res));
+	.write_data(SYNTHESIZED_WIRE_20),
+	.reg_val(SYNTHESIZED_WIRE_27),
+	.res_val(SYNTHESIZED_WIRE_26));
 
 
-control	b2v_inst6(
+mux2	b2v_res_or_reg(
+	.sel(SYNTHESIZED_WIRE_29),
+	.in0(SYNTHESIZED_WIRE_27),
+	.in1(SYNTHESIZED_WIRE_26),
+	.out(res));
+
+
+sign_extender	b2v_sign_extender(
 	.clk(clock),
-	.format(SYNTHESIZED_WIRE_14),
-	.sign(SYNTHESIZED_WIRE_26),
-	.opcode(SYNTHESIZED_WIRE_27),
-	.cpin(SYNTHESIZED_WIRE_10),
-	.cpout(SYNTHESIZED_WIRE_11),
-	.memRead(SYNTHESIZED_WIRE_20),
-	.memWrite(SYNTHESIZED_WIRE_21),
-	.halt(done),
-	.branch(SYNTHESIZED_WIRE_29),
-	.jump(SYNTHESIZED_WIRE_0),
-	.writeSrc(SYNTHESIZED_WIRE_18));
+	.extend(immediate),
+	.extended(SYNTHESIZED_WIRE_13));
 
+assign	SYNTHESIZED_WIRE_1 = SYNTHESIZED_WIRE_24 & SYNTHESIZED_WIRE_29;
 
-mux_1	b2v_inst7(
-	.in0(SYNTHESIZED_WIRE_17),
-	.in1(res),
-	.in2(res),
-	.sel(SYNTHESIZED_WIRE_18),
-	.out(SYNTHESIZED_WIRE_13));
-
-
-sign_extender	b2v_inst8(
-	.clk(clock),
-	.extend(SYNTHESIZED_WIRE_19),
-	.extended(res));
-
-
-instr_ram	b2v_inst9(
-	.clk(clock),
-	.ReadMem(SYNTHESIZED_WIRE_20),
-	.WriteMem(SYNTHESIZED_WIRE_21),
-	.DataAddress(res),
-	.DataIn(SYNTHESIZED_WIRE_28),
-	.DataOut(SYNTHESIZED_WIRE_17));
-
-assign	SYNTHESIZED_WIRE_1 = SYNTHESIZED_WIRE_23 & SYNTHESIZED_WIRE_29;
-
-
-endmodule
-
-module mux_0(sel,in0,in1,out);
-/* synthesis black_box */
-
-input sel;
-input [15:0] in0;
-input [15:0] in1;
-output [15:0] out;
-
-endmodule
-
-module mux_1(in0,in1,in2,sel,out);
-/* synthesis black_box */
-
-input [15:0] in0;
-input [15:0] in1;
-input [15:0] in2;
-input [1:0] sel;
-output [15:0] out;
 
 endmodule

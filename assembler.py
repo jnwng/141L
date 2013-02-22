@@ -44,7 +44,7 @@ def get_labels(infile):
 
         if line != "\n":
             if label: 
-                count = instruction_count + 1
+                count = instruction_count
                 strip_label = label.group('label').rstrip(':')
                 print "Label: %(label)s @: %(count)s" % {'label': strip_label, 'count': count}
 

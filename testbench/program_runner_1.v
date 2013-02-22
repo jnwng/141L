@@ -3,21 +3,20 @@
 module program_runner_1;
 	reg clock;
 	reg restart;
-	reg one;
 	reg init;
 	wire done;
 	
-	processor prog1(clock, restart, one, init, done);
+	processor prog1 (restart, init, clock, done);
+	
+	initial
+		$monitor($time, , restart, init, done);
 	
 	initial
 	begin
-		init = 1; restart = 1; one = 1;
+		init = 1; restart = 0;
+		#20 init = 0; restart = 0;
 	end
 	
-	always
-	begin
-		if (done) $finish;
-	end
 	
 	initial
 	begin

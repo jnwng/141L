@@ -1,21 +1,19 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 module instr_rom_1
 (
 	input [15:0] pc_in,
-	output reg format,
-	output reg [3:0] opcode,
-	output reg sign,
-	output reg [2:0] operand,
-	output reg [7:0] immediate
+	output wire format,
+	output wire [3:0] opcode,
+	output wire sign,
+	output wire [2:0] operand,
+	output wire [7:0] immediate
 
 );
 
-	reg [8:0] rom [0:54];
 	reg [8:0] instr_out;
 	
-	// ROM INITIALIZATION
-	always @ (*)
+	always @ (pc_in)
 	begin
 		case(pc_in)
 			0: begin instr_out=9'b000000001; end
@@ -29,13 +27,13 @@ module instr_rom_1
 			8: begin instr_out=9'b101111111; end
 			9: begin instr_out=9'b101110001; end
 			10: begin instr_out=9'b101110000; end
-			11: begin instr_out=9'b000100010; end
+			11: begin instr_out=9'b000100001; end
 			12: begin instr_out=9'b101001000; end
 			13: begin instr_out=9'b101110110; end
 			14: begin instr_out=9'b101111111; end
 			15: begin instr_out=9'b101110000; end
 			16: begin instr_out=9'b101110000; end
-			17: begin instr_out=9'b000011111; end
+			17: begin instr_out=9'b000011110; end
 			18: begin instr_out=9'b101001000; end
 			19: begin instr_out=9'b000000001; end
 			20: begin instr_out=9'b101110101; end
@@ -44,7 +42,7 @@ module instr_rom_1
 			23: begin instr_out=9'b101010101; end
 			24: begin instr_out=9'b100000101; end
 			25: begin instr_out=9'b101110000; end
-			26: begin instr_out=9'b000000101; end
+			26: begin instr_out=9'b000000100; end
 			27: begin instr_out=9'b101111100; end
 			28: begin instr_out=9'b100110100; end
 			29: begin instr_out=9'b001100000; end
@@ -54,15 +52,13 @@ module instr_rom_1
 			33: begin instr_out=9'b001100000; end
 			34: begin instr_out=9'b100100101; end
 		endcase
+		$display("Program Counter %d", pc_in);
 	end
 
-	always @ (*) begin
-		instr_out = rom[pc_in];
-		format = instr_out[8];
-		opcode = instr_out[7:4];
-		sign = instr_out[3];
-		operand = instr_out[2:0];
-		immediate = instr_out[7:0];
-	end
+	assign format = instr_out[8];
+	assign opcode = instr_out[7:4];
+	assign sign = instr_out[3];
+	assign operand = instr_out[2:0];
+	assign immediate = instr_out[7:0];
 
 endmodule

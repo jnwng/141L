@@ -31,13 +31,6 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 0 48)
-		(input)
-		(text "b" (rect 0 0 7 12)(font "Arial" ))
-		(text "b" (rect 21 43 28 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
-	)
-	(port
 		(pt 184 32)
 		(output)
 		(text "out[15..0]" (rect 0 0 70 12)(font "Arial" ))

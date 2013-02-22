@@ -21,6 +21,10 @@ module ALU
 
   reg [15:0] x;
   
+  initial begin
+	compres = 0;
+  end
+  
   always @ (op or res or register)
   begin
    case(op)

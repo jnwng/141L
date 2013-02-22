@@ -1,14 +1,11 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 
 module adder
 (
 	input [15:0] a,
-	output reg [15:0] out
+	output wire [15:0] out
 );
 
-always
-	begin
-	   out = a + 1;
-	end
+assign out = a + 1;
 
 endmodule

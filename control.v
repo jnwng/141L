@@ -1,14 +1,19 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 // This is a Verilog description for a control file
 
-`define op_add 3'b000
-`define op_epar 3'b100
-`define op_cp 3'b111
-`define op_store 3'b010
-`define op_load 3'b001
+`define write_ALU 2'b11
+`define write_MEM 2'b00
+`define write_IMM 2'b01
+`define write_RES 2'b10
+
+`define op_epar 4'b0100
+`define op_cp 4'b0111
+`define op_load 4'b0001
 `define op_halt 4'b1011
 `define op_branch 4'b0100
 `define op_jump 4'b0011
+
+`define op_add 4'b0000
 
 module control
 (
@@ -25,43 +30,69 @@ module control
 	output reg branch,
 	output reg jump
 );
+
+initial begin
+	branch = 0;
+	jump = 0;
+	cpin = 0;
+	cpout = 0;
+end
+
 	
 	always @(posedge clk) begin
+		branch <= 0;
+		jump <= 0;
 		case (format)
+			0: begin
+				$display("Res.");
+				writeSrc <= `write_IMM;
+			end
 			1: begin
-				writeSrc <= 2;
-			end
-		endcase	
-		case (opcode)
-			`op_cp:	begin
-				if (sign) begin
-					cpin <= 0;
-					cpout <= 1;
-				end
-				else begin
-					cpin <= 1;
-					cpout <= 0; 
-				end
-			end
-			`op_store: begin
-				writeSrc <= 0;
-			end
-			`op_load: begin
-				writeSrc <= 0;
-			end
-			`op_branch: begin
-				branch <= 1;
-			end
-			`op_jump: begin
-				jump <= 1;
-			end
-			`op_halt: begin
-				halt <= 1;
-			end
-			default begin
-				writeSrc <= 1;
+				case (opcode)
+					`op_add: begin
+						$display("Add.");
+						writeSrc <= `write_ALU;
+					end
+					`op_epar: begin
+						$display("epar");
+						writeSrc <= `write_ALU;
+					end
+					`op_cp:	begin
+						$display("cp");
+						if (sign) begin
+							cpin <= 0;
+							cpout <= 1;
+						end
+						else begin
+							cpin <= 1;
+							cpout <= 0; 
+						end
+					end
+					`op_load: begin
+						$display("load");
+						writeSrc <= `write_MEM;
+					end
+					`op_branch: begin
+						$display("Branch.");
+						branch <= 1;
+					end
+					`op_jump: begin
+						$display("Jump.");
+						jump <= 1;
+					end
+					`op_halt: begin
+						$display("halt");
+						halt <= 1;
+					end
+					default: begin
+						$display("default");
+						writeSrc <= `write_IMM;
+					end
+				endcase
 			end
 		endcase
+		$display(writeSrc);
+		
 	end
 
 endmodule	
