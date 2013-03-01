@@ -6,7 +6,7 @@ res 1
 load $s0
 
 # 32 is initial index of array but loop increments by 1 and 0 indexed
-res 30
+res 31
 cpin $s1            # index is 32
 
 loop:
@@ -44,11 +44,11 @@ cpout $t2
 jump $t2
 
 end1:
-res 95              # endcase, set array index value @ address 96
+res 96              # endcase, set array index value @ address 96
 store $s0
 
 end2:
-res 127             # endcase2, set 127 to value @ address 96
+res 128             # endcase2, set 127 to value @ address 96
 cpin $t3
-res 95
+res 96
 store $t3
