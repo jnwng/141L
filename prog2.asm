@@ -45,6 +45,7 @@ res 1
 add 0, $s0
 cpout $s0 # Subtract 1 from the original count
 
+# Loop back with the count -1 value.
 res factorial
 cpout $t2
 jump $t2
@@ -55,8 +56,8 @@ store $s1
 
 
 multiply:       
-# multiply the value in $res by the value in $t0
-# Original number is in $t1, Num -1 in $t2
+# multiply the value in $t1 by the value in $t2
+# We want to add $t1 to $t1, $t2 times.
 # Result in $t0
 
 # We want to short circuit if the value in $t0 is 1
@@ -78,28 +79,33 @@ cpout $c2
 res endmul2
 branch 1        # if $t2 is 0, then return 1 in $res
 
-cpin $t2
-add 1, $t2
-cpout $t1       # Accumulator register
+# Get the accumlated value
+cpin $t0
+# And add one more copy of the original value
+add 1, $t1
+cpout $t0       # Accumulator register
+# Equivalent to x = x+x
 
 res 1
 cpout $t3       # Store 1 in $t3
-cpin $t0        # Get count
+cpin $t2        # Get count
 add 0, $t3  # Subtract one from count
-cpout $t0       # Set count to result
+cpout $t2       # Set count to result
 
+# We've done one iteration, now add this number again.
 res multiply
 cpout $t3
-cpin $t1
 jump $t3
 
 endmul: 
+# We multiplied by one at some point, send through the accumulated value in $t0 in $res
 res fac1
 cpout $t3
 cpin $t0
 jump $t3
 
 endmul2:
+# we multiplied by zero. This shouldn't happen, so we're sending out 1 in res.
 res fac1
 cpout $t3
 res 1
