@@ -1,228 +1,187 @@
+// program 3
 
-Program 3
-
-// Can’t think of a great way to do this other than
-// Use memory a bunch. ‘Hash Table’ style
-// Each table entry is 2 half words (so we need 64 halfwords)
-// Going to look something like this
-// Address:  | 0           | 1                 | 2 
-// Contents: | First Value | First Value Count | Second Value ...
-// hash Table from  0 - 64
-// given array from 64 - 128
-//$s1 = Beginning address of the hash table
-//$c1 = last index of the array
-//$c2 = last index of hash table
-//$t0 = current end of hash table
-//$t2 = current place in hash table
-//$t0 = array's current address
-//128 = address where the array of integers starts
-
-
-
-res 64              # beginning address of our hash table - 1
-cpout $s1           # $s1 is 64 
-res 128             # store last index of hash table
-cpout $c2           # put in $c2 for comparison later
-res 63
-cpout $t0           # index = 63 (start_index-1)
-// Walking through array
-
-loop:
-res 128
-cpout $s2
-// fetch routine, iterate through hashmap for index of a value, returns
-// index in $s0
-
-fetch:
+// The Setup
 res 0
-cpout $t0           # $t0 marks the end of the hash table $t0 = 0
-cpout $t2           # this keeps track of our place in the hashtable $t2 = 0
+cpout $s0 # $s0 will be our current index in the hash table
+res 128
+cpout $s1 # s1 will be our current index in the array of integers
 
-loop2:
-res 152             # here we check if we have hit the end of the array
-load $c1            # c1 = last index in th array
-cpin $s1            # res  = beginning address of the hash table
-cpout $c2           # $c2 = begining address of the hash table
-res end             # prepare to jump to end
-cpin $t1            # end address is in $t1
-branch 1            # we end if we have
-cpin $t0            # we want the value of our array’s current index
-load $c1            # load the value at that index into $c1
-cpin $s1            # copy the address of our desired key to be found
-load $c2            # load the value into $c2
-res 2               # increment the hash table bookmark
-add $t2
-cpout $t2           # copy in the hash key address into $s0
-cpout $s0
-res new_entry       # if $t0 = $s1 we hit the end, make a new entry
-cpin $t1             
-branch 1
-cpin $t2
-load $c1            #c1 is the current hash table entry
-res inc     
-cpin $t1           
-branch 1            # if the hash table entry is the key, we inc   
-res 16
-add $s1
-cpout $s1
-res loop2           # increment the array index, and loop
-cpin $t1
-jump $t1
-
-// here we are passed in the new key to be created, and we create the key 
-new_entry:
-cpin $t0
-store $s1           # store new key
-res 1
-add $t0
-store $t3           # store the current address of the index 
+// loop through the array
+loop:
+res 64
+cpin $c1 # This is the address of the end of our array
 cpin $s1
-cpout $s0
-res 16
-add $s1
-cpout $s1
-res loop
-cpyin $t1
-jump $t1
-// Here we increment a key in the hash table if we see that it occurs again
-inc:
-cpin $t0
-cpout $t3
-fetch $s0          # get index value of integer in $s0 and put it in $s0
-res 1
-add $s0            # key address + 1 is the counter value
-copyout $t1        # store address of this counter value for now
-load $t0           # loaded count of integer in $t0
-res 1
-add $t0            # count + 1
-copyout $t0        
-copyin $t1
-store $t0          # map[x] = map[x]+1
-res 16
-add $s1
-cpout $s1
-res loop
-cpyin $t1
-cpyin $t3
-cpyout $t0
-jump $t1
-// we store the desired values
-end:
-res 1
-cpout $s0
-cpout $s1
-// we iterate through the hash table and find the largest entry.
-findlargest:      # iterating through the hash table
-cpin $t0		  # res = $t0
-cpout $c1         # c1 = $t0
-cpin $s1		  # res = $s1
-load $c2		  # c2 = value at s1
-res return
-cpout $t1		  #t1 is the label return
+cpout $c2 # This is the current address we are iterating on
+res end
+branch 1 # if we are currently at the last index in the array
+         # we branch to end
+// check if the number is in our hash table
+res loophashsetup
+cpout $t0
+jump $t0
+
+loophashsetup:
+res 0
+cpout $t1 # this will be our placeholder for this loops place in the hash table
+loophash:
+// compare the edge of our hash table, to our current place in the loop
+cpin $s0 
+cpout $c1
+cpin $t1
+cpout $c1
+res new_entry # If we have finished searching the hash table, we create a new entry 
 branch 1
-res 1
-add $s0            
+// we compare the entry in our hash table ($t1) to the array value passed in ($s1)
+cpin $s1
 load $c1
+cpin $t1
+load $c2
+res increment
+branch 1
+res 2 # change our place in the hash table
+add $t1
+cpout $t1
+// else, continue the loop
+res loophash
+cpout $t0
+jump $t0
+
+
+new_entry:
+cpin $s1 # res is now the address of the current array value
+load $t1 #t1 is the value of our current int
+res $c1 
+store $t1 # store the index at the end of the hash table
+res 0
+cpout $t2 # t2 = 0
+res 1
+add $c1
+store $t2 # we have now stored the value 0 next to the key
 res 2
-add $s1
+add $c1 # create a new index / end of hash table
+cpout $s0 # this is the new end of the hash table
+res 2
+// NEED TO SUBTRACT HERE!
+add 0, $s1
+cpout $s1 # we are not on the next index of the array
+res loop
+jump loop
+
+increment:
+res 1
+add $t1 #current place in hash table
+cpout $t3
+load $t2 # $t1 is the value of our hash key
+res 1
+add $t2 # increment that value by 1
+cpout $t2
+cpin $t3
+store $t2 # store that as the new value
+res 2
+// NEED TO SUBTRACT HERE!
+add 0, $s1
+cpout $s1 # we are not on the next index of the array
+res loop
+jump loop
+
+end:
+// $s1 = number occuring the most
+res 0
+cpout $t3 # this will keep track of our greatest occurance
+res 1
+cpout $t1 # this will keep track of our hash table index
+
+loop_highest:
+// if we hit the end of our hash table then we return what is in $s1
+cpin $s0
+cpout $c1
+cpin $t1
+cpout $c2
+res return
+branch 1
+// else we compare the value of the current key to see if it occurs more
+cpin $t1
+load $c1
+cpin $t3
 load $c2
 res gt
-cpout $t1
-branch 0, >
-res lt
-cpout $t1
-jump $t1
-// if an entry turns out to be greater than, we store it
+// if the new value is greater than the current one, store it
+branch 0, 2
+// if it is equal, store the bigger one
+res tie
+branch 1
+// else, run through loop again
+res 2
+add $t1
+cpout $t1 # move onto the next hash table value
+res loop_highest
+cpout $t0
+jump $t0
+
+
 gt:
-res -1
-add $c1 
-cpout $s0
-res findlargest
-cpout $t1
-jump $t1
-// if an entry turns out to be less than, we store it 
-lt:
-res -1
-add $c2
-cpout $s0
-res findlargest
-cpout $t1
-jump $t1
-// we save the value and return it 
+// save the new highest one
+cpin $c1
+cpout $t3
+res 1
+// NEED TO SUBTRACT HERE
+add 0, $t1
+load $s1 # this is the number occuring the most times
+res 2
+add $t1
+cpout $t1 # move onto the next hash table value
+res loop_highest
+cpout $t0
+jump $t0
+
+tie:
+res 1
+// NEED TO SUBTRACT HERE
+add 0, $t1
+load $c0 #c1 is the key of this hash entry
+cpin $s1 # this is currently out winning key
+cpout $c1
+res num1
+branch 0, 2 # if c1 > c2, set $s1 to $c1
+res num2
+cpout $t0
+jump $t0
+num1:
+cpin $c1
+cpout $s1
+num2:
+cpin $c2
+cpout $s1
+res 2
+add $t1
+cpout $t1 # move onto the next hash table value
+res loop_highest
+cpout $t0
+jump $t0
+
 return:
-res -1
-add $s0
-load $s0 // put the correct value in $s0
-cpin $s0
-res 64
-load $s0
+cpin $s1
+cpout $s0
 halt
 
-// NOTES:
-//hash Table from  0 - 64
-//given array from 64 - 128
+
+
+// NOTES
+//Given array memory locations: 128 - 64
+//Hash table memory locations: 0 - 64
+//Hash table: 0 offset = key, 1 offset = value
+//Global (before end label):
+//$s0 = current place in hash table (the end of it)
+//$s1 = current index (address) in the array
+//Loop_hash:
+//$t1 = current loop index
+//$c1 = current hash table index
+//$c2 = end of hash table (address)
+//end:
+//$t3 = greatest so far
+//$t1 = current index in hash table (address)
+//$c2 = end of the hash table
+//Global (after end label):
+//$s0 = current place in hash table (the end of it)
+//$s1 = the number occuring the most
 //
-//
-//$s1 = Beginning address of the hash table
-//$c1 = last index of the array
-//$c2 = last index of hash table
-//$t0 = current end of hash table
-//$t2 = current place in hash table
-//$t0 = array's current address
-//128 = address where the array of integers starts
-//
-//
-//GLOBAL
-//$res = where you put your branch address
-//$t0  = the bookmark index of our place in our array
-//$t1  = where you put your jump address
-//
-//SETUP:
-//
-//$s1  = 64 (beginning address of hash table -1)
-//$t0  = 63 (start_index -1)
-//$c2  = 128 (last index of the hash table)
-//$res = 63
-//
-//Loop:
-//$res = 128
-//$t3  = 128 (end of the given array)
-//
-//Fetch:
-//
-//$res = 0
-//$t0  = 0 (End of the hash table)
-//$t2  = 0 (Our place in the hash table)
-//
-//Loop2:
-//// if: $c1 == $c2 we jump to end, 
-//// else if: new c1 == new c2 we make a new entry 
-//$res = address of loop2
-//$s0  = (BRANCH1 NOT TAKEN): address of next entry in hash table $t2 
-//$t0  = address of our current index in the array
-//$t1  = END: Jump address
-//$t2  = 2 + $t2 = increment hash counter ($t2 is the hash table last index)
-//$t3  =
-//$c1  = the value of last index in the array (last as in end element: element at 152)
-//$c2  = 64 (GLOBAL $s1, beginning address of the hash table)
-//IF NOT BRANCHED to END:
-//$c1 = value of our current index in the array
-//$c2 = $s1 (address of the desired key to be found)
-//$t1 = address of new entry
-//IF BRANCH TO NEW ENTRY NOT TAKEN:
-//$s1 = s1 + 16 (move to the next index of the array, and loop)
-//$t1 = address of the loop2
-//
-//new_entry:
-//
-//$res = address of the current loop 
-//$s0  = Current element from array
-//$s1  = value of  the current index in our array ($t0) -> next index
-//$t0  = Address of current index in the array
-//$t3  = 1 + $t0
-//
-//inc:
-//
-//$s0  = value of current index  
-//$t0  = Curreny index in array + 1
-//$t3  = Current address of current index
