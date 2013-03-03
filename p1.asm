@@ -5,7 +5,7 @@
 res 1
 load $s0
 
-# 32 is initial index of array but loop increments by 1 and 0 indexed
+# 32 is initial index of array but loop increments by 1
 res 31
 cpin $s1            # index is 32
 
@@ -14,7 +14,7 @@ res 1               # increment index by 1
 add $s1
 cpout $s1           # so now index = index + 1
 
-res 96              # check to see if we are at the end
+res 80              # check to see if we are at the end
 cpout $c1           
 cpin $s1
 cpout $c2
@@ -29,8 +29,7 @@ cpout $c1
 res end1
 branch 1            # if count=0 jump to end
 
-res 32
-cpout $t0
+cpout $s1
 load $t0            # load value at address 32 into $t0
 cpin $t0            # load value at address 32 into $res
 
