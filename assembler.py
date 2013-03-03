@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import re
 
 opcodes = {
@@ -60,6 +62,7 @@ def assemble(infile):
 
     infile.seek(0)
     for line in infile:
+        instr = None
         comment = comment_regexp.match(line)
         label = label_regexp.match(line)
 

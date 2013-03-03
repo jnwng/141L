@@ -1,0 +1,15 @@
+//psf/Home/Documents/cse141L/instr_rom.v {1 {vlog -work work //psf/Home/Documents/cse141L/instr_rom.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instr_rom
+
+Top level modules:
+	instr_rom
+
+} {} {}} //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v {1 {vlog -work work //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module INSTR_ROM_TB
+
+Top level modules:
+	INSTR_ROM_TB
+
+} {} {}}

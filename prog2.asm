@@ -1,7 +1,11 @@
+# inspected by: lewisf
+#
+#
 
 # value initialization
-res 0
-load $s0  # Load the value at address 0, which is also our count register.
+res 0               # Put 0 in res
+load $s0            #  so we can load the value at address 0, which is also our count register.
+
 # Start up the saved accumulator register
 # Set $s1 to 0
 cpout $s1 
@@ -14,22 +18,20 @@ cpout $c1
 res 0 
 cpout $c2
 
-res endfac
-# branch if count is 0
-branch 1        
+res endfac          # if $s0 is now 0,     
+branch 1            #   then our factorial is done
 
 # Set $t0 to 1
-res 1
+res 1               
 cpout $t0
 
-# Get our original counter into $res
-cpin $s0 
+cpin $s0            # Get our original counter into $res
+add 0, $t2          # res = res - 1
 
-# res = res - 1
-add 0, $t2 
 # and then store the result in $t2
 cpout $t2       
-# Set $t0 back to the original count
+
+# Set $t1 back to the original count
 cpin $s1        
 cpyout $t1
 # And jump to multiply branch, with original number in $t1, and num -1 in $t2
