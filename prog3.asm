@@ -19,15 +19,12 @@
 # $s0 = current place in hash table (the end of it)
 # $s1 = the number occuring the most
 
+
 # The Setup
-# here we set s0 to the last filled index of the hash table, (starts at the address 0)
-# here we set s1 to the last touched index of the given array (begins at address 128)
-res 0
-cpout $s0                                                                          
-# $s0 will be our current index in the hash table
-res 128
-cpout $s1                                                                          
-# s1 will be our current index in the array of integers
+res 0           # initialize s0
+cpout $s0       #   by setting it to 0
+res 128         # initialize s1
+cpout $s1       #   by setting it to 128 (starting position of array)
 
 # here we loop through the array, or every element of the given array (32)
 # for each value in the array we search through the hash table to see if it 
@@ -36,6 +33,7 @@ cpout $s1
 # We do a check at the beginning to make sure the address of the array (IE 
 # its recorded index) is not 64, if it is, the array is finished, and we 
 # begin processing the hash table.
+
 loop:
 # here we check if the current array index (in $s1) is 64, if so we end the loop
 res 64
@@ -48,11 +46,7 @@ res end
 branch 1                                                                           
 # if we are currently at the last index in the array we branch to end
 # otherwise we check if the number is in our hash table
-res loophashsetup
-cpout $t0
-jump $t0
 
-loophashsetup:
 # we begin at the 0, the first hash table entry, and run through the entire hash table, comparing the value passed in $s1 to our keys.
 # if found, we increment the value by 1, if not, we create a new entry
 res 0
@@ -85,7 +79,6 @@ cpout $t1
 res loophash
 cpout $t0
 jump $t0
-
 
 new_entry:
 # here we create a new entry in the hash table, at the end of the current hash table (address stored in $s0), then increment $s0 to mark a new end
