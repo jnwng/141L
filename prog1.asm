@@ -50,6 +50,7 @@ jump $t2            #   and jump
 end1:
 res 96              # endcase, set array index value @ address 96
 store $s0
+halt
 
 # End 2 - when we finished going through the array and failed.
 end2:
@@ -57,3 +58,4 @@ res 127             # Get the number 127
 cpout $t3           #   put it in a temporary variable
 res 96              #   and store it in
 store $t3           #   address 36
+halt
