@@ -1,7 +1,6 @@
 res 1               # set $res to 1
 load $s0            # load value at address 1 into $s0
 
-
 res 16              # set $res to 15 (pos 30), loop will inc
 cpin $s1            # keep track of array index in $s1
 
