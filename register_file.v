@@ -29,10 +29,6 @@ module register_file
 		endcase
 	end
 	
-	always @ (cpyin) begin
-		res <= reg_val;
-	end
-	
 	assign res_val = res;
 	assign reg_val = reg_sel == 3'b000 ? reg0 :
 						  reg_sel == 3'b001 ? reg1 :
@@ -43,7 +39,10 @@ module register_file
 						  reg_sel == 3'b110 ? reg6 : reg7 ;
 	
 	always @(posedge clk) begin
-		res <= write_data;
+		if (cpyin) 
+			res <= reg_val;
+		else
+			res <= write_data;
 	end
 
 endmodule	

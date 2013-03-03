@@ -11,7 +11,7 @@ module next_pc_logic
 
 reg [15:0] temp_out;
 
-always @(negedge clock)
+always @(posedge clock)
 begin
 	if (init) begin
 		temp_out = 0;
