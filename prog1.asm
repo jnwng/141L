@@ -38,7 +38,7 @@ cpin $t0            #   and then put it back into $res
 # Checking for even parity of the value we loaded from the array
 cpin $s0            # put count in $res
 epar $t3            #   check even parity of $res, set $t3 to 1 if so, else 0
-add -, $t3          #   subtract $t3 from count (if even, count - 1)
+add 0, $t3          #   subtract $t3 from count (if even, count - 1)
 cpin $s0            #   load count back into $s0
 
 # Loop back
