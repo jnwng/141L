@@ -28,8 +28,14 @@ module ALU
   always @ (op or res or register)
   begin
    case(op)
-      `op_add: out = res + register;
-		`op_sub: out = res - register;
+      `op_add: begin 
+		out = res + register;
+		$display("res: %d", res);
+		$display("register: %d", register);
+		$display("Add: %d", out);
+		end
+		`op_sub: 
+		 out = res - register;
 	   `op_and: out = res & register;
 		`op_or:  out = res | register;
 		`op_epar: begin
@@ -39,7 +45,7 @@ module ALU
 			x = x & 8'h0F;
 			out = ((16'h6996 >> x) & 1);
 		end 
-		`op_branch: begin
+		   `op_branch: begin
 			// input res is $c1
 			// input register is $c2
 			if (eq) begin
@@ -57,6 +63,6 @@ module ALU
 			end
 		end
    endcase
+	
   end
-
-endmodule
+endmodule	

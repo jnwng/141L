@@ -17,6 +17,10 @@ module program_runner_1;
 		#20 init = 0; restart = 0;
 	end
 	
+	always @ (done)
+	begin
+		$stop;
+	end
 	
 	initial
 	begin

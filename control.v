@@ -6,18 +6,18 @@
 `define write_IMM 2'b01
 `define write_RES 2'b10
 
-`define op_epar 4'b0100
-`define op_cp 4'b0111
-`define op_load 4'b0001
-`define op_halt 4'b1011
-`define op_branch 4'b0100
-`define op_jump 4'b0011
-
+`define op_shift 4'b1010
 `define op_add 4'b0000
+`define op_load 4'b0001
+`define op_store 4'b0010
+`define op_jump 4'b0011
+`define op_branch 4'b0100
+`define op_epar 4'b0101
+`define op_cp 4'b0111
+`define op_halt 4'b1011
 
 module control
 (
-	input clk,							// clock
 	input format,
    input [3:0] opcode,						// are we copying value from a res into a register
 	input sign,						// are we copying a value out?
@@ -39,14 +39,18 @@ initial begin
 end
 
 	
-	always @(posedge clk) begin
+	always @ (*) begin
 		branch <= 0;
 		jump <= 0;
+		cpin <= 0;
+		cpout <= 0;
+		memRead <= 0;
+		memWrite <= 0;
 		case (format)
 			0: begin
 				$display("Res.");
 				writeSrc <= `write_IMM;
-			end
+				end
 			1: begin
 				case (opcode)
 					`op_add: begin
@@ -58,19 +62,23 @@ end
 						writeSrc <= `write_ALU;
 					end
 					`op_cp:	begin
-						$display("cp");
 						if (sign) begin
-							cpin <= 0;
+							$display("cpout");
 							cpout <= 1;
 						end
 						else begin
+							$display("cpin");
 							cpin <= 1;
-							cpout <= 0; 
 						end
 					end
 					`op_load: begin
 						$display("load");
+						memRead <= 1;
 						writeSrc <= `write_MEM;
+					end
+					`op_store: begin
+						$display("store");
+						memWrite <= 1;
 					end
 					`op_branch: begin
 						$display("Branch.");
