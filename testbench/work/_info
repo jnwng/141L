@@ -4,424 +4,424 @@ K3
 cModel Technology
 Z0 d\\psf\Home\Documents\cse141L\testbench
 vadder
-Z1 I1hQ72eJDMX4CNikSJETjH1
-Z2 VFQ^g3_<Vc?9ggW^]JOQgo2
-Z3 d\\psf\Home\Documents\cse141L\testbench
-Z4 w1361858147
-Z5 8//psf/Home/Documents/cse141L/adder.v
-Z6 F//psf/Home/Documents/cse141L/adder.v
+Z1 !s100 eDbPAF:]P<gzB1fK>NaA91
+Z2 I1hQ72eJDMX4CNikSJETjH1
+Z3 VFQ^g3_<Vc?9ggW^]JOQgo2
+Z4 d\\psf\Home\Documents\cse141L\testbench
+Z5 w1361858147
+Z6 8//psf/Home/Documents/cse141L/adder.v
+Z7 F//psf/Home/Documents/cse141L/adder.v
 L0 3
-Z7 OP;L;10.1d;51
+Z8 OP;L;10.1d;51
 r1
 31
-Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
-Z9 !s100 eDbPAF:]P<gzB1fK>NaA91
-Z10 !s108 1362442831.352000
+Z9 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
+Z10 !s108 1362446634.137000
 Z11 !s107 //psf/Home/Documents/cse141L/adder.v|
 Z12 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/adder.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU
-Z13 I@ok^B<hzeNPRL]dm2;f7k3
-Z14 VnT^PaSW2V5?HL<zJG]99A0
-R3
-Z15 w1362441986
-Z16 8//psf/Home/Documents/cse141L/ALU.v
-Z17 F//psf/Home/Documents/cse141L/ALU.v
+Z13 !s100 nJKMUja1aSa;`CQXeRdD]3
+Z14 I:hEojFT?MX[8[cagiFBnN3
+Z15 VnT^PaSW2V5?HL<zJG]99A0
+R4
+Z16 w1362446503
+Z17 8//psf/Home/Documents/cse141L/ALU.v
+Z18 F//psf/Home/Documents/cse141L/ALU.v
 L0 10
-R7
+R8
 r1
 31
-Z18 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/ALU.v|
-R8
+R9
 Z19 n@a@l@u
-Z20 !s100 K3R<TziOV53`Wa2dTHjof1
-Z21 !s108 1362442831.414000
-Z22 !s107 //psf/Home/Documents/cse141L/ALU.v|
+Z20 !s108 1362446634.230000
+Z21 !s107 //psf/Home/Documents/cse141L/ALU.v|
+Z22 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU_TB
-Z23 I=OYo4K^TFk6inOK5SMOSc0
-Z24 VT3H70N^;JzGPBGC?M:B<n3
-R3
+Z23 !s100 :j=0Whn;52@3IU4AG68hE3
+Z24 I=OYo4K^TFk6inOK5SMOSc0
+Z25 VT3H70N^;JzGPBGC?M:B<n3
 R4
-Z25 8//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
-Z26 F//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
+R5
+Z26 8//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
+Z27 F//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
 L0 3
-R7
+R8
 r1
 31
-Z27 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
-R8
+R9
 Z28 n@a@l@u_@t@b
-Z29 !s100 :j=0Whn;52@3IU4AG68hE3
-Z30 !s108 1362442831.023000
-Z31 !s107 //psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
+Z29 !s108 1362446633.793000
+Z30 !s107 //psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
+Z31 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vcontrol
-!i10b 1
-!s100 c7<D>iJ`8HkgNU6;K2<nG0
-IeNB4C`@>AjIIAVzR]aXYM1
-Z32 VA3>OKjcK0:E3E5OLfhYCa2
-R3
-w1362444278
-Z33 8//psf/Home/Documents/cse141L/control.v
-Z34 F//psf/Home/Documents/cse141L/control.v
+Z32 !s100 c7<D>iJ`8HkgNU6;K2<nG0
+Z33 IeNB4C`@>AjIIAVzR]aXYM1
+Z34 VA3>OKjcK0:E3E5OLfhYCa2
+R4
+Z35 w1362446343
+Z36 8//psf/Home/Documents/cse141L/control.v
+Z37 F//psf/Home/Documents/cse141L/control.v
 L0 19
-R7
+R8
 r1
+31
+R9
+Z38 !s108 1362446634.309000
+Z39 !s107 //psf/Home/Documents/cse141L/control.v|
+Z40 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/control.v|
+!i10b 1
 !s85 0
-31
-!s108 1362444300.037000
-!s107 //psf/Home/Documents/cse141L/control.v|
-Z35 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/control.v|
 !s101 -O0
-R8
 vcycle_counter
-Z36 Ige`1oi4?f`K]DWHE:_@cC3
-Z37 VTPbh1<6NUg41T61mEg:iA0
-R3
-R15
-Z38 8//psf/Home/Documents/cse141L/cycle_counter.v
-Z39 F//psf/Home/Documents/cse141L/cycle_counter.v
+Z41 !s100 R_D@c2]^5J8h@F2=VG?jW3
+Z42 Ige`1oi4?f`K]DWHE:_@cC3
+Z43 VTPbh1<6NUg41T61mEg:iA0
+R4
+Z44 w1362441986
+Z45 8//psf/Home/Documents/cse141L/cycle_counter.v
+Z46 F//psf/Home/Documents/cse141L/cycle_counter.v
 L0 1
-R7
+R8
 r1
 31
-R8
-Z40 !s100 R_D@c2]^5J8h@F2=VG?jW3
-Z41 !s108 1362442831.555000
-Z42 !s107 //psf/Home/Documents/cse141L/cycle_counter.v|
-Z43 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/cycle_counter.v|
+R9
+Z47 !s108 1362446634.402000
+Z48 !s107 //psf/Home/Documents/cse141L/cycle_counter.v|
+Z49 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/cycle_counter.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdata_ram
-Z44 IjR<kmFc=60@4fFfK7e8KA1
-Z45 V@bROHiVJ6SJ9JTBdZ:iSS1
-R3
+Z50 !s100 h0fZ<Bc<^m9k_V?c88_;j1
+Z51 IjR<kmFc=60@4fFfK7e8KA1
+Z52 V@bROHiVJ6SJ9JTBdZ:iSS1
 R4
-Z46 8//psf/Home/Documents/cse141L/data_ram.v
-Z47 F//psf/Home/Documents/cse141L/data_ram.v
+R5
+Z53 8//psf/Home/Documents/cse141L/data_ram.v
+Z54 F//psf/Home/Documents/cse141L/data_ram.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z48 !s100 h0fZ<Bc<^m9k_V?c88_;j1
-Z49 !s108 1362442831.633000
-Z50 !s107 //psf/Home/Documents/cse141L/data_ram.v|
-Z51 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/data_ram.v|
+R9
+Z55 !s108 1362446634.480000
+Z56 !s107 //psf/Home/Documents/cse141L/data_ram.v|
+Z57 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/data_ram.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vfetch_unit
-Z52 IU@<kjI>`V8]k?eb_:L9P40
-Z53 V0BhKNXbI3hV1eiZQ;77i60
-R3
-Z54 w1361344859
-Z55 8//psf/Home/Documents/cse141L/fetch_unit.v
-Z56 F//psf/Home/Documents/cse141L/fetch_unit.v
+Z58 !s100 WWH?aejDWBT`FH:6KoN[E1
+Z59 IU@<kjI>`V8]k?eb_:L9P40
+Z60 V0BhKNXbI3hV1eiZQ;77i60
+R4
+Z61 w1362444854
+Z62 8//psf/Home/Documents/cse141L/fetch_unit.v
+Z63 F//psf/Home/Documents/cse141L/fetch_unit.v
 L0 19
-R7
+R8
 r1
 31
-Z57 !s108 1362442831.711000
-Z58 !s107 //psf/Home/Documents/cse141L/fetch_unit.v|
-Z59 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/fetch_unit.v|
-R8
-Z60 !s100 WWH?aejDWBT`FH:6KoN[E1
+Z64 !s108 1362446571.028000
+Z65 !s107 //psf/Home/Documents/cse141L/fetch_unit.v|
+Z66 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|//psf/Home/Documents/cse141L/fetch_unit.v|
+R9
 !i10b 1
 !s85 0
 !s101 -O0
 vinstr_rom_1
-Z61 IPAAc=iPe=<LSiUab@:YIO2
-Z62 VA:BFco<C2`116zDTL[4GN0
-R3
-R15
-Z63 8//psf/Home/Documents/cse141L/instr_rom_1.v
-Z64 F//psf/Home/Documents/cse141L/instr_rom_1.v
+Z67 !s100 Cffji<GJE@g1YZDm0>3L`1
+Z68 II8j5BFLUzR<D2?2IID6^`1
+Z69 VA:BFco<C2`116zDTL[4GN0
+R4
+Z70 w1362446366
+Z71 8//psf/Home/Documents/cse141L/instr_rom_1.v
+Z72 F//psf/Home/Documents/cse141L/instr_rom_1.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z65 !s100 ghz=?`g3[T;NmjL2[>Vj80
-Z66 !s108 1362442831.789000
-Z67 !s107 //psf/Home/Documents/cse141L/instr_rom_1.v|
-Z68 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_1.v|
+R9
+Z73 !s108 1362446634.559000
+Z74 !s107 //psf/Home/Documents/cse141L/instr_rom_1.v|
+Z75 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vinstr_rom_2
-Z69 IBSfYMbHWAnkA7l9TmJUg73
-Z70 V>Xlb=CE=BRQCW5jg;bW[m3
-R3
+Z76 !s100 o;@gE5aFIH>52B1F;4HH^2
+Z77 IBSfYMbHWAnkA7l9TmJUg73
+Z78 V>Xlb=CE=BRQCW5jg;bW[m3
 R4
-Z71 8//psf/Home/Documents/cse141L/instr_rom_2.v
-Z72 F//psf/Home/Documents/cse141L/instr_rom_2.v
+R5
+Z79 8//psf/Home/Documents/cse141L/instr_rom_2.v
+Z80 F//psf/Home/Documents/cse141L/instr_rom_2.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z73 !s100 o;@gE5aFIH>52B1F;4HH^2
-Z74 !s108 1362442831.867000
-Z75 !s107 //psf/Home/Documents/cse141L/instr_rom_2.v|
-Z76 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_2.v|
+R9
+Z81 !s108 1362446634.637000
+Z82 !s107 //psf/Home/Documents/cse141L/instr_rom_2.v|
+Z83 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_2.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vinstr_rom_3
-Z77 I0SH=S:eGgSCOGngF^Q@X72
-Z78 Vh5oDaJJ:DeAP^EBX]8Y?m3
-R3
+Z84 !s100 VVTDeG=WKnkbzECZJNHe:3
+Z85 I0SH=S:eGgSCOGngF^Q@X72
+Z86 Vh5oDaJJ:DeAP^EBX]8Y?m3
 R4
-Z79 8//psf/Home/Documents/cse141L/instr_rom_3.v
-Z80 F//psf/Home/Documents/cse141L/instr_rom_3.v
+R5
+Z87 8//psf/Home/Documents/cse141L/instr_rom_3.v
+Z88 F//psf/Home/Documents/cse141L/instr_rom_3.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z81 !s100 VVTDeG=WKnkbzECZJNHe:3
-Z82 !s108 1362442831.930000
-Z83 !s107 //psf/Home/Documents/cse141L/instr_rom_3.v|
-Z84 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_3.v|
+R9
+Z89 !s108 1362446634.715000
+Z90 !s107 //psf/Home/Documents/cse141L/instr_rom_3.v|
+Z91 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom_3.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vINSTR_ROM_TB
-Z85 IYg4[UO<Ti1oF1QCT<U4?^2
-Z86 VHC[WF3f8oem]zmEfYh@IO2
-R3
-R54
-Z87 8//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
-Z88 F//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
+Z92 !s100 nPhfj><T:ohWlDdjMUe:c1
+Z93 IYg4[UO<Ti1oF1QCT<U4?^2
+Z94 VHC[WF3f8oem]zmEfYh@IO2
+R4
+Z95 w1361344859
+Z96 8//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
+Z97 F//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z89 n@i@n@s@t@r_@r@o@m_@t@b
-Z90 !s100 nPhfj><T:ohWlDdjMUe:c1
-Z91 !s108 1362442831.102000
-Z92 !s107 //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v|
-Z93 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v|
+R9
+Z98 n@i@n@s@t@r_@r@o@m_@t@b
+Z99 !s108 1362446633.871000
+Z100 !s107 //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v|
+Z101 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux2
-Z94 I;;GoJZX_`AQGm[Q5_9LF93
-Z95 V5i>0FDh9c_KC9aJMfYKBm1
-R3
+Z102 !s100 GN69M0;HI2METhW3hcMGV2
+Z103 I;;GoJZX_`AQGm[Q5_9LF93
+Z104 V5i>0FDh9c_KC9aJMfYKBm1
 R4
-Z96 8//psf/Home/Documents/cse141L/mux2.v
-Z97 F//psf/Home/Documents/cse141L/mux2.v
+R5
+Z105 8//psf/Home/Documents/cse141L/mux2.v
+Z106 F//psf/Home/Documents/cse141L/mux2.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z98 !s100 GN69M0;HI2METhW3hcMGV2
-Z99 !s108 1362442832.148000
-Z100 !s107 //psf/Home/Documents/cse141L/mux2.v|
-Z101 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux2.v|
+R9
+Z107 !s108 1362446634.965000
+Z108 !s107 //psf/Home/Documents/cse141L/mux2.v|
+Z109 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux2.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux4
-Z102 I77Qh4BQLeYlE3MORO:?Ki1
-Z103 VIc@I[g8B3Le@VhzB0bnSR3
-R3
+Z110 I77Qh4BQLeYlE3MORO:?Ki1
+Z111 VIc@I[g8B3Le@VhzB0bnSR3
 R4
-Z104 8\\psf\Home\Documents\cse141L\mux4.v
-Z105 F\\psf\Home\Documents\cse141L\mux4.v
+R5
+Z112 8\\psf\Home\Documents\cse141L\mux4.v
+Z113 F\\psf\Home\Documents\cse141L\mux4.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z106 !s100 CN69W7l8Vbbm`PJNWk9TM2
-Z107 !s108 1362442832.305000
-Z108 !s107 \\psf\Home\Documents\cse141L\mux4.v|
-Z109 !s90 -reportprogress|300|-work|work|\\psf\Home\Documents\cse141L\mux4.v|
+R9
+Z114 !s100 CN69W7l8Vbbm`PJNWk9TM2
+Z115 !s108 1362446635.105000
+Z116 !s107 \\psf\Home\Documents\cse141L\mux4.v|
+Z117 !s90 -reportprogress|300|-work|work|\\psf\Home\Documents\cse141L\mux4.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux_0
-Z110 IDTz6<=ZW0QQT^zG7SXD9Z2
-Z111 VTA;m@W`hLW@079^5[9XX@0
-R3
+Z118 IDTz6<=ZW0QQT^zG7SXD9Z2
+Z119 VTA;m@W`hLW@079^5[9XX@0
 R4
-Z112 8\\psf\Home\Documents\cse141L\mux_0.v
-Z113 F\\psf\Home\Documents\cse141L\mux_0.v
+R61
+Z120 8\\psf\Home\Documents\cse141L\mux_0.v
+Z121 F\\psf\Home\Documents\cse141L\mux_0.v
 L0 20
-R7
+R8
 r1
 31
-R8
-Z114 !s100 YAXg7hbYR;j<[H6LZMo0I3
-Z115 !s108 1362442832.008000
-Z116 !s107 \\psf\Home\Documents\cse141L\mux_0.v|
-Z117 !s90 -reportprogress|300|-work|work|\\psf\Home\Documents\cse141L\mux_0.v|
+R9
+Z122 !s100 YAXg7hbYR;j<[H6LZMo0I3
+Z123 !s108 1362446634.809000
+Z124 !s107 \\psf\Home\Documents\cse141L\mux_0.v|
+Z125 !s90 -reportprogress|300|-work|work|\\psf\Home\Documents\cse141L\mux_0.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux_1
-Z118 IeEJdUEf_ggd][Cd:TB6jm2
-Z119 VG=TN;ND@oWP?z?k3Iz5MX3
-R3
+Z126 !s100 RFJF67D[6FB8>3dhaKadj0
+Z127 IeEJdUEf_ggd][Cd:TB6jm2
+Z128 VG=TN;ND@oWP?z?k3Iz5MX3
 R4
-Z120 8//psf/Home/Documents/cse141L/mux_1.v
-Z121 F//psf/Home/Documents/cse141L/mux_1.v
+R5
+Z129 8//psf/Home/Documents/cse141L/mux_1.v
+Z130 F//psf/Home/Documents/cse141L/mux_1.v
 L0 20
-R7
+R8
 r1
 31
-R8
-Z122 !s100 RFJF67D[6FB8>3dhaKadj0
-Z123 !s108 1362442832.086000
-Z124 !s107 //psf/Home/Documents/cse141L/mux_1.v|
-Z125 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux_1.v|
+R9
+Z131 !s108 1362446634.887000
+Z132 !s107 //psf/Home/Documents/cse141L/mux_1.v|
+Z133 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vnext_pc_logic
-Z126 I6hb]dm^kM6H78:YV^b7Yc0
-Z127 V3FP`J9na<zI<>@>XSaAMg2
-R3
+Z134 !s100 O5NZlB5?>o4JJ0fV85^lE1
+Z135 I6hb]dm^kM6H78:YV^b7Yc0
+Z136 V3FP`J9na<zI<>@>XSaAMg2
 R4
-Z128 8//psf/Home/Documents/cse141L/next_pc_logic.v
-Z129 F//psf/Home/Documents/cse141L/next_pc_logic.v
+R5
+Z137 8//psf/Home/Documents/cse141L/next_pc_logic.v
+Z138 F//psf/Home/Documents/cse141L/next_pc_logic.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z130 !s100 O5NZlB5?>o4JJ0fV85^lE1
-Z131 !s108 1362442832.367000
-Z132 !s107 //psf/Home/Documents/cse141L/next_pc_logic.v|
-Z133 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/next_pc_logic.v|
+R9
+Z139 !s108 1362446635.184000
+Z140 !s107 //psf/Home/Documents/cse141L/next_pc_logic.v|
+Z141 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/next_pc_logic.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vNEXT_PC_TB
-Z134 IBlFRVzUZ:o>K:jJ3@7QX30
-Z135 Vd2h92ZkGLiao[UDg5[@5<2
-R3
-R54
-Z136 8//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v
-Z137 F//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v
+Z142 !s100 o8ITM`1P@]96[D5373d:m3
+Z143 IBlFRVzUZ:o>K:jJ3@7QX30
+Z144 Vd2h92ZkGLiao[UDg5[@5<2
+R4
+R95
+Z145 8//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v
+Z146 F//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z138 n@n@e@x@t_@p@c_@t@b
-Z139 !s100 o8ITM`1P@]96[D5373d:m3
-Z140 !s108 1362442831.180000
-Z141 !s107 //psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v|
-Z142 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v|
+R9
+Z147 n@n@e@x@t_@p@c_@t@b
+Z148 !s108 1362446633.965000
+Z149 !s107 //psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v|
+Z150 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/next_pc_logic_testbench.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vpc
-Z143 Ih7ec1;oF:IWNiLLUF7b692
-Z144 V<g10P``4f19XDYoFQ[S2R2
-R3
+Z151 !s100 dBmdkM=[i]I7zCfG<mSAI3
+Z152 Ih7ec1;oF:IWNiLLUF7b692
+Z153 V<g10P``4f19XDYoFQ[S2R2
 R4
-Z145 8//psf/Home/Documents/cse141L/pc.v
-Z146 F//psf/Home/Documents/cse141L/pc.v
+R5
+Z154 8//psf/Home/Documents/cse141L/pc.v
+Z155 F//psf/Home/Documents/cse141L/pc.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z147 !s100 dBmdkM=[i]I7zCfG<mSAI3
-Z148 !s108 1362442832.445000
-Z149 !s107 //psf/Home/Documents/cse141L/pc.v|
-Z150 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/pc.v|
+R9
+Z156 !s108 1362446635.262000
+Z157 !s107 //psf/Home/Documents/cse141L/pc.v|
+Z158 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/pc.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vprocessor
-Z151 IOB=j1<CehEZh_Xo>3z8AS3
-Z152 V[D6C?RfW_ch@fIKghO<S@3
-R3
-R15
-Z153 8//psf/Home/Documents/cse141L/processor.v
-Z154 F//psf/Home/Documents/cse141L/processor.v
+Z159 !s100 lYa3nhgS]@:BV[oCI:OT23
+Z160 IOB=j1<CehEZh_Xo>3z8AS3
+Z161 V[D6C?RfW_ch@fIKghO<S@3
+R4
+Z162 w1362446327
+Z163 8//psf/Home/Documents/cse141L/processor.v
+Z164 F//psf/Home/Documents/cse141L/processor.v
 L0 19
-R7
+R8
 r1
 31
-R8
-Z155 !s100 lYa3nhgS]@:BV[oCI:OT23
-Z156 !s108 1362442832.523000
-Z157 !s107 //psf/Home/Documents/cse141L/processor.v|
-Z158 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/processor.v|
+R9
+Z165 !s108 1362446635.340000
+Z166 !s107 //psf/Home/Documents/cse141L/processor.v|
+Z167 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/processor.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vprogram_runner_1
-Z159 I^ZlXFRDgcYL`Q^`gLG2>00
-Z160 VF4dn3_hhBUIYA]o8lWP[i0
-R3
-R15
-Z161 8//psf/Home/Documents/cse141L/testbench/program_runner_1.v
-Z162 F//psf/Home/Documents/cse141L/testbench/program_runner_1.v
+Z168 !s100 VlD[b^lZV]B2cMbiCkF1J3
+Z169 I^ZlXFRDgcYL`Q^`gLG2>00
+Z170 VF4dn3_hhBUIYA]o8lWP[i0
+R4
+R44
+Z171 8//psf/Home/Documents/cse141L/testbench/program_runner_1.v
+Z172 F//psf/Home/Documents/cse141L/testbench/program_runner_1.v
 L0 3
-R7
+R8
 r1
 31
-R8
-Z163 !s100 VlD[b^lZV]B2cMbiCkF1J3
-Z164 !s108 1362442831.273000
-Z165 !s107 //psf/Home/Documents/cse141L/testbench/program_runner_1.v|
-Z166 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/program_runner_1.v|
+R9
+Z173 !s108 1362446634.059000
+Z174 !s107 //psf/Home/Documents/cse141L/testbench/program_runner_1.v|
+Z175 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/program_runner_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vregister_file
-Z167 I>^kDL39NiV=F46jMYbUK`1
-Z168 V79Hf?5f1mQ6e:XAAWG@@<2
-R3
-Z169 w1362442641
-Z170 8//psf/Home/Documents/cse141L/register_file.v
-Z171 F//psf/Home/Documents/cse141L/register_file.v
+Z176 !s100 k=S6n1;XoGzjIdO<7F@]V3
+Z177 IWI>XXLeinR59P3G664Q3C3
+Z178 V79Hf?5f1mQ6e:XAAWG@@<2
+R4
+Z179 w1362444901
+Z180 8//psf/Home/Documents/cse141L/register_file.v
+Z181 F//psf/Home/Documents/cse141L/register_file.v
 L0 4
-R7
+R8
 r1
 31
-R8
-Z172 !s100 U=I@?zAMVUQ]XdW=02:0:1
-Z173 !s108 1362442832.586000
-Z174 !s107 //psf/Home/Documents/cse141L/register_file.v|
-Z175 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/register_file.v|
+R9
 !i10b 1
 !s85 0
+Z182 !s108 1362446635.418000
+Z183 !s107 //psf/Home/Documents/cse141L/register_file.v|
+Z184 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/register_file.v|
 !s101 -O0
 vsign_extender
-Z176 I]UX?zMLiSXY1@:]8L>I`^0
-Z177 VLKLLac?Pddcd?CVNUIFmR3
-R3
-R15
-Z178 8//psf/Home/Documents/cse141L/sign_extender.v
-Z179 F//psf/Home/Documents/cse141L/sign_extender.v
-L0 3
-R7
-r1
-31
-R8
 !i10b 1
-Z180 !s100 7jJ6=JR2Z;iV`7;F3je<?1
+Z185 !s100 7jJ6=JR2Z;iV`7;F3je<?1
+Z186 I]UX?zMLiSXY1@:]8L>I`^0
+Z187 VLKLLac?Pddcd?CVNUIFmR3
+R4
+R44
+Z188 8//psf/Home/Documents/cse141L/sign_extender.v
+Z189 F//psf/Home/Documents/cse141L/sign_extender.v
+L0 3
+R8
+r1
 !s85 0
-Z181 !s108 1362442832.664000
-Z182 !s107 //psf/Home/Documents/cse141L/sign_extender.v|
-Z183 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/sign_extender.v|
+31
+!s108 1362446635.496000
+!s107 //psf/Home/Documents/cse141L/sign_extender.v|
+!s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/sign_extender.v|
 !s101 -O0
+R9

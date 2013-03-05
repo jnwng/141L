@@ -4,7 +4,7 @@
 `define op_sub 3'b001
 `define op_and 3'b010
 `define op_or  3'b011
-`define op_epar 3'b100
+`define op_epar 3'b101
 `define op_branch 3'b100
 
 module ALU
