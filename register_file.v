@@ -15,18 +15,16 @@ module register_file
 );
   
    reg [15:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, res;
-	
-	
-	
-	assign res_val = res;
-	assign reg_val = reg_sel == 3'b000 ? reg0 :
-						  reg_sel == 3'b001 ? reg1 :
-						  reg_sel == 3'b010 ? reg2 :
-						  reg_sel == 3'b011 ? reg3 :
-						  reg_sel == 3'b100 ? reg4 :
-						  reg_sel == 3'b101 ? reg5 :
-						  reg_sel == 3'b110 ? reg6 : reg7 ;
-	
+
+		assign res_val = comp ? reg7 : res;
+		assign reg_val = comp ? reg6 : reg_sel == 3'b000 ? reg0 :
+							reg_sel == 3'b001 ? reg1 :
+							reg_sel == 3'b010 ? reg2 :
+							reg_sel == 3'b011 ? reg3 :
+							reg_sel == 3'b100 ? reg4 :
+							reg_sel == 3'b101 ? reg5 :
+							reg_sel == 3'b110 ? reg6 : reg7 ;
+
 	always @(negedge clk) begin
 		if (cpyout) begin
 			case (reg_sel)
