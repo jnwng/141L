@@ -19,16 +19,16 @@
 module control
 (
 	input format,
-   input [3:0] opcode,						// are we copying value from a res into a register
+   input [3:0] opcode,			// are we copying value from a res into a register
 	input sign,						// are we copying a value out?
-	output reg cpin,		   // value of res
-	output reg cpout,			// value of specified register
+	output reg cpin,		      // value of res
+	output reg cpout,			   // value of specified register
 	output reg memRead,
 	output reg memWrite,
 	output reg [1:0] writeSrc,
 	output reg halt,
 	output reg branch,
-	output reg jump
+	output reg jump	
 );
 
 initial begin
@@ -36,6 +36,9 @@ initial begin
 	jump = 0;
 	cpin = 0;
 	cpout = 0;
+	memRead = 0;
+	memWrite = 0;
+	halt = 0;
 end
 
 	
@@ -46,6 +49,7 @@ end
 		cpout <= 0;
 		memRead <= 0;
 		memWrite <= 0;
+		writeSrc <= 1'bZ;
 		case (format)
 			0: begin
 				$display("Res.");

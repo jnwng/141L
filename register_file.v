@@ -27,10 +27,10 @@ module register_file
 						  reg_sel == 3'b101 ? reg5 :
 						  reg_sel == 3'b110 ? reg6 : reg7 ;
 	
-	always @ (cpyin) begin
-		res <= reg_val;
-	end
 	always @(negedge clk) begin
+		if (cpyin) begin
+			res = reg_val;
+		end
 		if (cpyout) begin
 			case (reg_sel)
 				3'b000:	reg0 <= res_val;
