@@ -11,7 +11,7 @@ cpout $s1            # we store index in $s1
 
 loop:
 res 1               # increment index by 1
-add $s1             #   we add 1 to res (index)
+add 1, $s1             #   we add 1 to res (index)
 cpout $s1           #   and copy it back into index
 
 # Checking to see if we are at the last element in our array

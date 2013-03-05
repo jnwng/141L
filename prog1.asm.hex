@@ -1,37 +1,37 @@
-0: begin instr_out = 000000001 end;
-1: begin instr_out = 100010000 end;
-2: begin instr_out = 000011111 end;
-3: begin instr_out = 101111001 end;
-4: begin instr_out = 000000001 end;
-5: begin instr_out = 100000001 end;
-6: begin instr_out = 101111001 end;
-7: begin instr_out = 001010000 end;
-8: begin instr_out = 101111111 end;
-9: begin instr_out = 101110001 end;
-10: begin instr_out = 101110000 end;
-11: begin instr_out = 000100010 end;
-12: begin instr_out = 101000000 end;
-13: begin instr_out = 000000000 end;
-14: begin instr_out = 101110000 end;
-15: begin instr_out = 101110000 end;
-16: begin instr_out = 101111111 end;
-17: begin instr_out = 000011110 end;
-18: begin instr_out = 101001000 end;
-19: begin instr_out = 101110001 end;
-20: begin instr_out = 100010010 end;
-21: begin instr_out = 101110010 end;
-22: begin instr_out = 101110000 end;
-23: begin instr_out = 101010101 end;
-24: begin instr_out = 100000101 end;
-25: begin instr_out = 101110000 end;
-26: begin instr_out = 000000100 end;
-27: begin instr_out = 101111100 end;
-28: begin instr_out = 100110100 end;
-29: begin instr_out = 001100000 end;
-30: begin instr_out = 100100000 end;
-31: begin instr_out = 110110000 end;
-32: begin instr_out = 001111111 end;
-33: begin instr_out = 101111101 end;
-34: begin instr_out = 001100000 end;
-35: begin instr_out = 100100101 end;
-36: begin instr_out = 110110000 end;
+000000001
+100010000
+000011111
+101111001
+000000001
+100001001
+101111001
+001010000
+101111110
+101110001
+101111111
+000100010
+101000000
+000000000
+101111111
+101110000
+101111110
+000011110
+101001000
+101110001
+100010010
+101110010
+101110000
+101010101
+100000101
+101110000
+000000100
+101111100
+100110100
+001100000
+100100000
+110110000
+001111111
+101111101
+001100000
+100100101
+110110000

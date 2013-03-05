@@ -51,7 +51,6 @@ module instr_rom_1
         33: begin instr_out = 9'b001100000; end
         34: begin instr_out = 9'b100100101; end  	
         endcase
-		$display("Program Counter %d", pc_in);
 	end
 
 	assign format = instr_out[8];

@@ -73,7 +73,7 @@ branch 1
 # if we do not increment, we move to the next hash table entry
 res 2                                                                              
 # change our place in the hash table
-add $t1
+add 1, $t1
 cpout $t1
 # else, continue the loop
 res loophash
@@ -96,13 +96,13 @@ res 1
 cpout $t2                                                                          
 # t2 = 1 
 res 1
-add $c1
+add 1, $c1
 # then we store 1 as the value
 store $t2                                                                          
 # we have now stored the value 1 next to the key
 res 2
 # we then increment the hash table size
-add $c1                                                                            
+add 1, $c1                                                                            
 # create a new index / end of hash table
 cpout $s0                                                                          
 # this is the new end of the hash table
@@ -118,14 +118,14 @@ jump loop
 increment:
 # here we are passed the current index we found a match with in the hash table
 res 1
-add $t1                                                                            
+add 1, $t1                                                                            
 # current place in hash table
 cpout $t3
 load $t2                                                                           
 # $t1 is the value of our hash key
 # we get the corresponding value, and add 1 to it, and then store it
 res 1
-add $t2                                                                            
+add 1, $t2                                                                            
 # increment that value by 1
 cpout $t2
 cpin $t3
@@ -177,7 +177,7 @@ res tie
 branch 1
 # else, run through loop again
 res 2
-add $t1
+add 1, $t1
 cpout $t1                                                                          
 # move onto the next hash table value
 res loop_highest
@@ -197,7 +197,7 @@ add 0, $t1
 load $s1                                                                           
 # this is the number occuring the most times
 res 2
-add $t1
+add 1, $t1
 cpout $t1                                                                          
 # move onto the next hash table value
 res loop_highest
@@ -229,7 +229,7 @@ num2:
 cpin $c2
 cpout $s1
 res 2
-add $t1
+add 1, $t1
 # then we return to the loop
 cpout $t1                                                                          
 # move onto the next hash table value
