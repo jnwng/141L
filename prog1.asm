@@ -7,7 +7,7 @@ load $s0            #   is stored in s0
 
 # 32 is initial index of array but loop increments by 1
 res 31              # index is 31
-cpin $s1            # we store index in $s1
+cpout $s1            # we store index in $s1
 
 loop:
 res 1               # increment index by 1

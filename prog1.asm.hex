@@ -1,7 +1,7 @@
 0: begin instr_out = 000000001 end;
 1: begin instr_out = 100010000 end;
 2: begin instr_out = 000011111 end;
-3: begin instr_out = 101110001 end;
+3: begin instr_out = 101111001 end;
 4: begin instr_out = 000000001 end;
 5: begin instr_out = 100000001 end;
 6: begin instr_out = 101111001 end;
