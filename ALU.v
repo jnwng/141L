@@ -28,14 +28,17 @@ module ALU
   always @ (op or res or register)
   begin
    case(op)
-      `op_add: begin 
-		out = res + register;
-		$display("res: %d", res);
-		$display("register: %d", register);
-		$display("Add: %d", out);
-		end
-		`op_sub: 
-		 out = res - register;
+      `op_add: begin
+			$display("res: %d", res);
+			$display("register: %d", register);	
+			if (eq) begin
+				out = res + register;
+				$display("Add: %d", out);
+			end else begin
+				out = res - register;
+				$display("Sub: %d", out);
+			end
+		end 
 	   `op_and: out = res & register;
 		`op_or:  out = res | register;
 		`op_epar: begin

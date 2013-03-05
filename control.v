@@ -28,7 +28,8 @@ module control
 	output reg [1:0] writeSrc,
 	output reg halt,
 	output reg branch,
-	output reg jump	
+	output reg jump,
+	output reg signOut
 );
 
 initial begin
@@ -50,6 +51,8 @@ end
 		memRead <= 0;
 		memWrite <= 0;
 		writeSrc <= 1'bZ;
+		signOut <= sign;
+		$display("sign: %d", sign	);
 		case (format)
 			0: begin
 				$display("Res.");
