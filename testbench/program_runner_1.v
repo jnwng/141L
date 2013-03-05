@@ -17,9 +17,9 @@ module program_runner_1;
 		#20 init = 0; restart = 0;
 	end
 	
-	always @ (done)
+	always @ (posedge clock)
 	begin
-		$stop;
+		if (done) begin $stop; end
 	end
 	
 	initial

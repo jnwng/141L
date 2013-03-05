@@ -104,7 +104,6 @@ end
 				endcase
 			end
 		endcase
-		$display(writeSrc);
 		
 	end
 

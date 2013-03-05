@@ -7,7 +7,9 @@ module register_file
    input cpyin,						// are we copying value from a res into a register
 	input cpyout,						// are we copying a value out?
 	input [2:0] reg_sel,			   // select a register
+	output [15:0] cone_reg,
 	output [15:0] res_val,		   // value of res
+	output [15:0] ctwo_reg,
 	output [15:0] reg_val,			// value of specified register
 	input [15:0] write_data,		// write data from alu
 	input comp,
@@ -16,8 +18,10 @@ module register_file
   
    reg [15:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7, res;
 
-	assign res_val = comp ? reg7 : res;
-	assign reg_val = comp ? reg6 : reg_sel == 3'b000 ? reg0 :
+	assign cone_reg = reg6;
+	assign ctwo_reg = reg7;
+	assign res_val = res;
+	assign reg_val = reg_sel == 3'b000 ? reg0 :
 						reg_sel == 3'b001 ? reg1 :
 						reg_sel == 3'b010 ? reg2 :
 						reg_sel == 3'b011 ? reg3 :

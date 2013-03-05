@@ -82,6 +82,13 @@ Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 
 Top level modules:
 	data_ram
 
+} {} {}} //psf/Home/Documents/cse141L/control.v {1 {vlog -work work //psf/Home/Documents/cse141L/control.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module control
+
+Top level modules:
+	control
+
 } {} {}} //psf/Home/Documents/cse141L/ALU.v {1 {vlog -work work //psf/Home/Documents/cse141L/ALU.v
 Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module ALU

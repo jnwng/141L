@@ -28,14 +28,10 @@ module ALU
 		compres <= 0;
 		case(op)
 			`op_add: begin
-				$display("res: %d", res);
-				$display("register: %d", register);	
 				if (eq) begin
 					out <= res + register;
-					$display("Add: %d", out);
 				end else begin
 					out <= res - register;
-					$display("Sub: %d", out);
 				end
 			end
 			`op_epar: begin

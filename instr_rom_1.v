@@ -26,13 +26,13 @@ module instr_rom_1
             8: begin instr_out = 9'b101111110; end
             9: begin instr_out = 9'b101110001; end
             10: begin instr_out = 9'b101111111; end
-            11: begin instr_out = 9'b000100010; end
+            11: begin instr_out = 9'b000100101; end
             12: begin instr_out = 9'b101000000; end
             13: begin instr_out = 9'b000000000; end
             14: begin instr_out = 9'b101111111; end
             15: begin instr_out = 9'b101110000; end
             16: begin instr_out = 9'b101111110; end
-            17: begin instr_out = 9'b000011110; end
+            17: begin instr_out = 9'b000011101; end
             18: begin instr_out = 9'b101001000; end
             19: begin instr_out = 9'b101110001; end
             20: begin instr_out = 9'b100010010; end
@@ -44,14 +44,19 @@ module instr_rom_1
             26: begin instr_out = 9'b000000100; end
             27: begin instr_out = 9'b101111100; end
             28: begin instr_out = 9'b100110100; end
-            29: begin instr_out = 9'b001100000; end
-            30: begin instr_out = 9'b100100000; end
-            31: begin instr_out = 9'b110110000; end
-            32: begin instr_out = 9'b001111111; end
-            33: begin instr_out = 9'b101111101; end
+            29: begin instr_out = 9'b000100000; end
+            30: begin instr_out = 9'b101111010; end
+            31: begin instr_out = 9'b101110001; end
+            32: begin instr_out = 9'b100000010; end
+            33: begin instr_out = 9'b101111001; end
             34: begin instr_out = 9'b001100000; end
-            35: begin instr_out = 9'b100100101; end
+            35: begin instr_out = 9'b100100001; end
             36: begin instr_out = 9'b110110000; end
+            37: begin instr_out = 9'b001111111; end
+            38: begin instr_out = 9'b101111101; end
+            39: begin instr_out = 9'b001100000; end
+            40: begin instr_out = 9'b100100101; end
+            41: begin instr_out = 9'b110110000; end
         endcase
 	end
 

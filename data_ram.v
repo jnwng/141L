@@ -31,6 +31,7 @@ module data_ram
 	always @ (posedge clk)
 	begin
 		if (WriteMem) begin
+			$display("DataIn: %d", DataIn);
 			my_memory[DataAddress] <= DataIn;
 		end
 	end

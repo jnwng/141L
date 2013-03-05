@@ -50,7 +50,6 @@ def get_labels(infile):
                 print "Label: %(label)s @: %(count)s" % {'label': strip_label, 'count': count}
 
                 labels[strip_label] = count
-                instruction_count += 1
             elif comment:
                 pass
             else:

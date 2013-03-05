@@ -48,8 +48,13 @@ jump $t2            #   and jump
 
 # End 1 - when we have succeeded in finding the desired num of even parity numbers
 end1:
-res 96              # endcase, set array index value @ address 96
-store $s0
+res 32              # we need the array index so we take 32
+cpout $t0           #    and put it in a temp
+cpin $s1            #    so we can take our final mem position
+add 0, $t0          #    and do mem position - array start
+cpout $s1           #    to get array index in $s1
+res 96              # endcase, in memory position 96
+store $s1           #    store the array index
 halt
 
 # End 2 - when we finished going through the array and failed.
