@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -249,28 +249,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 176 80))
-	)
-)
-(symbol
-	(rect 1006 408 1190 504)
-	(text "adder" (rect 5 0 32 12)(font "Arial" ))
-	(text "inst4" (rect 8 80 31 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "a[15..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "a[15..0]" (rect 21 27 58 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 184 32)
-		(output)
-		(text "out[15..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "out[15..0]" (rect 93 27 140 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 168 80))
 	)
 )
 (symbol
@@ -702,15 +680,34 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 224 176))
 	)
 )
-(connector
-	(pt 974 416)
-	(pt 974 440)
-	(bus)
-)
-(connector
-	(pt 974 440)
-	(pt 1006 440)
-	(bus)
+(symbol
+	(rect 1022 408 1190 488)
+	(text "adder" (rect 5 0 32 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 27 46 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "a[15..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "a[15..0]" (rect 21 43 58 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "out[15..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "out[15..0]" (rect 108 27 147 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
 )
 (connector
 	(pt 774 176)
@@ -1007,26 +1004,6 @@ applicable agreement for further details.
 (connector
 	(pt 480 456)
 	(pt 486 456)
-	(bus)
-)
-(connector
-	(pt 974 416)
-	(pt 750 416)
-	(bus)
-)
-(connector
-	(pt 750 248)
-	(pt 750 416)
-	(bus)
-)
-(connector
-	(pt 720 248)
-	(pt 750 248)
-	(bus)
-)
-(connector
-	(pt 750 248)
-	(pt 774 248)
 	(bus)
 )
 (connector
@@ -1335,10 +1312,6 @@ applicable agreement for further details.
 	(pt 648 104)
 )
 (connector
-	(pt 648 104)
-	(pt 840 104)
-)
-(connector
 	(pt 472 8)
 	(pt 472 248)
 )
@@ -1441,6 +1414,46 @@ applicable agreement for further details.
 	(pt 472 8)
 	(pt 696 8)
 )
+(connector
+	(pt 750 248)
+	(pt 750 456)
+	(bus)
+)
+(connector
+	(pt 720 248)
+	(pt 750 248)
+	(bus)
+)
+(connector
+	(pt 750 248)
+	(pt 774 248)
+	(bus)
+)
+(connector
+	(pt 750 456)
+	(pt 1022 456)
+	(bus)
+)
+(connector
+	(pt 792 104)
+	(pt 792 440)
+)
+(connector
+	(pt 648 104)
+	(pt 792 104)
+)
+(connector
+	(pt 792 104)
+	(pt 840 104)
+)
+(connector
+	(pt 792 440)
+	(pt 1022 440)
+)
+(connector
+	(pt 1022 440)
+	(pt 1024 440)
+)
 (junction (pt 2032 256))
 (junction (pt 2008 272))
 (junction (pt 1688 96))
@@ -1458,3 +1471,5 @@ applicable agreement for further details.
 (junction (pt 472 248))
 (junction (pt 1664 32))
 (junction (pt 1272 208))
+(junction (pt 792 104))
+(junction (pt 1022 440))

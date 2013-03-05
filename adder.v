@@ -2,10 +2,13 @@
 
 module adder
 (
+   input clock,
 	input [15:0] a,
-	output wire [15:0] out
+	output reg [15:0] out
 );
 
-assign out = a + 1;
+always @ (posedge clock) begin
+	out <= a + 1;
+end
 
 endmodule

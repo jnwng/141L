@@ -49,11 +49,11 @@ end
 		cpout <= 0;
 		memRead <= 0;
 		memWrite <= 0;
-		writeSrc <= 1'bZ;
+		writeSrc <= 2'bZ;
 		case (format)
 			0: begin
-				$display("Res.");
-				writeSrc <= `write_IMM;
+					$display("Res.");
+					writeSrc <= `write_IMM;
 				end
 			1: begin
 				case (opcode)
@@ -63,6 +63,7 @@ end
 					end
 					`op_epar: begin
 						$display("epar");
+						memRead <= 1;
 						writeSrc <= `write_ALU;
 					end
 					`op_cp:	begin
