@@ -15,11 +15,12 @@ module instr_rom_3
 	always @ (pc_in)
 	begin
 		case(pc_in)
+            // changed 2
          0: begin instr_out   = 9'b000000000; end
          1: begin instr_out   = 9'b101111000; end
          2: begin instr_out   = 9'b010000000; end
          3: begin instr_out   = 9'b101111001; end
-         4: begin instr_out   = 9'b001000000; end
+         4: begin instr_out   = 9'b010100000; end
          5: begin instr_out   = 9'b101111110; end
          6: begin instr_out   = 9'b101110001; end
          7: begin instr_out   = 9'b101111111; end
@@ -58,7 +59,7 @@ module instr_rom_3
          41: begin instr_out  = 9'b100001110; end
          42: begin instr_out  = 9'b101111000; end
          43: begin instr_out  = 9'b000000010; end
-         44: begin instr_out  = 9'b100000001; end
+         44: begin instr_out  = 9'b100001001; end
          45: begin instr_out  = 9'b101111001; end
          46: begin instr_out  = 9'b000001001; end
          47: begin instr_out  = 9'b101111010; end
@@ -73,7 +74,7 @@ module instr_rom_3
          56: begin instr_out  = 9'b101110101; end
          57: begin instr_out  = 9'b100100100; end
          58: begin instr_out  = 9'b000000010; end
-         59: begin instr_out  = 9'b100000001; end
+         59: begin instr_out  = 9'b100001001; end
          60: begin instr_out  = 9'b101111001; end
          61: begin instr_out  = 9'b000001001; end
          62: begin instr_out  = 9'b101111010; end
@@ -136,6 +137,7 @@ module instr_rom_3
          119: begin instr_out = 9'b101110001; end
          120: begin instr_out = 9'b101111000; end
          121: begin instr_out = 9'b110110000; end
+           // changed /2
         endcase
 	end
 

@@ -35,8 +35,8 @@ cpout $s1       #   by setting it to 128 (starting position of array)
 # begin processing the hash table.
 
 loop:
-# here we check if the current array index (in $s1) is 64, if so we end the loop
-res 64
+# here we check if the current array index (in $s1) is 160, if so we end the loop
+res 160
 cpout $c1                                                                           
 # This is the address of the end of our array
 cpin $s1
@@ -106,10 +106,10 @@ add 1, $c1
 # create a new index / end of hash table
 cpout $s0                                                                          
 # this is the new end of the hash table
+//should I be res-ing 1?
 res 2
-# NEED TO SUBTRACT HERE!
 # and move on to the next index of the array, and jump back to the loop
-add 0, $s1
+add 1, $s1
 cpout $s1                                                                          
 # we are now on the next index of the array
 res loop
@@ -133,9 +133,9 @@ cpin $t3
 store $t2                                                                          
 # store that as the new value
 # we increment the current index of the array we are looping through, and jump back into the main loop
+//should I be res-ing 1?
 res 2
-# NEED TO SUBTRACT HERE!
-add 0, $s1
+add 1, $s1
 cpout $s1                                                                          
 # we are not on the next index of the array
 res loop
