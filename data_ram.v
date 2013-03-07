@@ -15,7 +15,7 @@ module data_ram
 	// RAM INITIALIZATION
 	initial
 	begin
-		$readmemh("//psf/Home/Documents/cse141L/initMem.list", my_memory);
+		$readmemh("C:/\Users/\DerekLouie/\Desktop/\initMem.list", my_memory);
 	end
 	
 	

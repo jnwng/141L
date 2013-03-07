@@ -57,6 +57,7 @@ module ALU
 						1: compres <= register < res;
 						2: compres <= register > res;
 					endcase
+				$display("Branch Address: %d", compres);
 				end
 			end
 		endcase
