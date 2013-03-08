@@ -113,16 +113,16 @@ def assemble(infile):
             equals_flag = branch.group('equals')
             comp_flag = branch.group('comp')
             if comp_flag:
-                comp_flag = 0 if comp_flag == '<' else 1
+                comp_flag = 1 if comp_flag == '<' else 2
 
             instr = (1 << 4) ^ opcode
             instr = (instr << 1) ^ int(equals_flag)
             branch_str = "%(instr)s %(equals)s"
             instr <<= 3
 
-            if comp_flag:
+            if comp_flag is not None:
                 instr ^= int(comp_flag)
-                branch_str +=  ", %(comp)s"
+                branch_str += ", %(comp)s"
 
             print branch_str % branch.groupdict()
             print bin(instr)
