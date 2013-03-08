@@ -14,7 +14,7 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 12.1 Build 177 11/07/2012 SJ Web Edition"
-// CREATED		"Fri Mar 08 00:26:36 2013"
+// CREATED		"Fri Mar 08 05:35:30 2013"
 
 module processor_3(
 	restart,
@@ -105,6 +105,7 @@ data_ram	b2v_inst12(
 ALU	b2v_inst2(
 	.clock(clock),
 	.eq(sign),
+	.format(format),
 	.ltgt(instr_out),
 	.op(opcode),
 	.register(SYNTHESIZED_WIRE_37),

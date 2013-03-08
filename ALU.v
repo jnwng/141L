@@ -14,7 +14,8 @@ module ALU
 	input eq,
 	output reg compres,
    output reg [15:0] out,
-   input [3:0] op
+   input [3:0] op,
+	input format
 );
 
   reg [15:0] x;
@@ -23,9 +24,10 @@ module ALU
 	compres = 0;
   end
   
-  always @ (op or res or register)
+  always @ (op or res or register or format)
   begin
-		compres = 0;
+		compres <= 0;
+		if (format) begin
 		case(op)
 			`op_add: begin
 				if (eq) begin
@@ -45,20 +47,22 @@ module ALU
 				// input res is $c1
 				// input register is $c2
 				out = res;
+				$display("ltgt: %d", ltgt);
 				if (eq) begin
 					case(ltgt)
-						0:	compres = register == res;
-						1: compres = register <= res;
-						2: compres = register >= res;
+						0:	compres <= res == register;
+						1: compres <= res <= register;
+						2: compres <= res >= register;
 					endcase
 				end else begin
-					case(register)
-						0: compres = register != res;
-						1: compres = register < res;
-						2: compres = register > res;
+					case(ltgt)
+						0: compres <= res != register;
+						1: compres <= res < register;
+						2: compres <= res > register;
 					endcase
 				end
 			end
 		endcase
+		end
   end
 endmodule	

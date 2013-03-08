@@ -159,7 +159,7 @@ branch 1, <
 cpin $t1
 load $c1
 cpin $t3
-load $c2
+cpout $c2
 res gt
 # if the new value is greater than the current one, store it
 branch 0, > 
@@ -217,6 +217,14 @@ jump $t0
 num1:
 cpin $c1
 cpout $s1
+res 2
+add 1, $t1
+# then we return to the loop
+cpout $t1                                                                          
+# move onto the next hash table value
+res loop_highest
+cpout $t0
+jump $t0
 
 num2:
 cpin $c2
