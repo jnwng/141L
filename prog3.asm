@@ -25,15 +25,6 @@ res 0           # initialize s0
 cpout $s0       #   by setting it to 0
 res 128         # initialize s1
 cpout $s1       #   by setting it to 128 (starting position of array)
-
-# here we loop through the array, or every element of the given array (32)
-# for each value in the array we search through the hash table to see if it 
-# already exists, and we increment the number's value (the number is the key 
-# in the hash table) by 1. Otherwise a new entry is made for the number.
-# We do a check at the beginning to make sure the address of the array (IE 
-# its recorded index) is not 64, if it is, the array is finished, and we 
-# begin processing the hash table.
-
 loop:
 # here we check if the current array index (in $s1) is 160, if so we end the loop
 res 160
@@ -107,7 +98,7 @@ add 1, $c1
 cpout $s0                                                                          
 # this is the new end of the hash table
 //should I be res-ing 1?
-res 2
+res 1
 # and move on to the next index of the array, and jump back to the loop
 add 1, $s1
 cpout $s1                                                                          
@@ -134,7 +125,7 @@ store $t2
 # store that as the new value
 # we increment the current index of the array we are looping through, and jump back into the main loop
 //should I be res-ing 1?
-res 2
+res 1 
 add 1, $s1
 cpout $s1                                                                          
 # we are not on the next index of the array
