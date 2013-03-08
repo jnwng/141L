@@ -60,6 +60,7 @@ module register_file
 		else begin
 			res <= write_data;
 		end
+		$display("Res Value: %d", res);
 	end
 
 endmodule	

@@ -894,10 +894,6 @@ applicable agreement for further details.
 	(pt 1704 112)
 )
 (connector
-	(pt 216 -152)
-	(pt 216 152)
-)
-(connector
 	(pt 1704 -152)
 	(pt 216 -152)
 )
