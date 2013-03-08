@@ -6,6 +6,10 @@ module sign_extender
 	output [15:0] extended
 );
 
-	assign extended[15:0] = { {8{extend[7]}}, extend[7:0] };
+	// we don't ever res negative numbers.
+	// assign extended[15:0] = { {8{extend[7]}}, extend[7:0] };
+	//
+	assign extended[15:8] = 8'b00000000;
+	assign extended[7:0] = extend;
 	
 endmodule

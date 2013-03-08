@@ -113,7 +113,8 @@ add 0, $s1
 cpout $s1                                                                          
 # we are now on the next index of the array
 res loop
-jump loop
+cpout $t0
+jump $t0
 
 increment:
 # here we are passed the current index we found a match with in the hash table
@@ -138,7 +139,8 @@ add 0, $s1
 cpout $s1                                                                          
 # we are not on the next index of the array
 res loop
-jump loop
+cpout $t0
+jump $t0
 
 end:
 # we hit this branch if we have finished running through ever element in the array
@@ -209,11 +211,11 @@ tie:
 res 1
 # NEED TO SUBTRACT HERE
 add 0, $t1
-load $c0                                                                           
+load $c1                                                                           
 # c1 is the key of this hash entry
 cpin $s1                                                                           
 # this is currently out winning key
-cpout $c1
+cpout $c2
 res num1
 # we do a branch, if c1 > c2, we set the $s1 to c1
 branch 0, 2                                                                        

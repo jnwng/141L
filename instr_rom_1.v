@@ -8,7 +8,6 @@ module instr_rom_1
 	output wire sign,
 	output wire [2:0] operand,
 	output wire [7:0] immediate
-
 );
 
 	reg [8:0] instr_out;
