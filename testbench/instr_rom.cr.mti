@@ -75,12 +75,89 @@ Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 
 Top level modules:
 	program_runner_1
 
+} {} {}} //psf/Home/Documents/cse141L/processor_2.v {1 {vlog -work work //psf/Home/Documents/cse141L/processor_2.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module processor_2
+
+Top level modules:
+	processor_2
+
+} {} {}} //psf/Home/Documents/cse141L/testbench/program_runner_2.v {1 {vlog -work work //psf/Home/Documents/cse141L/testbench/program_runner_2.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module program_runner_2
+
+Top level modules:
+	program_runner_2
+
+} {} {}} //psf/Home/Documents/cse141L/control.v {1 {vlog -work work //psf/Home/Documents/cse141L/control.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} //psf/Home/Documents/cse141L/processor_3.v {1 {vlog -work work //psf/Home/Documents/cse141L/processor_3.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module processor_3
+
+Top level modules:
+	processor_3
+
+} {} {}} //psf/Home/Documents/cse141L/testbench/program_runner_3.v {1 {vlog -work work //psf/Home/Documents/cse141L/testbench/program_runner_3.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module program_runner_3
+
+Top level modules:
+	program_runner_3
+
 } {} {}} //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v {1 {vlog -work work //psf/Home/Documents/cse141L/testbench/instr_rom_test_bench.v
 Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module INSTR_ROM_TB
 
 Top level modules:
 	INSTR_ROM_TB
+
+} {} {}} //psf/Home/Documents/cse141L/register_file.v {1 {vlog -work work //psf/Home/Documents/cse141L/register_file.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} //psf/Home/Documents/cse141L/instr_rom_1.v {1 {vlog -work work //psf/Home/Documents/cse141L/instr_rom_1.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instr_rom_1
+
+Top level modules:
+	instr_rom_1
+
+} {} {}} //psf/Home/Documents/cse141L/instr_rom_2.v {1 {vlog -work work //psf/Home/Documents/cse141L/instr_rom_2.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instr_rom_2
+
+Top level modules:
+	instr_rom_2
+
+} {} {}} //psf/Home/Documents/cse141L/sign_extender.v {1 {vlog -work work //psf/Home/Documents/cse141L/sign_extender.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sign_extender
+
+Top level modules:
+	sign_extender
+
+} {} {}} //psf/Home/Documents/cse141L/instr_rom_3.v {1 {vlog -work work //psf/Home/Documents/cse141L/instr_rom_3.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instr_rom_3
+
+Top level modules:
+	instr_rom_3
+
+} {} {}} //psf/Home/Documents/cse141L/processor.v {1 {vlog -work work //psf/Home/Documents/cse141L/processor.v
+Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module processor
+
+Top level modules:
+	processor
 
 } {} {}} //psf/Home/Documents/cse141L/adder.v {1 {vlog -work work //psf/Home/Documents/cse141L/adder.v
 Model Technology ModelSim PE Student Edition vlog 10.1d Compiler 2012.11 Nov  2 2012
