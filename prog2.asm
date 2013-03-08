@@ -33,7 +33,7 @@ cpout $t2
 
 # Set $t1 back to the original count
 cpin $s1        
-cpyout $t1
+cpout $t1
 # And jump to multiply branch, with original number in $t1, and num -1 in $t2
 # Set our multiply label to $t3
 res multiply
