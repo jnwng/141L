@@ -182,9 +182,11 @@ gt:
 cpin $c1
 cpout $t3
 res 1
+cpout $t0
+cpin $t1
 # we subtract to get to the 0 offset to get the key corresponding to the value
 # NEED TO SUBTRACT HERE
-add 0, $t1
+add 0, $t0
 load $s1                                                                           
 # this is the number occuring the most times
 res 2
@@ -198,8 +200,10 @@ jump $t0
 tie:
 # if we have a tie between max values, we have to choose the key that is larger.
 res 1
+cpout $t0
+cpin $t1
 # NEED TO SUBTRACT HERE
-add 0, $t1
+add 0, $t0
 load $c1                                                                           
 # c1 is the key of this hash entry
 cpin $s1                                                                           
@@ -238,9 +242,10 @@ res loop_highest
 cpout $t0
 jump $t0
 
-# finally if we finish running through the hash map, we return the number occuring the most times in $s0
+# finally if we finish running through the hash map, we return the number occuring in mem slot 64
 return:
 cpin $s1
-cpout $s0
+res 64
+store $s1
 halt
 

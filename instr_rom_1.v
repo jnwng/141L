@@ -26,7 +26,7 @@ module instr_rom_1
             9: begin instr_out = 9'b101110001; end
             10: begin instr_out = 9'b101111111; end
             11: begin instr_out = 9'b000100101; end
-            12: begin instr_out = 9'b101000000; end
+            12: begin instr_out = 9'b101000001; end
             13: begin instr_out = 9'b000000000; end
             14: begin instr_out = 9'b101111111; end
             15: begin instr_out = 9'b101110000; end
