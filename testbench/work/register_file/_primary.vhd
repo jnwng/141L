@@ -12,6 +12,7 @@ entity register_file is
         reg_val         : out    vl_logic_vector(15 downto 0);
         write_data      : in     vl_logic_vector(15 downto 0);
         comp            : in     vl_logic;
-        memLoad         : in     vl_logic
+        memLoad         : in     vl_logic;
+        regWrite        : in     vl_logic
     );
 end register_file;

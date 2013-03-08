@@ -1,7 +1,3 @@
-# inspected by: lewisf
-#
-#
-
 # value initialization
 res 0               # Put 0 in res
 load $s0            #  so we can load the value at address 0, which is also our count register.
@@ -24,6 +20,7 @@ branch 1            #   then our factorial is done
 # Set $t0 to 1
 res 1               
 cpout $t0
+cpout $t2
 
 cpin $s0            # Get our original counter into $res
 add 0, $t2          # res = res - 1
@@ -33,7 +30,7 @@ cpout $t2
 
 # Set $t1 back to the original count
 cpin $s1        
-cpyout $t1
+cpout $t1
 # And jump to multiply branch, with original number in $t1, and num -1 in $t2
 # Set our multiply label to $t3
 res multiply
@@ -44,7 +41,9 @@ fac1:
 cpout $s1       # Save multiply result
 
 res 1
-add 0, $s0
+cpout $t0
+cpin $s0
+add 0, $t0
 cpout $s0 # Subtract 1 from the original count
 
 # Loop back with the count -1 value.
@@ -53,8 +52,9 @@ cpout $t2
 jump $t2
 
 endfac:
-res 8
+res 15
 store $s1
+halt
 
 
 multiply:       

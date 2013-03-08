@@ -9,6 +9,7 @@ entity ALU is
         eq              : in     vl_logic;
         compres         : out    vl_logic;
         \out\           : out    vl_logic_vector(15 downto 0);
-        op              : in     vl_logic_vector(3 downto 0)
+        op              : in     vl_logic_vector(3 downto 0);
+        format          : in     vl_logic
     );
 end ALU;

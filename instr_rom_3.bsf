@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2012 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -20,52 +20,52 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 264 144)
-	(text "instr_rom_3" (rect 5 0 82 12)(font "Arial" ))
-	(text "inst" (rect 8 112 36 124)(font "Arial" ))
+	(rect 16 16 224 160)
+	(text "instr_rom_3" (rect 5 0 54 12)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "pc_in[15..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "pc_in[15..0]" (rect 21 27 105 39)(font "Arial" ))
+		(text "pc_in[15..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "pc_in[15..0]" (rect 21 27 65 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
-		(pt 248 32)
+		(pt 208 32)
 		(output)
-		(text "format" (rect 0 0 42 12)(font "Arial" ))
-		(text "format" (rect 185 27 227 39)(font "Arial" ))
-		(line (pt 248 32)(pt 232 32)(line_width 1))
+		(text "format" (rect 0 0 27 12)(font "Arial" ))
+		(text "format" (rect 160 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 1))
 	)
 	(port
-		(pt 248 48)
+		(pt 208 48)
 		(output)
-		(text "opcode[3..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "opcode[3..0]" (rect 143 43 227 55)(font "Arial" ))
-		(line (pt 248 48)(pt 232 48)(line_width 3))
+		(text "opcode[3..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "opcode[3..0]" (rect 139 43 187 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
 	)
 	(port
-		(pt 248 64)
+		(pt 208 64)
 		(output)
-		(text "sign" (rect 0 0 28 12)(font "Arial" ))
-		(text "sign" (rect 199 59 227 71)(font "Arial" ))
-		(line (pt 248 64)(pt 232 64)(line_width 1))
+		(text "sign" (rect 0 0 15 12)(font "Arial" ))
+		(text "sign" (rect 172 59 187 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64)(line_width 1))
 	)
 	(port
-		(pt 248 80)
+		(pt 208 80)
 		(output)
-		(text "operand[2..0]" (rect 0 0 92 12)(font "Arial" ))
-		(text "operand[2..0]" (rect 135 75 227 87)(font "Arial" ))
-		(line (pt 248 80)(pt 232 80)(line_width 3))
+		(text "operand[2..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "operand[2..0]" (rect 136 75 187 87)(font "Arial" ))
+		(line (pt 208 80)(pt 192 80)(line_width 3))
 	)
 	(port
-		(pt 248 96)
+		(pt 208 96)
 		(output)
-		(text "immediate[7..0]" (rect 0 0 106 12)(font "Arial" ))
-		(text "immediate[7..0]" (rect 121 91 227 103)(font "Arial" ))
-		(line (pt 248 96)(pt 232 96)(line_width 3))
+		(text "immediate[7..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "immediate[7..0]" (rect 127 91 187 103)(font "Arial" ))
+		(line (pt 208 96)(pt 192 96)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 232 112)(line_width 1))
+		(rectangle (rect 16 16 192 128)(line_width 1))
 	)
 )
