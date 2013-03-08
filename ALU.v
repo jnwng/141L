@@ -29,9 +29,9 @@ module ALU
 		case(op)
 			`op_add: begin
 				if (eq) begin
-					out <= res + register;
+					out <= register + res;
 				end else begin
-					out <= res - register;
+					out <= register - res;
 				end
 			end
 			`op_epar: begin
@@ -42,9 +42,7 @@ module ALU
 				out = ((16'h6996 >> x) & 1);
 			end 
 			`op_branch: begin
-				// input res is $c1
-				// input register is $c2
-				out = 0;
+			  out = res;
 				if (eq) begin
 					case(ltgt)
 						0:	compres = register == res;

@@ -28,7 +28,8 @@ module control
 	output reg [1:0] writeSrc,
 	output reg halt,
 	output reg branch,
-	output reg jump
+	output reg jump,
+	output reg regWrite
 );
 
 initial begin
@@ -38,6 +39,7 @@ initial begin
 	cpout = 0;
 	memRead = 0;
 	memWrite = 0;
+	regWrite = 1;
 	halt = 0;
 end
 
@@ -50,6 +52,7 @@ end
 		memRead <= 0;
 		memWrite <= 0;
 		writeSrc <= 2'bZ;
+		regWrite <= 1;
 		case (format)
 			0: begin
 					$display("Res.");
@@ -84,18 +87,23 @@ end
 					`op_store: begin
 						$display("store");
 						memWrite <= 1;
+						regWrite <= 0;
 					end
 					`op_branch: begin
 						$display("Branch.");
 						branch <= 1;
+						writeSrc <= 2'bZ;
+						regWrite <= 0;
 					end
 					`op_jump: begin
 						$display("Jump.");
 						jump <= 1;
+						regWrite <= 0;
 					end
 					`op_halt: begin
 						$display("halt");
 						halt <= 1;
+						regWrite <= 0;
 					end
 					default: begin
 						$display("default");

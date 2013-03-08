@@ -12,6 +12,7 @@ entity control is
         writeSrc        : out    vl_logic_vector(1 downto 0);
         halt            : out    vl_logic;
         branch          : out    vl_logic;
-        jump            : out    vl_logic
+        jump            : out    vl_logic;
+        regWrite        : out    vl_logic
     );
 end control;

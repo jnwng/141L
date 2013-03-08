@@ -37,7 +37,7 @@ cpout $s1       #   by setting it to 128 (starting position of array)
 loop:
 # here we check if the current array index (in $s1) is 64, if so we end the loop
 res 64
-cpout $c1                                                                           
+cpin $c1                                                                           
 # This is the address of the end of our array
 cpin $s1
 cpout $c2                                                                          
@@ -58,7 +58,7 @@ loophash:
 cpin $s0
 cpout $c1
 cpin $t1
-cpout $c2
+cpout $c1
 res new_entry                                                                      
 # If we have finished searching the hash table, we create a new entry
 branch 1
@@ -88,7 +88,7 @@ cpin $s1
 # res is now the address of the current array value
 load $t1                                                                           
 # t1 is the value of our current int
-cpin $c1
+res $c1
 # then we store that as the hash table key
 store $t1                                                                          
 # store the index at the end of the hash table
@@ -113,8 +113,7 @@ add 0, $s1
 cpout $s1                                                                          
 # we are now on the next index of the array
 res loop
-cpout $t0
-jump $t0
+jump loop
 
 increment:
 # here we are passed the current index we found a match with in the hash table
@@ -139,8 +138,7 @@ add 0, $s1
 cpout $s1                                                                          
 # we are not on the next index of the array
 res loop
-cpout $t0
-jump $t0
+jump loop
 
 end:
 # we hit this branch if we have finished running through ever element in the array
@@ -211,11 +209,11 @@ tie:
 res 1
 # NEED TO SUBTRACT HERE
 add 0, $t1
-load $c1                                                                           
+load $c0                                                                           
 # c1 is the key of this hash entry
 cpin $s1                                                                           
 # this is currently out winning key
-cpout $c2
+cpout $c1
 res num1
 # we do a branch, if c1 > c2, we set the $s1 to c1
 branch 0, 2                                                                        
