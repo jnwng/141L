@@ -18,26 +18,17 @@
 # Global (after end label):
 # $s0 = current place in hash table (the end of it)
 # $s1 = the number occuring the most
-
-
 # The Setup
+
+
 res 0           # initialize s0
 cpout $s0       #   by setting it to 0
 res 128         # initialize s1
 cpout $s1       #   by setting it to 128 (starting position of array)
-
-# here we loop through the array, or every element of the given array (32)
-# for each value in the array we search through the hash table to see if it 
-# already exists, and we increment the number's value (the number is the key 
-# in the hash table) by 1. Otherwise a new entry is made for the number.
-# We do a check at the beginning to make sure the address of the array (IE 
-# its recorded index) is not 64, if it is, the array is finished, and we 
-# begin processing the hash table.
-
 loop:
-# here we check if the current array index (in $s1) is 64, if so we end the loop
-res 64
-cpin $c1                                                                           
+# here we check if the current array index (in $s1) is 160, if so we end the loop
+res 160
+cpout $c1                                                                           
 # This is the address of the end of our array
 cpin $s1
 cpout $c2                                                                          
@@ -58,7 +49,7 @@ loophash:
 cpin $s0
 cpout $c1
 cpin $t1
-cpout $c1
+cpout $c2
 res new_entry                                                                      
 # If we have finished searching the hash table, we create a new entry
 branch 1
@@ -88,7 +79,7 @@ cpin $s1
 # res is now the address of the current array value
 load $t1                                                                           
 # t1 is the value of our current int
-res $c1
+cpin $c1
 # then we store that as the hash table key
 store $t1                                                                          
 # store the index at the end of the hash table
@@ -106,14 +97,14 @@ add 1, $c1
 # create a new index / end of hash table
 cpout $s0                                                                          
 # this is the new end of the hash table
-res 2
-# NEED TO SUBTRACT HERE!
+res 1
 # and move on to the next index of the array, and jump back to the loop
-add 0, $s1
+add 1, $s1
 cpout $s1                                                                          
 # we are now on the next index of the array
 res loop
-jump loop
+cpout $t0
+jump $t0 
 
 increment:
 # here we are passed the current index we found a match with in the hash table
@@ -132,13 +123,13 @@ cpin $t3
 store $t2                                                                          
 # store that as the new value
 # we increment the current index of the array we are looping through, and jump back into the main loop
-res 2
-# NEED TO SUBTRACT HERE!
-add 0, $s1
+res 1 
+add 1, $s1
 cpout $s1                                                                          
 # we are not on the next index of the array
 res loop
-jump loop
+cpout $t0
+jump $t0
 
 end:
 # we hit this branch if we have finished running through ever element in the array
@@ -162,7 +153,7 @@ cpout $c1
 cpin $t1
 cpout $c2
 res return
-branch 1
+branch 1, <
 # else we compare the value of the current key to see if it occurs more
 # if it has a greater value, we reset the max, and save the key
 cpin $t1
@@ -171,7 +162,7 @@ cpin $t3
 load $c2
 res gt
 # if the new value is greater than the current one, store it
-branch 0, 2
+branch 0, > 
 # if it is equal, store the bigger key
 res tie
 branch 1
@@ -209,22 +200,24 @@ tie:
 res 1
 # NEED TO SUBTRACT HERE
 add 0, $t1
-load $c0                                                                           
+load $c1                                                                           
 # c1 is the key of this hash entry
 cpin $s1                                                                           
 # this is currently out winning key
-cpout $c1
+cpout $c2
 res num1
 # we do a branch, if c1 > c2, we set the $s1 to c1
-branch 0, 2                                                                        
+branch 0, >                                                                        
 # if c1 > c2, set $s1 to $c1
 # otherwise we set $s1 to $c2
 res num2
 cpout $t0
 jump $t0
+
 num1:
 cpin $c1
 cpout $s1
+
 num2:
 cpin $c2
 cpout $s1

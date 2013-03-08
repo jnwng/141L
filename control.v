@@ -87,7 +87,6 @@ end
 					`op_store: begin
 						$display("store");
 						memWrite <= 1;
-						regWrite <= 0;
 					end
 					`op_branch: begin
 						$display("Branch.");
