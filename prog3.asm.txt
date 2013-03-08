@@ -4,7 +4,7 @@
 3: begin instr_out = 9'b101111001; end
 4: begin instr_out = 9'b001000000; end
 5: begin instr_out = 9'b101110110; end
-6: begin instr_out = 9'b101110001; end
+6: begin instr_out = 9'b101111001; end
 7: begin instr_out = 9'b101111111; end
 8: begin instr_out = 9'b000111111; end
 9: begin instr_out = 9'b101001000; end
@@ -13,7 +13,7 @@
 12: begin instr_out = 9'b101110000; end
 13: begin instr_out = 9'b101111110; end
 14: begin instr_out = 9'b101110011; end
-15: begin instr_out = 9'b101111110; end
+15: begin instr_out = 9'b101111111; end
 16: begin instr_out = 9'b000011110; end
 17: begin instr_out = 9'b101001000; end
 18: begin instr_out = 9'b101110001; end

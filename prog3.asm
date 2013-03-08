@@ -37,7 +37,7 @@ cpout $s1       #   by setting it to 128 (starting position of array)
 loop:
 # here we check if the current array index (in $s1) is 64, if so we end the loop
 res 64
-cpin $c1                                                                           
+cpout $c1                                                                           
 # This is the address of the end of our array
 cpin $s1
 cpout $c2                                                                          
@@ -58,7 +58,7 @@ loophash:
 cpin $s0
 cpout $c1
 cpin $t1
-cpout $c1
+cpout $c2
 res new_entry                                                                      
 # If we have finished searching the hash table, we create a new entry
 branch 1

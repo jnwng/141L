@@ -25,7 +25,7 @@ module ALU
   
   always @ (op or res or register)
   begin
-		compres <= 0;
+		compres = 0;
 		case(op)
 			`op_add: begin
 				if (eq) begin
@@ -47,15 +47,15 @@ module ALU
 				out = 0;
 				if (eq) begin
 					case(ltgt)
-						0:	compres <= register == res;
-						1: compres <= register <= res;
-						2: compres <= register >= res;
+						0:	compres = register == res;
+						1: compres = register <= res;
+						2: compres = register >= res;
 					endcase
 				end else begin
 					case(register)
-						0: compres <= register != res;
-						1: compres <= register < res;
-						2: compres <= register > res;
+						0: compres = register != res;
+						1: compres = register < res;
+						2: compres = register > res;
 					endcase
 				end
 			end

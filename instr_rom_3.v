@@ -20,7 +20,7 @@ module instr_rom_3
             2: begin instr_out = 9'b010000000; end
             3: begin instr_out = 9'b101111001; end
             4: begin instr_out = 9'b001000000; end
-            5: begin instr_out = 9'b101110110; end
+            5: begin instr_out = 9'b101111110; end
             6: begin instr_out = 9'b101110001; end
             7: begin instr_out = 9'b101111111; end
             8: begin instr_out = 9'b000111111; end
