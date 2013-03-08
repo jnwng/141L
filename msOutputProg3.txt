@@ -1,0 +1,448 @@
+ Res Value:     x
+# instruction number:     0
+# Res.
+#                    0 010
+# Cycle:        x
+# Res Value:     x
+# instruction number:     1
+# cpout
+#                   20 000
+# Cycle:        0
+# Res Value:     0
+# instruction number:     2
+# Res.
+# Cycle:        1
+# Res Value:     x
+# instruction number:     3
+# cpout
+# Cycle:        2
+# Res Value: 65408
+# instruction number:     4
+# Res.
+# Cycle:        3
+# Res Value:     x
+# instruction number:     5
+# cpout
+# Cycle:        4
+# Res Value: 65440
+# instruction number:     6
+# cpin
+# Cycle:        5
+# Res Value:     x
+# instruction number:     7
+# cpout
+# Cycle:        6
+# Res Value: 65408
+# instruction number:     8
+# Res.
+# Cycle:        7
+# Res Value:     x
+# instruction number:     9
+# Branch.
+# Cycle:        8
+# Res Value:    63
+# instruction number:    10
+# Res.
+# Cycle:        9
+# Res Value:     X
+# instruction number:    11
+# cpout
+# Cycle:       10
+# Res Value:     0
+# instruction number:    12
+# cpin
+# Cycle:       11
+# Res Value:     x
+# instruction number:    13
+# cpout
+# Cycle:       12
+# Res Value:     0
+# instruction number:    14
+# cpin
+# Cycle:       13
+# Res Value:     x
+# instruction number:    15
+# cpout
+# Cycle:       14
+# Res Value:     0
+# instruction number:    16
+# Res.
+# Cycle:       15
+# Res Value:     x
+# instruction number:    17
+# Branch.
+# Cycle:       16
+# Res Value:    30
+# instruction number:    30
+# Jump.
+# Cycle:       17
+# Res Value:     X
+# instruction number:    31
+# cpin
+# Cycle:       18
+# Res Value:     X
+# instruction number:    32
+# load
+# Cycle:       19
+# Res Value: 65408
+# instruction number:    33
+# cpin
+# Cycle:       20
+# Res Value: 65408
+# instruction number:    34
+# store
+# Cycle:       21
+# DataIn:     x
+# Res Value:     0
+# instruction number:    35
+# Res.
+# Cycle:       22
+# Res Value:     X
+# instruction number:    36
+# cpout
+# Cycle:       23
+# Res Value:     1
+# instruction number:    37
+# Res.
+# Cycle:       24
+# Res Value:     x
+# instruction number:    38
+# Add.
+# Cycle:       25
+# Res Value:     1
+# instruction number:    39
+# store
+# Cycle:       26
+# DataIn:     1
+# Res Value:     1
+# instruction number:    40
+# Res.
+# Cycle:       27
+# Res Value:     X
+# instruction number:    41
+# Add.
+# Cycle:       28
+# Res Value:     3
+# instruction number:    42
+# cpout
+# Cycle:       29
+# Res Value:     3
+# instruction number:    43
+# Res.
+# Cycle:       30
+# Res Value:     X
+# instruction number:    44
+# Add.
+# Cycle:       31
+# Res Value:     1
+# instruction number:    45
+# cpout
+# Cycle:       32
+# Res Value: 65409
+# instruction number:    46
+# Res.
+# Cycle:       33
+# Res Value:     x
+# instruction number:    47
+# cpout
+# Cycle:       34
+# Res Value:     4
+# instruction number:    48
+# Jump.
+# Cycle:       35
+# Res Value:     x
+# instruction number:    49
+# Res.
+# Cycle:       36
+# Res Value:     x
+# instruction number:    50
+# Add.
+# Cycle:       37
+# Res Value:     1
+# instruction number:    51
+# cpout
+# Cycle:       38
+# Res Value:     x
+# instruction number:    52
+# load
+# Cycle:       39
+# Res Value:     x
+# instruction number:    53
+# Res.
+# Cycle:       40
+# Res Value:     x
+# instruction number:    54
+# Add.
+# Cycle:       41
+# Res Value:     1
+# instruction number:    55
+# cpout
+# Cycle:       42
+# Res Value:     x
+# instruction number:    56
+# cpin
+# Cycle:       43
+# Res Value:     x
+# instruction number:    57
+# store
+# Cycle:       44
+# DataIn:     x
+# Res Value:     x
+# instruction number:    58
+# Res.
+# Cycle:       45
+# Res Value:     x
+# instruction number:    59
+# Add.
+# Cycle:       46
+# Res Value:     1
+# instruction number:    60
+# cpout
+# Cycle:       47
+# Res Value: 65410
+# instruction number:    61
+# Res.
+# Cycle:       48
+# Res Value:     x
+# instruction number:    62
+# cpout
+# Cycle:       49
+# Res Value:     4
+# instruction number:    63
+# Jump.
+# Cycle:       50
+# Res Value:     x
+# instruction number:    64
+# Res.
+# Cycle:       51
+# Res Value:     x
+# instruction number:    65
+# cpout
+# Cycle:       52
+# Res Value:     0
+# instruction number:    66
+# Res.
+# Cycle:       53
+# Res Value:     x
+# instruction number:    67
+# cpout
+# Cycle:       54
+# Res Value:     1
+# instruction number:    68
+# cpin
+# Cycle:       55
+# Res Value:     x
+# instruction number:    69
+# cpout
+# Cycle:       56
+# Res Value:     3
+# instruction number:    70
+# cpin
+# Cycle:       57
+# Res Value:     x
+# instruction number:    71
+# cpout
+# Cycle:       58
+# Res Value:     1
+# instruction number:    72
+# Res.
+# Cycle:       59
+# Res Value:     x
+# instruction number:    73
+# Branch.
+# Cycle:       60
+# Res Value:   124
+# instruction number:    74
+# cpin
+# Cycle:       61
+# Res Value:     X
+# instruction number:    75
+# load
+# Cycle:       62
+# Res Value:     1
+# instruction number:    76
+# cpin
+# Cycle:       63
+# Res Value:     1
+# instruction number:    77
+# cpout
+# Cycle:       64
+# Res Value:     0
+# instruction number:    78
+# Res.
+# Cycle:       65
+# Res Value:     X
+# instruction number:    79
+# Branch Address: 0
+# Branch.
+# Branch Address: 0
+# Cycle:       66
+# Res Value:    87
+# instruction number:    87
+# Jump.
+# Cycle:       67
+# Res Value:     X
+# instruction number:    88
+# cpin
+# Cycle:       68
+# Res Value:     X
+# instruction number:    89
+# cpout
+# Cycle:       69
+# Res Value:     1
+# instruction number:    90
+# Res.
+# Cycle:       70
+# Res Value:     X
+# instruction number:    91
+# Add.
+# Cycle:       71
+# Res Value:     1
+# instruction number:    92
+# load
+# Cycle:       72
+# Res Value:     0
+# instruction number:    93
+# Res.
+# Cycle:       73
+# Res Value:     0
+# instruction number:    94
+# Add.
+# Cycle:       74
+# Res Value:     2
+# instruction number:    95
+# cpout
+# Cycle:       75
+# Res Value:     3
+# instruction number:    96
+# Branch Address: 0
+# Res.
+# Branch Address: 1
+# Cycle:       76
+# Res Value:     X
+# instruction number:    97
+# cpout
+# Cycle:       77
+# Res Value:    67
+# instruction number:    98
+# Jump.
+# Cycle:       78
+# Res Value:     X
+# instruction number:    99
+# Res.
+# Cycle:       79
+# Res Value:     X
+# instruction number:   100
+# Add.
+# Cycle:       80
+# Res Value:     1
+# instruction number:   101
+# load
+# Cycle:       81
+# Res Value: 65534
+# instruction number:   102
+# cpin
+# Cycle:       82
+# Res Value: 65534
+# instruction number:   103
+# cpout
+# Cycle:       83
+# Res Value:     x
+# instruction number:   104
+# Res.
+# Cycle:       84
+# Res Value:     x
+# instruction number:   105
+# Branch Address: 0
+# Branch.
+# Cycle:       85
+# Res Value:   108
+# instruction number:   106
+# Res.
+# Cycle:       86
+# Res Value:     X
+# instruction number:   107
+# cpout
+# Cycle:       87
+# Res Value:   116
+# instruction number:   108
+# Jump.
+# Cycle:       88
+# Res Value:     X
+# instruction number:   109
+# cpin
+# Cycle:       89
+# Res Value:     X
+# instruction number:   110
+# cpout
+# Cycle:       90
+# Res Value:     x
+# instruction number:   111
+# Res.
+# Cycle:       91
+# Res Value:     x
+# instruction number:   112
+# Add.
+# Cycle:       92
+# Res Value:     2
+# instruction number:   113
+# cpout
+# Cycle:       93
+# Res Value:     5
+# instruction number:   114
+# Branch Address: 0
+# Res.
+# Branch Address: 0
+# Cycle:       94
+# Res Value:     X
+# instruction number:   115
+# cpout
+# Cycle:       95
+# Res Value:    67
+# instruction number:   116
+# Jump.
+# Cycle:       96
+# Res Value:     X
+# instruction number:   117
+# cpin
+# Cycle:       97
+# Res Value:     X
+# instruction number:   118
+# cpout
+# Cycle:       98
+# Res Value:     x
+# instruction number:   119
+# Res.
+# Cycle:       99
+# Res Value:     x
+# instruction number:   120
+# Add.
+# Cycle:      100
+# Res Value:     2
+# instruction number:   121
+# cpout
+# Cycle:      101
+# Res Value:     7
+# instruction number:   122
+# Branch Address: 0
+# Res.
+# Branch Address: 0
+# Cycle:      102
+# Res Value:     X
+# instruction number:   123
+# cpout
+# Cycle:      103
+# Res Value:    67
+# instruction number:   124
+# Jump.
+# Cycle:      104
+# Res Value:     X
+# instruction number:   125
+# cpin
+# Cycle:      105
+# Res Value:     X
+# instruction number:   126
+# cpout
+# Cycle:      106
+# Res Value:     x
+# instruction number:   127
