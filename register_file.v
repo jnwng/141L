@@ -42,7 +42,7 @@ module register_file
 				3'b111:	reg7 <= res_val;
 			endcase
 		end
-		if (memLoad) begin
+		else if (memLoad) begin
 			case (reg_sel)
 				3'b000:	reg0 <= write_data;
 				3'b001:	reg1 <= write_data;
@@ -57,7 +57,7 @@ module register_file
 		else if (cpyin) begin
             res <= reg_val;
 		end
-		else begin
+		else if (!cpyout && !cpyin) begin
 			res <= write_data;
 		end
 	end

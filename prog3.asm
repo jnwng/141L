@@ -88,7 +88,7 @@ cpin $s1
 # res is now the address of the current array value
 load $t1                                                                           
 # t1 is the value of our current int
-res $c1
+cpin $c1
 # then we store that as the hash table key
 store $t1                                                                          
 # store the index at the end of the hash table
