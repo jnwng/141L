@@ -3,7 +3,8 @@ res 0               # Put 0 in res
 load $s0            #  so we can load the value at address 0, which is also our count register.
 
 # Start up the saved accumulator register
-# Set $s1 to 0
+# Set $s1 to target number
+res 0
 cpout $s1 
 
 factorial:
@@ -32,7 +33,10 @@ cpout $t2
 cpin $s1        
 cpout $t1
 # And jump to multiply branch, with original number in $t1, and num -1 in $t2
-# Set our multiply label to $t3
+# Set our multiply label to $t3, set our counter in $t0 to zero
+res 0
+cpout $t0
+
 res multiply
 cpout $t3
 jump $t3
@@ -62,7 +66,7 @@ multiply:
 # We want to add $t1 to $t1, $t2 times.
 # Result in $t0
 
-# We want to short circuit if the value in $t0 is 1
+# We want to short circuit if the value in $t2 is 1
 # Base case 1
 res 1
 cpout $c1
@@ -95,6 +99,7 @@ add 0, $t3  # Subtract one from count
 cpout $t2       # Set count to result
 
 # We've done one iteration, now add this number again.
+# $t1 should have remained the same, and $t2 should be one less.
 res multiply
 cpout $t3
 jump $t3

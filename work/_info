@@ -1,178 +1,470 @@
 m255
-K3
+K4
+z2
 13
 cModel Technology
-Z0 d\\psf\Home\Documents\cse141L
+Z0 dD:\Users\Jon\Documents\Homework\141L
+!i10d 8192
+!i10e 25
+!i10f 100
 vadder
-Z1 I=1V:HeQEf4VQkTb;3heA40
-Z2 VGNe@GD^KD][j7O_RTL;Wc1
-Z3 d\\psf\Home\Documents\cse141L
-Z4 w1360011514
-Z5 8//psf/Home/Documents/cse141L/adder.v
-Z6 F//psf/Home/Documents/cse141L/adder.v
+Z1 !s110 1362963770
+Z2 !s100 DaQM5MeUQk9h9geFHooz_0
+Z3 Ig@A4J_BoKfNbQY0zk2=ne1
+Z4 V`JN@9S9cnhjKRR_L]QIcM3
+Z5 dD:\Users\Jon\Documents\Homework\141L
+Z6 w1362878521
+Z7 8D:/Users/Jon/Documents/Homework/141L/adder.v
+Z8 FD:/Users/Jon/Documents/Homework/141L/adder.v
 L0 3
-Z7 OP;L;10.1d;51
+Z9 OP;L;10.2;57
 r1
 31
-Z8 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
-Z9 !s100 5gi^iFnH484?h<L[cOFif0
-Z10 !s108 1360019267.456000
-Z11 !s107 //psf/Home/Documents/cse141L/adder.v|
-Z12 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/adder.v|
+Z10 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/adder.v|
+Z11 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -O0
 !i10b 1
 !s85 0
+Z12 !s108 1362963770.940000
+Z13 !s107 D:/Users/Jon/Documents/Homework/141L/adder.v|
 !s101 -O0
 vALU
-Z13 Il3CiQIkNNCTc[hbQ`0UTz3
-Z14 VG8IZfWbEG3Tig35<:=4C[0
-R3
-Z15 w1360015680
-Z16 8//psf/Home/Documents/cse141L/ALU.v
-Z17 F//psf/Home/Documents/cse141L/ALU.v
+R1
+Z14 !s100 ;RR>edLP5eBJ`eI[Ya@2M0
+Z15 IalbUi1JkGb^L=58kkQH^j3
+R4
+R5
+R6
+Z16 8D:/Users/Jon/Documents/Homework/141L/ALU.v
+Z17 FD:/Users/Jon/Documents/Homework/141L/ALU.v
 L0 8
-R7
+R9
 r1
 31
-Z18 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/ALU.v|
-R8
+Z18 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/ALU.v|
+R11
 Z19 n@a@l@u
-Z20 !s100 VR=TOE5PU`4TFE9HW^Qec0
-Z21 !s108 1360019267.534000
-Z22 !s107 //psf/Home/Documents/cse141L/ALU.v|
+Z20 !s108 1362963770.889000
+Z21 !s107 D:/Users/Jon/Documents/Homework/141L/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vALU_TB
-!i10b 1
-!s100 OYdkTOH1E<KPKZ@9mFjR30
-I9dWeIOX7IKjgYLVggA0nU0
-VT3H70N^;JzGPBGC?M:B<n3
-R3
-w1360018984
-8//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
-F//psf/Home/Documents/cse141L/testbench/alu_test_bench.v
-L0 3
-R7
-r1
-!s85 0
-31
-!s108 1360019282.081000
-!s107 //psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
-!s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/testbench/alu_test_bench.v|
-!s101 -O0
-R8
-n@a@l@u_@t@b
-vfetch_unit
-Z23 IU@<kjI>`V8]k?eb_:L9P40
-Z24 V0BhKNXbI3hV1eiZQ;77i60
-R3
-Z25 w1360017185
-Z26 8//psf/Home/Documents/cse141L/fetch_unit.v
-Z27 F//psf/Home/Documents/cse141L/fetch_unit.v
+vcontrol
+R1
+Z22 !s100 VYdGoHKiH^U4Zif5zfTcH3
+Z23 IEBd26l4bJPQciiA1c^dV<0
+R4
+R5
+R6
+Z24 8D:/Users/Jon/Documents/Homework/141L/control.v
+Z25 FD:/Users/Jon/Documents/Homework/141L/control.v
 L0 19
-R7
+R9
 r1
 31
-Z28 !s108 1360019267.612000
-Z29 !s107 //psf/Home/Documents/cse141L/fetch_unit.v|
-Z30 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/fetch_unit.v|
-R8
-Z31 !s100 WWH?aejDWBT`FH:6KoN[E1
+Z26 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/control.v|
+R11
+Z27 !s108 1362963770.836000
+Z28 !s107 D:/Users/Jon/Documents/Homework/141L/control.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vinstr_rom
-Z32 IJG8QQ?SfI:GV0_Ihgj?Qj0
-Z33 VJ0Z3bR>DR>IM_Ne?[8AO81
-R3
-Z34 w1360012658
-Z35 8//psf/Home/Documents/cse141L/instr_rom.v
-Z36 F//psf/Home/Documents/cse141L/instr_rom.v
-L0 3
-R7
+vcycle_counter
+R1
+Z29 !s100 Q<nJj<O0^^LKKJ8ZnHaXR3
+Z30 II^zCGC>BeNM]6m3;d>ISY2
+R4
+R5
+R6
+Z31 8D:/Users/Jon/Documents/Homework/141L/cycle_counter.v
+Z32 FD:/Users/Jon/Documents/Homework/141L/cycle_counter.v
+L0 1
+R9
 r1
 31
-R8
-Z37 !s100 K_62_3E=WPn;cEPcWHo3[0
-Z38 !s108 1360019267.706000
-Z39 !s107 //psf/Home/Documents/cse141L/instr_rom.v|
-Z40 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/instr_rom.v|
+Z33 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/cycle_counter.v|
+R11
+Z34 !s108 1362963770.786000
+Z35 !s107 D:/Users/Jon/Documents/Homework/141L/cycle_counter.v|
 !i10b 1
 !s85 0
 !s101 -O0
-vmux
-Z41 I509gG@;fedA2>W4Lk_kB@1
-Z42 VJM<m`2H2PW?Z1oC]n9>:U2
-R3
-Z43 w1360016621
-Z44 8//psf/Home/Documents/cse141L/mux.v
-Z45 F//psf/Home/Documents/cse141L/mux.v
+vdata_ram
+R1
+Z36 !s100 ^`Y?ojoo95OMOFd5nYd_F1
+Z37 IeA7j5;`C66MYfeF4K@EkH2
+R4
+R5
+Z38 w1362899105
+Z39 8D:/Users/Jon/Documents/Homework/141L/data_ram.v
+Z40 FD:/Users/Jon/Documents/Homework/141L/data_ram.v
 L0 3
-R7
+R9
 r1
 31
-R8
-Z46 !s100 DMF]1KTfz[;LXEjHfdhfk2
-Z47 !s108 1360019267.784000
-Z48 !s107 //psf/Home/Documents/cse141L/mux.v|
-Z49 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux.v|
+Z41 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/data_ram.v|
+R11
+Z42 !s108 1362963770.735000
+Z43 !s107 D:/Users/Jon/Documents/Homework/141L/data_ram.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vfetch_unit
+R1
+Z44 !s100 [`?JBnW:GbdeH=3><]MbO2
+Z45 I7kUY7l87mIYYa5bjQ4UQg1
+R4
+R5
+Z46 w1362898794
+Z47 8D:/Users/Jon/Documents/Homework/141L/fetch_unit.v
+Z48 FD:/Users/Jon/Documents/Homework/141L/fetch_unit.v
+L0 19
+R9
+r1
+31
+Z49 !s108 1362963770.678000
+Z50 !s107 D:/Users/Jon/Documents/Homework/141L/fetch_unit.v|
+Z51 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/fetch_unit.v|
+R11
+!i10b 1
+!s85 0
+!s101 -O0
+vinstr_rom_1
+R1
+Z52 !s100 A>iHM`EfBLanC89;a57WF0
+Z53 IhNHl=>>c2DNz4Bz[75<m_2
+R4
+R5
+R6
+Z54 8D:/Users/Jon/Documents/Homework/141L/instr_rom_1.v
+Z55 FD:/Users/Jon/Documents/Homework/141L/instr_rom_1.v
+L0 3
+R9
+r1
+31
+Z56 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/instr_rom_1.v|
+R11
+Z57 !s108 1362963770.626000
+Z58 !s107 D:/Users/Jon/Documents/Homework/141L/instr_rom_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinstr_rom_2
+R1
+Z59 IUcNO_V_Q;^]`?X_<OBHn31
+R4
+R5
+Z60 w1362963746
+Z61 8D:/Users/Jon/Documents/Homework/141L/instr_rom_2.v
+Z62 FD:/Users/Jon/Documents/Homework/141L/instr_rom_2.v
+L0 3
+R9
+r1
+31
+Z63 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/instr_rom_2.v|
+R11
+Z64 !s100 cUI<bLgnz81>YcH>Gl0[F3
+Z65 !s108 1362963770.575000
+Z66 !s107 D:/Users/Jon/Documents/Homework/141L/instr_rom_2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinstr_rom_3
+R1
+Z67 !s100 XTdK1QfS>nJ^lo7NU^QzM0
+Z68 IgK]Je;I_K46FJM??Qbz6M0
+R4
+R5
+R6
+Z69 8D:/Users/Jon/Documents/Homework/141L/instr_rom_3.v
+Z70 FD:/Users/Jon/Documents/Homework/141L/instr_rom_3.v
+L0 3
+R9
+r1
+31
+Z71 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/instr_rom_3.v|
+R11
+Z72 !s108 1362963770.502000
+Z73 !s107 D:/Users/Jon/Documents/Homework/141L/instr_rom_3.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux2
+R1
+Z74 !s100 beQZBTg[^_BfzYf_KR0_i1
+Z75 IzW[Y<ABTVe?FLS>N6l60g2
+R4
+R5
+Z76 w1361502093
+Z77 8D:/Users/Jon/Documents/Homework/141L/mux2.v
+Z78 FD:/Users/Jon/Documents/Homework/141L/mux2.v
+L0 3
+R9
+r1
+31
+Z79 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/mux2.v|
+R11
+Z80 !s108 1362963770.452000
+Z81 !s107 D:/Users/Jon/Documents/Homework/141L/mux2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux4
+R1
+Z82 !s100 zShKhh97?oQahjACEkhTm2
+Z83 Ii?4dH<Z^IOo944TdWIPXO3
+R4
+R5
+Z84 w1361498626
+Z85 8D:/Users/Jon/Documents/Homework/141L/mux4.v
+Z86 FD:/Users/Jon/Documents/Homework/141L/mux4.v
+L0 3
+R9
+r1
+31
+Z87 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/mux4.v|
+R11
+Z88 !s108 1362963770.403000
+Z89 !s107 D:/Users/Jon/Documents/Homework/141L/mux4.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux_0
-Z50 I1I3hm6V[P<8^]lXia=54c2
-Z51 VTA;m@W`hLW@079^5[9XX@0
-R3
-R25
-Z52 8//psf/Home/Documents/cse141L/mux_0.v
-Z53 F//psf/Home/Documents/cse141L/mux_0.v
-L0 20
-R7
+R1
+Z90 !s100 zo4I^I?c`E5iSY4U]^Pz?0
+Z91 I<[EQN;F:_cn?]iJiml4B71
+R4
+R5
+R46
+R47
+R48
+L0 68
+R9
 r1
 31
-R8
-Z54 !s100 j;W1a8<YkEP?_THi:=0ZM3
-Z55 !s108 1360019267.846000
-Z56 !s107 //psf/Home/Documents/cse141L/mux_0.v|
-Z57 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/mux_0.v|
+R49
+R50
+R51
+R11
+!i10b 1
+!s85 0
+!s101 -O0
+vmux_1
+R1
+Z92 !s100 L=Rk<T?2?zdSa><1JIK@F2
+Z93 IXjE;I>mQ?8hZkXB:m7_`d3
+R4
+R5
+Z94 w1361489962
+Z95 8D:/Users/Jon/Documents/Homework/141L/mux_1.v
+Z96 FD:/Users/Jon/Documents/Homework/141L/mux_1.v
+L0 20
+R9
+r1
+31
+Z97 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/mux_1.v|
+R11
+Z98 !s108 1362963770.296000
+Z99 !s107 D:/Users/Jon/Documents/Homework/141L/mux_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vnext_pc_logic
-Z58 I1BHeKU0O7@mGKCUn52EFm0
-Z59 V[5>SY@SW<0jRECH]A6HZm0
-R3
-Z60 w1360016407
-Z61 8//psf/Home/Documents/cse141L/next_pc_logic.v
-Z62 F//psf/Home/Documents/cse141L/next_pc_logic.v
+R1
+Z100 !s100 gk6=>VMDZU8TN<K9VLkeQ1
+Z101 I7Qe:JM9<XoRI[fA8;6md`3
+R4
+R5
+Z102 w1361511084
+Z103 8D:/Users/Jon/Documents/Homework/141L/next_pc_logic.v
+Z104 FD:/Users/Jon/Documents/Homework/141L/next_pc_logic.v
 L0 3
-R7
+R9
 r1
 31
-R8
-Z63 !s100 Lo]DWKjl8i;zJ8LTo6N`C1
-Z64 !s108 1360019267.924000
-Z65 !s107 //psf/Home/Documents/cse141L/next_pc_logic.v|
-Z66 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/next_pc_logic.v|
+Z105 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/next_pc_logic.v|
+R11
+Z106 !s108 1362963770.245000
+Z107 !s107 D:/Users/Jon/Documents/Homework/141L/next_pc_logic.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vpc
+R1
+Z108 !s100 ET8_8Fhzz@?9eHlY^=^Cl1
+Z109 IOL9OY54e:E8Y3mX0^nig>2
+R4
+R5
+Z110 w1361487495
+Z111 8D:/Users/Jon/Documents/Homework/141L/pc.v
+Z112 FD:/Users/Jon/Documents/Homework/141L/pc.v
+L0 3
+R9
+r1
+31
+Z113 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/pc.v|
+R11
+Z114 !s108 1362963770.193000
+Z115 !s107 D:/Users/Jon/Documents/Homework/141L/pc.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprocessor
+R1
+Z116 !s100 AAJ_=1kRRk7kWKGT4cbOj1
+Z117 IZ6Bo0@BRPOJ1hH]0CzGzj1
+R4
+R5
+R6
+Z118 8D:/Users/Jon/Documents/Homework/141L/processor.v
+Z119 FD:/Users/Jon/Documents/Homework/141L/processor.v
+L0 19
+R9
+r1
+31
+Z120 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/processor.v|
+R11
+Z121 !s108 1362963770.141000
+Z122 !s107 D:/Users/Jon/Documents/Homework/141L/processor.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprocessor_2
+!s110 1362963773
+!i10b 1
+Z123 !s100 [2EU49PQ9?6n;H<k]3e150
+Z124 Ibl7IR`@0[n]>nmEaMchO>0
+R4
+R5
+Z125 w1362959225
+Z126 8D:/Users/Jon/Documents/Homework/141L/processor_2.v
+Z127 FD:/Users/Jon/Documents/Homework/141L/processor_2.v
+L0 19
+R9
+r1
+!s85 0
+31
+!s108 1362963773.286000
+!s107 D:/Users/Jon/Documents/Homework/141L/processor_2.v|
+Z128 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/processor_2.v|
+!s101 -O0
+R11
+vprocessor_3
+Z129 !s100 XgeQ[Kn`fO@>kNfTiia8[1
+Z130 IFg<z_l<66JYA_Iez8UNFg0
+R4
+R5
+R6
+Z131 8D:/Users/Jon/Documents/Homework/141L/processor_3.v
+Z132 FD:/Users/Jon/Documents/Homework/141L/processor_3.v
+L0 19
+R9
+r1
+31
+Z133 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/processor_3.v|
+R11
+R1
+Z134 !s108 1362963770.028000
+Z135 !s107 D:/Users/Jon/Documents/Homework/141L/processor_3.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprogram_runner_1
+Z136 !s110 1362963769
+Z137 !s100 ?BIMeDa]L>oLZ?1OdOC[X1
+Z138 IW3bG1DSDTT3Sg@ccL`^`F0
+R4
+R5
+R6
+Z139 8D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v
+Z140 FD:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v
+L0 3
+R9
+r1
+31
+Z141 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v|
+R11
+Z142 !s108 1362963769.976000
+Z143 !s107 D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprogram_runner_2
+R136
+Z144 !s100 X_3?MVXhNYVcRU24MMX`b0
+Z145 In;h4=_n0gV4H<d<I4>0`03
+R4
+R5
+R6
+Z146 8D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_2.v
+Z147 FD:/Users/Jon/Documents/Homework/141L/testbench/program_runner_2.v
+L0 3
+R9
+r1
+31
+Z148 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_2.v|
+R11
+Z149 !s108 1362963769.924000
+Z150 !s107 D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprogram_runner_3
+R136
+Z151 !s100 n2^PT]5XnH:DjZSZbJEC52
+Z152 I:KUc9<[Xi;M;1L8O`LR:b1
+R4
+R5
+R6
+Z153 8D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v
+Z154 FD:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v
+L0 3
+R9
+r1
+31
+Z155 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v|
+R11
+Z156 !s108 1362963769.873000
+Z157 !s107 D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vregister_file
-Z67 !s100 Oz8R6K3i;ikZfAK]d`UPk1
-Z68 Ia<jaaJ^X3;<ON<CNM10B[0
-Z69 VhI]>fOgEN>Q=ZT4h3S]?F1
-R3
-Z70 w1359964986
-Z71 8//psf/Home/Documents/cse141L/register_file.v
-Z72 F//psf/Home/Documents/cse141L/register_file.v
+R136
+Z158 !s100 ];ke0LVFOo]LhoC9nN_=60
+Z159 IXX0jjVjWND10Cd^]NEdz;1
+R4
+R5
+R6
+Z160 8D:/Users/Jon/Documents/Homework/141L/register_file.v
+Z161 FD:/Users/Jon/Documents/Homework/141L/register_file.v
 L0 4
-R7
+R9
 r1
 31
-Z73 !s90 -reportprogress|300|-work|work|//psf/Home/Documents/cse141L/register_file.v|
-R8
+Z162 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/register_file.v|
+R11
+Z163 !s108 1362963769.822000
+Z164 !s107 D:/Users/Jon/Documents/Homework/141L/register_file.v|
 !i10b 1
 !s85 0
-Z74 !s108 1360019268.065000
-Z75 !s107 //psf/Home/Documents/cse141L/register_file.v|
+!s101 -O0
+vsign_extender
+Z165 !s100 gj2EdNaXKYL=Ao2fjflJY1
+Z166 Ikk=0Gino<4Nc:GV@LzIQN2
+R4
+R5
+R6
+Z167 8D:/Users/Jon/Documents/Homework/141L/sign_extender.v
+Z168 FD:/Users/Jon/Documents/Homework/141L/sign_extender.v
+L0 3
+R9
+r1
+31
+Z169 !s90 -reportprogress|300|-work|work|-L|mtiAvm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-O0|D:/Users/Jon/Documents/Homework/141L/sign_extender.v|
+R11
+R136
+Z170 !s108 1362963769.775000
+Z171 !s107 D:/Users/Jon/Documents/Homework/141L/sign_extender.v|
+!i10b 1
+!s85 0
 !s101 -O0

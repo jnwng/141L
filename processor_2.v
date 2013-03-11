@@ -1,4 +1,4 @@
-// Copyright (C) 1991-2012 Altera Corporation
+// Copyright (C) 1991-2011 Altera Corporation
 // Your use of Altera Corporation's design tools, logic functions 
 // and other software and tools, and its AMPP partner logic 
 // functions, and any output files from any of the foregoing 
@@ -12,9 +12,9 @@
 // Altera or its authorized distributors.  Please refer to the 
 // applicable agreement for further details.
 
-// PROGRAM		"Quartus II 64-Bit"
-// VERSION		"Version 12.1 Build 177 11/07/2012 SJ Web Edition"
-// CREATED		"Fri Mar 08 06:19:37 2013"
+// PROGRAM		"Quartus II"
+// VERSION		"Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition"
+// CREATED		"Sun Mar 10 16:47:05 2013"
 
 module processor_2(
 	restart,

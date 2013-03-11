@@ -43,7 +43,7 @@ def get_labels(infile):
         comment = comment_regexp.match(line)
         label = label_regexp.match(line)
 
-        if line != "\n":
+        if line != "\n" and line.strip():
             if label: 
                 count = instruction_count
                 strip_label = label.group('label').rstrip(':')

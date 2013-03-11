@@ -38,10 +38,10 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY processor
+set_global_assignment -name TOP_LEVEL_ENTITY processor_2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:18:15  FEBRUARY 02, 2013"
-set_global_assignment -name LAST_QUARTUS_VERSION 12.1
+set_global_assignment -name LAST_QUARTUS_VERSION "11.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -65,11 +65,11 @@ set_global_assignment -name VERILOG_FILE instr_rom_3.v
 set_global_assignment -name VERILOG_FILE testbench/program_runner_1.v
 set_global_assignment -name VERILOG_FILE mux2.v
 set_global_assignment -name VERILOG_FILE mux4.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE processor_3.bdf
 set_global_assignment -name VERILOG_FILE testbench/program_runner_3.v
 set_global_assignment -name BDF_FILE processor_2.bdf
 set_global_assignment -name VERILOG_FILE testbench/program_runner_2.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
