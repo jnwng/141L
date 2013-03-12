@@ -8,7 +8,8 @@ module adder
 );
 
 always @ (posedge clock) begin
-	out <= a + 1;
-end
+			out <= a + 1;
+	end
+
 
 endmodule

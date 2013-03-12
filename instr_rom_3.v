@@ -14,6 +14,7 @@ module instr_rom_3
 	
 	always @ (pc_in)
 	begin
+		$display("***PCIN: %d***", pc_in);
 		case(pc_in)
             0: begin instr_out = 9'b000000000; end
             1: begin instr_out = 9'b101111000; end

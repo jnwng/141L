@@ -248,4 +248,3 @@ cpin $s1
 res 64
 store $s1
 halt
-

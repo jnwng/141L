@@ -28,6 +28,7 @@ module ALU
   begin
 		compres <= 0;
 		if (format) begin
+		$display("opcode: %d", op);
 		case(op)
 			`op_add: begin
 				if (eq) begin

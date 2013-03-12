@@ -6,7 +6,7 @@ module program_runner_1;
 	reg init;
 	wire done;
 	
-	processor prog1 (restart, init, clock, done);
+	processor_1 prog1 (restart, init, clock, done);
 	
 	initial
 		$monitor($time, , restart, init, done);

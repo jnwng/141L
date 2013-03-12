@@ -1,5 +1,5 @@
 Fitter report for 141L
-Sat Mar 09 22:05:12 2013
+Mon Mar 11 23:17:24 2013
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
 
 
@@ -24,10 +24,18 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
  16. Fitter Resource Utilization by Entity
  17. Delay Chain Summary
  18. Pad To Core Delay Chain Fanout
- 19. Interconnect Usage Summary
- 20. Fitter Device Options
- 21. Operating Settings and Conditions
- 22. Fitter Messages
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Non-Global High Fan-Out Signals
+ 22. Interconnect Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Fitter Messages
 
 
 
@@ -53,17 +61,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Sat Mar 09 22:05:12 2013         ;
+; Fitter Status                      ; Successful - Mon Mar 11 23:17:24 2013         ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
 ; Revision Name                      ; 141L                                          ;
-; Top-level Entity Name              ; processor                                     ;
+; Top-level Entity Name              ; processor_2                                   ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C35F672C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 0 / 33,216 ( 0 % )                            ;
-;     Total combinational functions  ; 0 / 33,216 ( 0 % )                            ;
-;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                            ;
-; Total registers                    ; 0                                             ;
+; Total logic elements               ; 5,669 / 33,216 ( 17 % )                       ;
+;     Total combinational functions  ; 4,064 / 33,216 ( 12 % )                       ;
+;     Dedicated logic registers      ; 4,328 / 33,216 ( 13 % )                       ;
+; Total registers                    ; 4328                                          ;
 ; Total pins                         ; 4 / 475 ( < 1 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                           ;
@@ -139,8 +147,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 8 ( 0.00 % )       ;
-;     -- Achieved     ; 0 / 8 ( 0.00 % )       ;
+;     -- Requested    ; 0 / 8403 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 8403 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -163,7 +171,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 5       ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 8400    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -174,119 +182,126 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_files/141L.pin.
 
 
-+-------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                     ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Total logic elements                        ; 0 / 33,216 ( 0 % )  ;
-;     -- Combinational with no register       ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;     -- Combinational with a register        ; 0                   ;
-;                                             ;                     ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 0                   ;
-;     -- <=2 input functions                  ; 0                   ;
-;     -- Register only                        ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 0                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers*                            ; 0 / 34,593 ( 0 % )  ;
-;     -- Dedicated logic registers            ; 0 / 33,216 ( 0 % )  ;
-;     -- I/O registers                        ; 0 / 1,377 ( 0 % )   ;
-;                                             ;                     ;
-; Total LABs:  partially or completely used   ; 0 / 2,076 ( 0 % )   ;
-; User inserted logic elements                ; 0                   ;
-; Virtual pins                                ; 0                   ;
-; I/O pins                                    ; 4 / 475 ( < 1 % )   ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )      ;
-; Global signals                              ; 0                   ;
-; M4Ks                                        ; 0 / 105 ( 0 % )     ;
-; Total block memory bits                     ; 0 / 483,840 ( 0 % ) ;
-; Total block memory implementation bits      ; 0 / 483,840 ( 0 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )      ;
-; PLLs                                        ; 0 / 4 ( 0 % )       ;
-; Global clocks                               ; 0 / 16 ( 0 % )      ;
-; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )       ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%        ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%        ;
-+---------------------------------------------+---------------------+
++-----------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                         ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Total logic elements                        ; 5,669 / 33,216 ( 17 % ) ;
+;     -- Combinational with no register       ; 1341                    ;
+;     -- Register only                        ; 1605                    ;
+;     -- Combinational with a register        ; 2723                    ;
+;                                             ;                         ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 2998                    ;
+;     -- 3 input functions                    ; 437                     ;
+;     -- <=2 input functions                  ; 629                     ;
+;     -- Register only                        ; 1605                    ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 4004                    ;
+;     -- arithmetic mode                      ; 60                      ;
+;                                             ;                         ;
+; Total registers*                            ; 4,328 / 34,593 ( 13 % ) ;
+;     -- Dedicated logic registers            ; 4,328 / 33,216 ( 13 % ) ;
+;     -- I/O registers                        ; 0 / 1,377 ( 0 % )       ;
+;                                             ;                         ;
+; Total LABs:  partially or completely used   ; 401 / 2,076 ( 19 % )    ;
+; User inserted logic elements                ; 0                       ;
+; Virtual pins                                ; 0                       ;
+; I/O pins                                    ; 4 / 475 ( < 1 % )       ;
+;     -- Clock pins                           ; 2 / 8 ( 25 % )          ;
+; Global signals                              ; 3                       ;
+; M4Ks                                        ; 0 / 105 ( 0 % )         ;
+; Total block memory bits                     ; 0 / 483,840 ( 0 % )     ;
+; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )     ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )          ;
+; PLLs                                        ; 0 / 4 ( 0 % )           ;
+; Global clocks                               ; 3 / 16 ( 19 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )           ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
+; Average interconnect usage (total/H/V)      ; 15% / 15% / 15%         ;
+; Peak interconnect usage (total/H/V)         ; 84% / 82% / 87%         ;
+; Maximum fan-out node                        ; clock~clkctrl           ;
+; Maximum fan-out                             ; 4309                    ;
+; Highest non-global fan-out signal           ; mux2:inst7|out[7]~8     ;
+; Highest non-global fan-out                  ; 541                     ;
+; Total fan-out                               ; 27668                   ;
+; Average fan-out                             ; 3.03                    ;
++---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+--------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                      ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Statistic                                   ; Top               ; hard_block:auto_generated_inst ;
-+---------------------------------------------+-------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low               ; Low                            ;
-;                                             ;                   ;                                ;
-; Total logic elements                        ; 0 / 33216 ( 0 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;     -- Combinational with a register        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic element usage by number of LUT inputs ;                   ;                                ;
-;     -- 4 input functions                    ; 0                 ; 0                              ;
-;     -- 3 input functions                    ; 0                 ; 0                              ;
-;     -- <=2 input functions                  ; 0                 ; 0                              ;
-;     -- Register only                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Logic elements by mode                      ;                   ;                                ;
-;     -- normal mode                          ; 0                 ; 0                              ;
-;     -- arithmetic mode                      ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Total registers                             ; 0                 ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 33216 ( 0 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- I/O registers                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Total LABs:  partially or completely used   ; 0 / 2076 ( 0 % )  ; 0 / 2076 ( 0 % )               ;
-;                                             ;                   ;                                ;
-; Virtual pins                                ; 0                 ; 0                              ;
-; I/O pins                                    ; 4                 ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )    ; 0 / 70 ( 0 % )                 ;
-; Total memory bits                           ; 0                 ; 0                              ;
-; Total RAM block bits                        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Connections                                 ;                   ;                                ;
-;     -- Input Connections                    ; 0                 ; 0                              ;
-;     -- Registered Input Connections         ; 0                 ; 0                              ;
-;     -- Output Connections                   ; 0                 ; 0                              ;
-;     -- Registered Output Connections        ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Internal Connections                        ;                   ;                                ;
-;     -- Total Connections                    ; 0                 ; 0                              ;
-;     -- Registered Connections               ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; External Connections                        ;                   ;                                ;
-;     -- Top                                  ; 0                 ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Partition Interface                         ;                   ;                                ;
-;     -- Input Ports                          ; 3                 ; 0                              ;
-;     -- Output Ports                         ; 1                 ; 0                              ;
-;     -- Bidir Ports                          ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Registered Ports                            ;                   ;                                ;
-;     -- Registered Input Ports               ; 0                 ; 0                              ;
-;     -- Registered Output Ports              ; 0                 ; 0                              ;
-;                                             ;                   ;                                ;
-; Port Connectivity                           ;                   ;                                ;
-;     -- Input Ports driven by GND            ; 0                 ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                 ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                 ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                 ; 0                              ;
-;     -- Input Ports with no Source           ; 0                 ; 0                              ;
-;     -- Output Ports with no Source          ; 0                 ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                 ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                 ; 0                              ;
-+---------------------------------------------+-------------------+--------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                          ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Statistic                                   ; Top                   ; hard_block:auto_generated_inst ;
++---------------------------------------------+-----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                   ; Low                            ;
+;                                             ;                       ;                                ;
+; Total logic elements                        ; 5669 / 33216 ( 17 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 1341                  ; 0                              ;
+;     -- Register only                        ; 1605                  ; 0                              ;
+;     -- Combinational with a register        ; 2723                  ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic element usage by number of LUT inputs ;                       ;                                ;
+;     -- 4 input functions                    ; 2998                  ; 0                              ;
+;     -- 3 input functions                    ; 437                   ; 0                              ;
+;     -- <=2 input functions                  ; 629                   ; 0                              ;
+;     -- Register only                        ; 1605                  ; 0                              ;
+;                                             ;                       ;                                ;
+; Logic elements by mode                      ;                       ;                                ;
+;     -- normal mode                          ; 4004                  ; 0                              ;
+;     -- arithmetic mode                      ; 60                    ; 0                              ;
+;                                             ;                       ;                                ;
+; Total registers                             ; 4328                  ; 0                              ;
+;     -- Dedicated logic registers            ; 4328 / 33216 ( 13 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- I/O registers                        ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Total LABs:  partially or completely used   ; 401 / 2076 ( 19 % )   ; 0 / 2076 ( 0 % )               ;
+;                                             ;                       ;                                ;
+; Virtual pins                                ; 0                     ; 0                              ;
+; I/O pins                                    ; 4                     ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )        ; 0 / 70 ( 0 % )                 ;
+; Total memory bits                           ; 0                     ; 0                              ;
+; Total RAM block bits                        ; 0                     ; 0                              ;
+; Clock control block                         ; 3 / 20 ( 15 % )       ; 0 / 20 ( 0 % )                 ;
+;                                             ;                       ;                                ;
+; Connections                                 ;                       ;                                ;
+;     -- Input Connections                    ; 0                     ; 0                              ;
+;     -- Registered Input Connections         ; 0                     ; 0                              ;
+;     -- Output Connections                   ; 0                     ; 0                              ;
+;     -- Registered Output Connections        ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Internal Connections                        ;                       ;                                ;
+;     -- Total Connections                    ; 27668                 ; 0                              ;
+;     -- Registered Connections               ; 5182                  ; 0                              ;
+;                                             ;                       ;                                ;
+; External Connections                        ;                       ;                                ;
+;     -- Top                                  ; 0                     ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Partition Interface                         ;                       ;                                ;
+;     -- Input Ports                          ; 3                     ; 0                              ;
+;     -- Output Ports                         ; 1                     ; 0                              ;
+;     -- Bidir Ports                          ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Registered Ports                            ;                       ;                                ;
+;     -- Registered Input Ports               ; 0                     ; 0                              ;
+;     -- Registered Output Ports              ; 0                     ; 0                              ;
+;                                             ;                       ;                                ;
+; Port Connectivity                           ;                       ;                                ;
+;     -- Input Ports driven by GND            ; 0                     ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                     ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                     ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                     ; 0                              ;
+;     -- Input Ports with no Source           ; 0                     ; 0                              ;
+;     -- Output Ports with no Source          ; 0                     ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                     ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                     ; 0                              ;
++---------------------------------------------+-----------------------+--------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,8 +309,8 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clock   ; B12   ; 3        ; 29           ; 36           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; init    ; D13   ; 3        ; 31           ; 36           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; clock   ; P2    ; 1        ; 0            ; 18           ; 2           ; 20                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; init    ; D13   ; 3        ; 31           ; 36           ; 3           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; restart ; C13   ; 3        ; 31           ; 36           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -305,7 +320,7 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; done ; C9    ; 3        ; 16           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; done ; A9    ; 3        ; 20           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -314,9 +329,9 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 +----------+----------------+---------------+--------------+
 ; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
 +----------+----------------+---------------+--------------+
-; 1        ; 0 / 64 ( 0 % ) ; 3.3V          ; --           ;
+; 1        ; 1 / 64 ( 2 % ) ; 3.3V          ; --           ;
 ; 2        ; 2 / 59 ( 3 % ) ; 3.3V          ; --           ;
-; 3        ; 4 / 56 ( 7 % ) ; 3.3V          ; --           ;
+; 3        ; 3 / 56 ( 5 % ) ; 3.3V          ; --           ;
 ; 4        ; 0 / 58 ( 0 % ) ; 3.3V          ; --           ;
 ; 5        ; 0 / 65 ( 0 % ) ; 3.3V          ; --           ;
 ; 6        ; 1 / 59 ( 2 % ) ; 3.3V          ; --           ;
@@ -337,7 +352,7 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 ; A6       ; 479        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A7       ; 465        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A8       ; 457        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A9       ; 451        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A9       ; 451        ; 3        ; done                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A10      ; 447        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -519,7 +534,7 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 ; B9       ; 452        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B12      ; 433        ; 3        ; clock                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -542,7 +557,7 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 ; C6       ; 485        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C7       ; 468        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C8       ; 463        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C9       ; 459        ; 3        ; done                                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C9       ; 459        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -821,7 +836,7 @@ The pin-out file can be found in D:/Users/Jon/Documents/Homework/141L/output_fil
 ; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P2       ; 67         ; 1        ; clock                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1043,13 +1058,25 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |processor                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |processor          ;              ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                      ; Library Name ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+--------------+
+; |processor_2                     ; 5669 (0)    ; 4328 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 4    ; 0            ; 1341 (0)     ; 1605 (0)          ; 2723 (1)         ; |processor_2                             ;              ;
+;    |ALU:inst2|                   ; 121 (121)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 105 (105)    ; 0 (0)             ; 16 (16)          ; |processor_2|ALU:inst2                   ;              ;
+;    |adder:inst4|                 ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |processor_2|adder:inst4                 ;              ;
+;    |control:control|             ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |processor_2|control:control             ;              ;
+;    |data_ram:inst12|             ; 5159 (5159) ; 4096 (4096)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1062 (1062)  ; 1541 (1541)       ; 2556 (2556)      ; |processor_2|data_ram:inst12             ;              ;
+;    |instr_rom_2:inst6|           ; 99 (99)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (99)      ; 0 (0)             ; 0 (0)            ; |processor_2|instr_rom_2:inst6           ;              ;
+;    |mux2:inst7|                  ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 5 (5)            ; |processor_2|mux2:inst7                  ;              ;
+;    |mux2:inst8|                  ; 19 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 13 (13)          ; |processor_2|mux2:inst8                  ;              ;
+;    |mux4:mux4|                   ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 3 (3)            ; |processor_2|mux4:mux4                   ;              ;
+;    |next_pc_logic:inst3|         ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |processor_2|next_pc_logic:inst3         ;              ;
+;    |register_ex:inst11|          ; 43 (43)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 7 (7)             ; 34 (34)          ; |processor_2|register_ex:inst11          ;              ;
+;    |register_file:register_file| ; 176 (176)   ; 144 (144)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 52 (52)           ; 97 (97)          ; |processor_2|register_file:register_file ;              ;
+;    |register_id:inst9|           ; 18 (18)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 13 (13)          ; |processor_2|register_id:inst9           ;              ;
++----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1058,10 +1085,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+---------------+-----------------------+-----+
 ; Name    ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +---------+----------+---------------+---------------+-----------------------+-----+
-; restart ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; init    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; clock   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; done    ; Output   ; --            ; --            ; --                    ; --  ;
+; restart ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; clock   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; init    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 +---------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1071,25 +1098,1472 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; restart             ;                   ;         ;
-; init                ;                   ;         ;
 ; clock               ;                   ;         ;
+; init                ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
-+-------------------------------------------------+
-; Interconnect Usage Summary                      ;
-+----------------------------+--------------------+
-; Interconnect Resource Type ; Usage              ;
-+----------------------------+--------------------+
-; Block interconnects        ; 0 / 94,460 ( 0 % ) ;
-; C16 interconnects          ; 0 / 3,315 ( 0 % )  ;
-; C4 interconnects           ; 0 / 60,840 ( 0 % ) ;
-; Direct links               ; 0 / 94,460 ( 0 % ) ;
-; Global clocks              ; 0 / 16 ( 0 % )     ;
-; Local interconnects        ; 0 / 33,216 ( 0 % ) ;
-; R24 interconnects          ; 0 / 3,091 ( 0 % )  ;
-; R4 interconnects           ; 0 / 81,294 ( 0 % ) ;
-+----------------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                     ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                   ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ALU:inst2|out[15]~0                    ; LCCOMB_X34_Y20_N22 ; 16      ; Latch enable ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; branch_or_jump                         ; LCCOMB_X30_Y20_N6  ; 16      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; clock                                  ; PIN_P2             ; 20      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clock                                  ; PIN_P2             ; 4309    ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; data_ram:inst12|my_memory~6818         ; LCCOMB_X42_Y21_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6820         ; LCCOMB_X30_Y16_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6822         ; LCCOMB_X28_Y23_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6824         ; LCCOMB_X34_Y23_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6826         ; LCCOMB_X45_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6827         ; LCCOMB_X45_Y22_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6828         ; LCCOMB_X30_Y23_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6829         ; LCCOMB_X45_Y22_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6831         ; LCCOMB_X42_Y22_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6832         ; LCCOMB_X42_Y22_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6833         ; LCCOMB_X30_Y23_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6834         ; LCCOMB_X33_Y14_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6836         ; LCCOMB_X45_Y22_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6837         ; LCCOMB_X45_Y22_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6838         ; LCCOMB_X30_Y23_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6839         ; LCCOMB_X45_Y22_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6841         ; LCCOMB_X42_Y21_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6842         ; LCCOMB_X40_Y13_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6843         ; LCCOMB_X44_Y18_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6844         ; LCCOMB_X40_Y21_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6846         ; LCCOMB_X30_Y23_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6847         ; LCCOMB_X34_Y23_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6848         ; LCCOMB_X28_Y14_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6849         ; LCCOMB_X32_Y26_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6851         ; LCCOMB_X33_Y10_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6852         ; LCCOMB_X27_Y22_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6853         ; LCCOMB_X33_Y14_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6854         ; LCCOMB_X33_Y14_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6856         ; LCCOMB_X45_Y22_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6857         ; LCCOMB_X43_Y15_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6858         ; LCCOMB_X33_Y14_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6859         ; LCCOMB_X43_Y15_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6861         ; LCCOMB_X29_Y15_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6862         ; LCCOMB_X32_Y13_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6863         ; LCCOMB_X29_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6864         ; LCCOMB_X29_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6866         ; LCCOMB_X43_Y15_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6867         ; LCCOMB_X45_Y22_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6868         ; LCCOMB_X44_Y18_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6869         ; LCCOMB_X45_Y22_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6871         ; LCCOMB_X28_Y12_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6872         ; LCCOMB_X45_Y22_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6873         ; LCCOMB_X36_Y10_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6874         ; LCCOMB_X45_Y22_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6876         ; LCCOMB_X45_Y22_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6877         ; LCCOMB_X43_Y15_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6878         ; LCCOMB_X33_Y14_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6879         ; LCCOMB_X43_Y15_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6881         ; LCCOMB_X42_Y21_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6882         ; LCCOMB_X45_Y22_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6883         ; LCCOMB_X33_Y14_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6884         ; LCCOMB_X32_Y26_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6886         ; LCCOMB_X35_Y20_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6887         ; LCCOMB_X42_Y21_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6888         ; LCCOMB_X36_Y21_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6889         ; LCCOMB_X36_Y21_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6891         ; LCCOMB_X42_Y16_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6892         ; LCCOMB_X42_Y16_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6893         ; LCCOMB_X42_Y16_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6894         ; LCCOMB_X42_Y16_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6896         ; LCCOMB_X34_Y23_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6897         ; LCCOMB_X45_Y22_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6898         ; LCCOMB_X33_Y14_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6899         ; LCCOMB_X43_Y15_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6901         ; LCCOMB_X29_Y15_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6903         ; LCCOMB_X30_Y10_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6905         ; LCCOMB_X27_Y10_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6907         ; LCCOMB_X40_Y21_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6908         ; LCCOMB_X42_Y22_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6909         ; LCCOMB_X29_Y15_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6910         ; LCCOMB_X27_Y10_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6911         ; LCCOMB_X42_Y22_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6912         ; LCCOMB_X30_Y15_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6913         ; LCCOMB_X29_Y15_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6914         ; LCCOMB_X27_Y10_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6915         ; LCCOMB_X30_Y15_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6916         ; LCCOMB_X38_Y22_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6917         ; LCCOMB_X43_Y20_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6918         ; LCCOMB_X27_Y10_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6919         ; LCCOMB_X30_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6920         ; LCCOMB_X42_Y22_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6921         ; LCCOMB_X38_Y22_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6922         ; LCCOMB_X27_Y10_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6923         ; LCCOMB_X42_Y22_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6924         ; LCCOMB_X38_Y22_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6925         ; LCCOMB_X32_Y26_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6926         ; LCCOMB_X27_Y10_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6927         ; LCCOMB_X32_Y26_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6928         ; LCCOMB_X25_Y12_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6929         ; LCCOMB_X29_Y15_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6930         ; LCCOMB_X27_Y10_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6931         ; LCCOMB_X49_Y19_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6932         ; LCCOMB_X38_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6933         ; LCCOMB_X32_Y26_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6934         ; LCCOMB_X27_Y10_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6935         ; LCCOMB_X35_Y13_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6936         ; LCCOMB_X27_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6937         ; LCCOMB_X30_Y10_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6938         ; LCCOMB_X27_Y10_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6939         ; LCCOMB_X30_Y15_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6940         ; LCCOMB_X28_Y23_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6941         ; LCCOMB_X28_Y23_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6942         ; LCCOMB_X29_Y19_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6943         ; LCCOMB_X30_Y23_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6944         ; LCCOMB_X37_Y26_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6945         ; LCCOMB_X38_Y22_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6946         ; LCCOMB_X31_Y20_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6947         ; LCCOMB_X30_Y15_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6948         ; LCCOMB_X42_Y16_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6949         ; LCCOMB_X42_Y16_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6950         ; LCCOMB_X27_Y10_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6951         ; LCCOMB_X42_Y16_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6952         ; LCCOMB_X30_Y15_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6953         ; LCCOMB_X38_Y22_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6954         ; LCCOMB_X27_Y10_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6955         ; LCCOMB_X30_Y15_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6956         ; LCCOMB_X38_Y22_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6957         ; LCCOMB_X45_Y12_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6958         ; LCCOMB_X27_Y10_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6959         ; LCCOMB_X45_Y12_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6960         ; LCCOMB_X43_Y15_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6961         ; LCCOMB_X38_Y22_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6962         ; LCCOMB_X27_Y10_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6963         ; LCCOMB_X43_Y15_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6964         ; LCCOMB_X38_Y22_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6965         ; LCCOMB_X43_Y15_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6966         ; LCCOMB_X27_Y10_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6967         ; LCCOMB_X43_Y15_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6969         ; LCCOMB_X42_Y22_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6970         ; LCCOMB_X37_Y20_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6971         ; LCCOMB_X30_Y23_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6972         ; LCCOMB_X34_Y23_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6973         ; LCCOMB_X34_Y23_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6974         ; LCCOMB_X40_Y21_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6975         ; LCCOMB_X34_Y23_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6976         ; LCCOMB_X38_Y13_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6977         ; LCCOMB_X41_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6978         ; LCCOMB_X38_Y10_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6979         ; LCCOMB_X41_Y15_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6980         ; LCCOMB_X38_Y10_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6981         ; LCCOMB_X34_Y23_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6982         ; LCCOMB_X36_Y21_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6983         ; LCCOMB_X38_Y27_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6984         ; LCCOMB_X34_Y23_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6986         ; LCCOMB_X30_Y23_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6987         ; LCCOMB_X30_Y16_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6988         ; LCCOMB_X29_Y15_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6989         ; LCCOMB_X42_Y21_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6990         ; LCCOMB_X42_Y21_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6991         ; LCCOMB_X42_Y21_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6992         ; LCCOMB_X40_Y15_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6993         ; LCCOMB_X42_Y21_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6994         ; LCCOMB_X30_Y23_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6995         ; LCCOMB_X42_Y21_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6996         ; LCCOMB_X42_Y21_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6997         ; LCCOMB_X42_Y16_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6998         ; LCCOMB_X42_Y21_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~6999         ; LCCOMB_X42_Y21_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7000         ; LCCOMB_X42_Y21_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7001         ; LCCOMB_X42_Y21_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7003         ; LCCOMB_X49_Y14_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7004         ; LCCOMB_X49_Y14_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7005         ; LCCOMB_X36_Y18_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7006         ; LCCOMB_X49_Y14_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7007         ; LCCOMB_X49_Y14_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7008         ; LCCOMB_X49_Y14_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7009         ; LCCOMB_X29_Y19_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7010         ; LCCOMB_X49_Y14_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7011         ; LCCOMB_X28_Y17_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7012         ; LCCOMB_X42_Y16_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7013         ; LCCOMB_X36_Y10_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7014         ; LCCOMB_X41_Y10_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7015         ; LCCOMB_X35_Y20_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7016         ; LCCOMB_X41_Y10_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7017         ; LCCOMB_X42_Y16_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7018         ; LCCOMB_X41_Y10_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7020         ; LCCOMB_X27_Y19_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7021         ; LCCOMB_X42_Y22_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7022         ; LCCOMB_X40_Y15_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7023         ; LCCOMB_X38_Y22_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7024         ; LCCOMB_X38_Y22_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7025         ; LCCOMB_X38_Y22_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7026         ; LCCOMB_X29_Y15_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7027         ; LCCOMB_X38_Y22_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7028         ; LCCOMB_X36_Y18_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7029         ; LCCOMB_X30_Y23_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7030         ; LCCOMB_X47_Y21_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7031         ; LCCOMB_X38_Y27_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7032         ; LCCOMB_X30_Y15_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7033         ; LCCOMB_X46_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7034         ; LCCOMB_X44_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7035         ; LCCOMB_X46_Y22_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7037         ; LCCOMB_X24_Y13_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7038         ; LCCOMB_X30_Y23_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7039         ; LCCOMB_X33_Y10_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7040         ; LCCOMB_X41_Y10_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7041         ; LCCOMB_X24_Y13_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7042         ; LCCOMB_X42_Y22_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7043         ; LCCOMB_X30_Y23_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7044         ; LCCOMB_X24_Y13_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7045         ; LCCOMB_X25_Y12_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7046         ; LCCOMB_X41_Y10_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7047         ; LCCOMB_X28_Y12_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7048         ; LCCOMB_X41_Y10_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7049         ; LCCOMB_X41_Y10_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7050         ; LCCOMB_X41_Y10_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7051         ; LCCOMB_X42_Y16_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7052         ; LCCOMB_X41_Y10_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7054         ; LCCOMB_X32_Y26_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7055         ; LCCOMB_X32_Y26_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7056         ; LCCOMB_X29_Y15_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7057         ; LCCOMB_X32_Y26_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7058         ; LCCOMB_X42_Y22_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7059         ; LCCOMB_X40_Y13_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7060         ; LCCOMB_X32_Y26_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7061         ; LCCOMB_X32_Y27_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7062         ; LCCOMB_X30_Y23_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7063         ; LCCOMB_X32_Y27_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7064         ; LCCOMB_X32_Y27_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7065         ; LCCOMB_X42_Y16_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7066         ; LCCOMB_X32_Y27_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7067         ; LCCOMB_X32_Y27_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7068         ; LCCOMB_X32_Y27_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7069         ; LCCOMB_X45_Y23_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7071         ; LCCOMB_X24_Y13_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7072         ; LCCOMB_X42_Y22_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7073         ; LCCOMB_X37_Y26_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7074         ; LCCOMB_X37_Y26_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7075         ; LCCOMB_X24_Y13_N26 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7076         ; LCCOMB_X32_Y26_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7077         ; LCCOMB_X29_Y15_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7078         ; LCCOMB_X32_Y26_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7079         ; LCCOMB_X24_Y13_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7080         ; LCCOMB_X30_Y23_N28 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7081         ; LCCOMB_X37_Y26_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7082         ; LCCOMB_X42_Y16_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7083         ; LCCOMB_X24_Y13_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7084         ; LCCOMB_X24_Y16_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7085         ; LCCOMB_X43_Y15_N16 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7086         ; LCCOMB_X24_Y16_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7088         ; LCCOMB_X42_Y22_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7089         ; LCCOMB_X24_Y13_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7090         ; LCCOMB_X30_Y23_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7091         ; LCCOMB_X24_Y13_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7092         ; LCCOMB_X32_Y26_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7093         ; LCCOMB_X24_Y13_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7094         ; LCCOMB_X24_Y13_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7095         ; LCCOMB_X43_Y15_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7096         ; LCCOMB_X37_Y26_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7097         ; LCCOMB_X29_Y15_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7098         ; LCCOMB_X37_Y26_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7099         ; LCCOMB_X43_Y15_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7100         ; LCCOMB_X32_Y26_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7101         ; LCCOMB_X37_Y26_N10 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7102         ; LCCOMB_X42_Y16_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_ram:inst12|my_memory~7103         ; LCCOMB_X43_Y15_N22 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; init                                   ; PIN_D13            ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; instr_rom_2:inst6|WideNor0~13          ; LCCOMB_X28_Y22_N16 ; 9       ; Latch enable ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; register_ex:inst11|out_ctrl_cpin       ; LCFF_X21_Y18_N17   ; 16      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg0[15]~0 ; LCCOMB_X33_Y19_N18 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg1[15]~3 ; LCCOMB_X33_Y19_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg2[15]~0 ; LCCOMB_X33_Y19_N8  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg3[15]~0 ; LCCOMB_X33_Y19_N20 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg4[15]~0 ; LCCOMB_X31_Y16_N4  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg5[15]~1 ; LCCOMB_X31_Y16_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg6[15]~1 ; LCCOMB_X31_Y16_N0  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|reg7[15]~0 ; LCCOMB_X31_Y16_N2  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_file:register_file|res[15]~16 ; LCCOMB_X32_Y14_N6  ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++----------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                        ;
++-------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; Name                          ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+; ALU:inst2|out[15]~0           ; LCCOMB_X34_Y20_N22 ; 16      ; Global Clock         ; GCLK13           ; --                        ;
+; clock                         ; PIN_P2             ; 4309    ; Global Clock         ; GCLK3            ; --                        ;
+; instr_rom_2:inst6|WideNor0~13 ; LCCOMB_X28_Y22_N16 ; 9       ; Global Clock         ; GCLK11           ; --                        ;
++-------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+
+
++-----------------------------------------------------+
+; Non-Global High Fan-Out Signals                     ;
++-------------------------------------------+---------+
+; Name                                      ; Fan-Out ;
++-------------------------------------------+---------+
+; mux2:inst7|out[2]~13                      ; 541     ;
+; mux2:inst7|out[3]~12                      ; 541     ;
+; mux2:inst7|out[6]~9                       ; 541     ;
+; mux2:inst7|out[7]~8                       ; 541     ;
+; mux2:inst7|out[0]~15                      ; 532     ;
+; mux2:inst7|out[1]~14                      ; 532     ;
+; mux2:inst7|out[4]~11                      ; 514     ;
+; mux2:inst7|out[5]~10                      ; 514     ;
+; mux2:inst8|out[0]~18                      ; 259     ;
+; mux2:inst8|out[1]~16                      ; 259     ;
+; mux2:inst8|out[2]~14                      ; 259     ;
+; mux2:inst8|out[3]~12                      ; 259     ;
+; mux2:inst8|out[4]~11                      ; 259     ;
+; mux2:inst8|out[5]~10                      ; 259     ;
+; mux2:inst8|out[6]~9                       ; 259     ;
+; mux2:inst8|out[7]~8                       ; 259     ;
+; mux2:inst8|out[8]~7                       ; 259     ;
+; mux2:inst8|out[9]~6                       ; 259     ;
+; mux2:inst8|out[10]~5                      ; 259     ;
+; mux2:inst8|out[11]~4                      ; 259     ;
+; mux2:inst8|out[12]~3                      ; 259     ;
+; mux2:inst8|out[13]~2                      ; 259     ;
+; mux2:inst8|out[14]~1                      ; 259     ;
+; mux2:inst8|out[15]~0                      ; 259     ;
+; register_ex:inst11|out_ctrl_memWrite      ; 256     ;
+; register_ex:inst11|out_ctrl_branch        ; 68      ;
+; register_ex:inst11|out_extended[1]        ; 60      ;
+; register_ex:inst11|out_extended[2]        ; 52      ;
+; register_ex:inst11|out_extended[0]        ; 29      ;
+; register_ex:inst11|out_ctrl_writeSrc[0]   ; 28      ;
+; register_ex:inst11|out_ctrl_writeSrc[1]   ; 28      ;
+; next_pc_logic:inst3|temp_out[0]           ; 25      ;
+; ALU:inst2|Mux8~2                          ; 22      ;
+; ALU:inst2|compres~0                       ; 22      ;
+; next_pc_logic:inst3|temp_out[3]           ; 22      ;
+; ALU:inst2|compres~2                       ; 21      ;
+; instr_rom_2:inst6|Equal1~2                ; 20      ;
+; register_ex:inst11|out_extended[3]        ; 20      ;
+; register_ex:inst11|out_extended[4]        ; 20      ;
+; next_pc_logic:inst3|temp_out[2]           ; 20      ;
+; next_pc_logic:inst3|temp_out[5]           ; 20      ;
+; clock                                     ; 19      ;
+; register_ex:inst11|out_ctrl_cpout         ; 19      ;
+; register_ex:inst11|out_extended[6]        ; 19      ;
+; init                                      ; 16      ;
+; register_file:register_file|reg1[15]~3    ; 16      ;
+; branch_or_jump                            ; 16      ;
+; data_ram:inst12|my_memory~7103            ; 16      ;
+; data_ram:inst12|my_memory~7102            ; 16      ;
+; data_ram:inst12|my_memory~7101            ; 16      ;
+; data_ram:inst12|my_memory~7100            ; 16      ;
+; data_ram:inst12|my_memory~7099            ; 16      ;
+; data_ram:inst12|my_memory~7098            ; 16      ;
+; data_ram:inst12|my_memory~7097            ; 16      ;
+; data_ram:inst12|my_memory~7096            ; 16      ;
+; data_ram:inst12|my_memory~7095            ; 16      ;
+; data_ram:inst12|my_memory~7094            ; 16      ;
+; data_ram:inst12|my_memory~7093            ; 16      ;
+; data_ram:inst12|my_memory~7092            ; 16      ;
+; data_ram:inst12|my_memory~7091            ; 16      ;
+; data_ram:inst12|my_memory~7090            ; 16      ;
+; data_ram:inst12|my_memory~7089            ; 16      ;
+; data_ram:inst12|my_memory~7088            ; 16      ;
+; data_ram:inst12|my_memory~7087            ; 16      ;
+; data_ram:inst12|my_memory~7086            ; 16      ;
+; data_ram:inst12|my_memory~7085            ; 16      ;
+; data_ram:inst12|my_memory~7084            ; 16      ;
+; data_ram:inst12|my_memory~7083            ; 16      ;
+; data_ram:inst12|my_memory~7082            ; 16      ;
+; data_ram:inst12|my_memory~7081            ; 16      ;
+; data_ram:inst12|my_memory~7080            ; 16      ;
+; data_ram:inst12|my_memory~7079            ; 16      ;
+; data_ram:inst12|my_memory~7078            ; 16      ;
+; data_ram:inst12|my_memory~7077            ; 16      ;
+; data_ram:inst12|my_memory~7076            ; 16      ;
+; data_ram:inst12|my_memory~7075            ; 16      ;
+; data_ram:inst12|my_memory~7074            ; 16      ;
+; data_ram:inst12|my_memory~7073            ; 16      ;
+; data_ram:inst12|my_memory~7072            ; 16      ;
+; data_ram:inst12|my_memory~7071            ; 16      ;
+; data_ram:inst12|my_memory~7070            ; 16      ;
+; data_ram:inst12|my_memory~7069            ; 16      ;
+; data_ram:inst12|my_memory~7068            ; 16      ;
+; data_ram:inst12|my_memory~7067            ; 16      ;
+; data_ram:inst12|my_memory~7066            ; 16      ;
+; data_ram:inst12|my_memory~7065            ; 16      ;
+; data_ram:inst12|my_memory~7064            ; 16      ;
+; data_ram:inst12|my_memory~7063            ; 16      ;
+; data_ram:inst12|my_memory~7062            ; 16      ;
+; data_ram:inst12|my_memory~7061            ; 16      ;
+; data_ram:inst12|my_memory~7060            ; 16      ;
+; data_ram:inst12|my_memory~7059            ; 16      ;
+; data_ram:inst12|my_memory~7058            ; 16      ;
+; data_ram:inst12|my_memory~7057            ; 16      ;
+; data_ram:inst12|my_memory~7056            ; 16      ;
+; data_ram:inst12|my_memory~7055            ; 16      ;
+; data_ram:inst12|my_memory~7054            ; 16      ;
+; data_ram:inst12|my_memory~7053            ; 16      ;
+; data_ram:inst12|my_memory~7052            ; 16      ;
+; data_ram:inst12|my_memory~7051            ; 16      ;
+; data_ram:inst12|my_memory~7050            ; 16      ;
+; data_ram:inst12|my_memory~7049            ; 16      ;
+; data_ram:inst12|my_memory~7048            ; 16      ;
+; data_ram:inst12|my_memory~7047            ; 16      ;
+; data_ram:inst12|my_memory~7046            ; 16      ;
+; data_ram:inst12|my_memory~7045            ; 16      ;
+; data_ram:inst12|my_memory~7044            ; 16      ;
+; data_ram:inst12|my_memory~7043            ; 16      ;
+; data_ram:inst12|my_memory~7042            ; 16      ;
+; data_ram:inst12|my_memory~7041            ; 16      ;
+; data_ram:inst12|my_memory~7040            ; 16      ;
+; data_ram:inst12|my_memory~7039            ; 16      ;
+; data_ram:inst12|my_memory~7038            ; 16      ;
+; data_ram:inst12|my_memory~7037            ; 16      ;
+; data_ram:inst12|my_memory~7036            ; 16      ;
+; data_ram:inst12|my_memory~7035            ; 16      ;
+; data_ram:inst12|my_memory~7034            ; 16      ;
+; data_ram:inst12|my_memory~7033            ; 16      ;
+; data_ram:inst12|my_memory~7032            ; 16      ;
+; data_ram:inst12|my_memory~7031            ; 16      ;
+; data_ram:inst12|my_memory~7030            ; 16      ;
+; data_ram:inst12|my_memory~7029            ; 16      ;
+; data_ram:inst12|my_memory~7028            ; 16      ;
+; data_ram:inst12|my_memory~7027            ; 16      ;
+; data_ram:inst12|my_memory~7026            ; 16      ;
+; data_ram:inst12|my_memory~7025            ; 16      ;
+; data_ram:inst12|my_memory~7024            ; 16      ;
+; data_ram:inst12|my_memory~7023            ; 16      ;
+; data_ram:inst12|my_memory~7022            ; 16      ;
+; data_ram:inst12|my_memory~7021            ; 16      ;
+; data_ram:inst12|my_memory~7020            ; 16      ;
+; data_ram:inst12|my_memory~7019            ; 16      ;
+; data_ram:inst12|my_memory~7018            ; 16      ;
+; data_ram:inst12|my_memory~7017            ; 16      ;
+; data_ram:inst12|my_memory~7016            ; 16      ;
+; data_ram:inst12|my_memory~7015            ; 16      ;
+; data_ram:inst12|my_memory~7014            ; 16      ;
+; data_ram:inst12|my_memory~7013            ; 16      ;
+; data_ram:inst12|my_memory~7012            ; 16      ;
+; data_ram:inst12|my_memory~7011            ; 16      ;
+; data_ram:inst12|my_memory~7010            ; 16      ;
+; data_ram:inst12|my_memory~7009            ; 16      ;
+; data_ram:inst12|my_memory~7008            ; 16      ;
+; data_ram:inst12|my_memory~7007            ; 16      ;
+; data_ram:inst12|my_memory~7006            ; 16      ;
+; data_ram:inst12|my_memory~7005            ; 16      ;
+; data_ram:inst12|my_memory~7004            ; 16      ;
+; data_ram:inst12|my_memory~7003            ; 16      ;
+; data_ram:inst12|my_memory~7002            ; 16      ;
+; data_ram:inst12|my_memory~7001            ; 16      ;
+; data_ram:inst12|my_memory~7000            ; 16      ;
+; data_ram:inst12|my_memory~6999            ; 16      ;
+; data_ram:inst12|my_memory~6998            ; 16      ;
+; data_ram:inst12|my_memory~6997            ; 16      ;
+; data_ram:inst12|my_memory~6996            ; 16      ;
+; data_ram:inst12|my_memory~6995            ; 16      ;
+; data_ram:inst12|my_memory~6994            ; 16      ;
+; data_ram:inst12|my_memory~6993            ; 16      ;
+; data_ram:inst12|my_memory~6992            ; 16      ;
+; data_ram:inst12|my_memory~6991            ; 16      ;
+; data_ram:inst12|my_memory~6990            ; 16      ;
+; data_ram:inst12|my_memory~6989            ; 16      ;
+; data_ram:inst12|my_memory~6988            ; 16      ;
+; data_ram:inst12|my_memory~6987            ; 16      ;
+; data_ram:inst12|my_memory~6986            ; 16      ;
+; data_ram:inst12|my_memory~6985            ; 16      ;
+; data_ram:inst12|my_memory~6984            ; 16      ;
+; data_ram:inst12|my_memory~6983            ; 16      ;
+; data_ram:inst12|my_memory~6982            ; 16      ;
+; data_ram:inst12|my_memory~6981            ; 16      ;
+; data_ram:inst12|my_memory~6980            ; 16      ;
+; data_ram:inst12|my_memory~6979            ; 16      ;
+; data_ram:inst12|my_memory~6978            ; 16      ;
+; data_ram:inst12|my_memory~6977            ; 16      ;
+; data_ram:inst12|my_memory~6976            ; 16      ;
+; data_ram:inst12|my_memory~6975            ; 16      ;
+; data_ram:inst12|my_memory~6974            ; 16      ;
+; data_ram:inst12|my_memory~6973            ; 16      ;
+; data_ram:inst12|my_memory~6972            ; 16      ;
+; data_ram:inst12|my_memory~6971            ; 16      ;
+; data_ram:inst12|my_memory~6970            ; 16      ;
+; data_ram:inst12|my_memory~6969            ; 16      ;
+; data_ram:inst12|my_memory~6968            ; 16      ;
+; data_ram:inst12|my_memory~6967            ; 16      ;
+; data_ram:inst12|my_memory~6966            ; 16      ;
+; data_ram:inst12|my_memory~6965            ; 16      ;
+; data_ram:inst12|my_memory~6964            ; 16      ;
+; data_ram:inst12|my_memory~6963            ; 16      ;
+; data_ram:inst12|my_memory~6962            ; 16      ;
+; data_ram:inst12|my_memory~6961            ; 16      ;
+; data_ram:inst12|my_memory~6960            ; 16      ;
+; data_ram:inst12|my_memory~6959            ; 16      ;
+; data_ram:inst12|my_memory~6958            ; 16      ;
+; data_ram:inst12|my_memory~6957            ; 16      ;
+; data_ram:inst12|my_memory~6956            ; 16      ;
+; data_ram:inst12|my_memory~6955            ; 16      ;
+; data_ram:inst12|my_memory~6954            ; 16      ;
+; data_ram:inst12|my_memory~6953            ; 16      ;
+; data_ram:inst12|my_memory~6952            ; 16      ;
+; data_ram:inst12|my_memory~6951            ; 16      ;
+; data_ram:inst12|my_memory~6950            ; 16      ;
+; data_ram:inst12|my_memory~6949            ; 16      ;
+; data_ram:inst12|my_memory~6948            ; 16      ;
+; data_ram:inst12|my_memory~6947            ; 16      ;
+; data_ram:inst12|my_memory~6946            ; 16      ;
+; data_ram:inst12|my_memory~6945            ; 16      ;
+; data_ram:inst12|my_memory~6944            ; 16      ;
+; data_ram:inst12|my_memory~6943            ; 16      ;
+; data_ram:inst12|my_memory~6942            ; 16      ;
+; data_ram:inst12|my_memory~6941            ; 16      ;
+; data_ram:inst12|my_memory~6940            ; 16      ;
+; data_ram:inst12|my_memory~6939            ; 16      ;
+; data_ram:inst12|my_memory~6938            ; 16      ;
+; data_ram:inst12|my_memory~6937            ; 16      ;
+; data_ram:inst12|my_memory~6936            ; 16      ;
+; data_ram:inst12|my_memory~6935            ; 16      ;
+; data_ram:inst12|my_memory~6934            ; 16      ;
+; data_ram:inst12|my_memory~6933            ; 16      ;
+; data_ram:inst12|my_memory~6932            ; 16      ;
+; data_ram:inst12|my_memory~6931            ; 16      ;
+; data_ram:inst12|my_memory~6930            ; 16      ;
+; data_ram:inst12|my_memory~6929            ; 16      ;
+; data_ram:inst12|my_memory~6928            ; 16      ;
+; data_ram:inst12|my_memory~6927            ; 16      ;
+; data_ram:inst12|my_memory~6926            ; 16      ;
+; data_ram:inst12|my_memory~6925            ; 16      ;
+; data_ram:inst12|my_memory~6924            ; 16      ;
+; data_ram:inst12|my_memory~6923            ; 16      ;
+; data_ram:inst12|my_memory~6922            ; 16      ;
+; data_ram:inst12|my_memory~6921            ; 16      ;
+; data_ram:inst12|my_memory~6920            ; 16      ;
+; data_ram:inst12|my_memory~6919            ; 16      ;
+; data_ram:inst12|my_memory~6918            ; 16      ;
+; data_ram:inst12|my_memory~6917            ; 16      ;
+; data_ram:inst12|my_memory~6916            ; 16      ;
+; data_ram:inst12|my_memory~6915            ; 16      ;
+; data_ram:inst12|my_memory~6914            ; 16      ;
+; data_ram:inst12|my_memory~6913            ; 16      ;
+; data_ram:inst12|my_memory~6912            ; 16      ;
+; data_ram:inst12|my_memory~6911            ; 16      ;
+; data_ram:inst12|my_memory~6910            ; 16      ;
+; data_ram:inst12|my_memory~6909            ; 16      ;
+; data_ram:inst12|my_memory~6908            ; 16      ;
+; data_ram:inst12|my_memory~6907            ; 16      ;
+; data_ram:inst12|my_memory~6906            ; 16      ;
+; data_ram:inst12|my_memory~6905            ; 16      ;
+; data_ram:inst12|my_memory~6904            ; 16      ;
+; data_ram:inst12|my_memory~6903            ; 16      ;
+; data_ram:inst12|my_memory~6902            ; 16      ;
+; data_ram:inst12|my_memory~6901            ; 16      ;
+; data_ram:inst12|my_memory~6900            ; 16      ;
+; data_ram:inst12|my_memory~6899            ; 16      ;
+; data_ram:inst12|my_memory~6898            ; 16      ;
+; data_ram:inst12|my_memory~6897            ; 16      ;
+; data_ram:inst12|my_memory~6896            ; 16      ;
+; data_ram:inst12|my_memory~6895            ; 16      ;
+; data_ram:inst12|my_memory~6894            ; 16      ;
+; data_ram:inst12|my_memory~6893            ; 16      ;
+; data_ram:inst12|my_memory~6892            ; 16      ;
+; data_ram:inst12|my_memory~6891            ; 16      ;
+; data_ram:inst12|my_memory~6890            ; 16      ;
+; data_ram:inst12|my_memory~6889            ; 16      ;
+; data_ram:inst12|my_memory~6888            ; 16      ;
+; data_ram:inst12|my_memory~6887            ; 16      ;
+; data_ram:inst12|my_memory~6886            ; 16      ;
+; data_ram:inst12|my_memory~6885            ; 16      ;
+; data_ram:inst12|my_memory~6884            ; 16      ;
+; data_ram:inst12|my_memory~6883            ; 16      ;
+; data_ram:inst12|my_memory~6882            ; 16      ;
+; data_ram:inst12|my_memory~6881            ; 16      ;
+; data_ram:inst12|my_memory~6880            ; 16      ;
+; data_ram:inst12|my_memory~6879            ; 16      ;
+; data_ram:inst12|my_memory~6878            ; 16      ;
+; data_ram:inst12|my_memory~6877            ; 16      ;
+; data_ram:inst12|my_memory~6876            ; 16      ;
+; data_ram:inst12|my_memory~6875            ; 16      ;
+; data_ram:inst12|my_memory~6874            ; 16      ;
+; data_ram:inst12|my_memory~6873            ; 16      ;
+; data_ram:inst12|my_memory~6872            ; 16      ;
+; data_ram:inst12|my_memory~6871            ; 16      ;
+; data_ram:inst12|my_memory~6870            ; 16      ;
+; data_ram:inst12|my_memory~6869            ; 16      ;
+; data_ram:inst12|my_memory~6868            ; 16      ;
+; data_ram:inst12|my_memory~6867            ; 16      ;
+; data_ram:inst12|my_memory~6866            ; 16      ;
+; data_ram:inst12|my_memory~6865            ; 16      ;
+; data_ram:inst12|my_memory~6864            ; 16      ;
+; data_ram:inst12|my_memory~6863            ; 16      ;
+; data_ram:inst12|my_memory~6862            ; 16      ;
+; data_ram:inst12|my_memory~6861            ; 16      ;
+; data_ram:inst12|my_memory~6860            ; 16      ;
+; data_ram:inst12|my_memory~6859            ; 16      ;
+; data_ram:inst12|my_memory~6858            ; 16      ;
+; data_ram:inst12|my_memory~6857            ; 16      ;
+; data_ram:inst12|my_memory~6856            ; 16      ;
+; data_ram:inst12|my_memory~6855            ; 16      ;
+; data_ram:inst12|my_memory~6854            ; 16      ;
+; data_ram:inst12|my_memory~6853            ; 16      ;
+; data_ram:inst12|my_memory~6852            ; 16      ;
+; data_ram:inst12|my_memory~6851            ; 16      ;
+; data_ram:inst12|my_memory~6850            ; 16      ;
+; data_ram:inst12|my_memory~6849            ; 16      ;
+; data_ram:inst12|my_memory~6848            ; 16      ;
+; data_ram:inst12|my_memory~6847            ; 16      ;
+; data_ram:inst12|my_memory~6846            ; 16      ;
+; data_ram:inst12|my_memory~6845            ; 16      ;
+; data_ram:inst12|my_memory~6844            ; 16      ;
+; data_ram:inst12|my_memory~6843            ; 16      ;
+; data_ram:inst12|my_memory~6842            ; 16      ;
+; data_ram:inst12|my_memory~6841            ; 16      ;
+; data_ram:inst12|my_memory~6840            ; 16      ;
+; data_ram:inst12|my_memory~6839            ; 16      ;
+; data_ram:inst12|my_memory~6838            ; 16      ;
+; data_ram:inst12|my_memory~6837            ; 16      ;
+; data_ram:inst12|my_memory~6836            ; 16      ;
+; data_ram:inst12|my_memory~6835            ; 16      ;
+; data_ram:inst12|my_memory~6834            ; 16      ;
+; data_ram:inst12|my_memory~6833            ; 16      ;
+; data_ram:inst12|my_memory~6832            ; 16      ;
+; data_ram:inst12|my_memory~6831            ; 16      ;
+; data_ram:inst12|my_memory~6830            ; 16      ;
+; data_ram:inst12|my_memory~6829            ; 16      ;
+; data_ram:inst12|my_memory~6828            ; 16      ;
+; data_ram:inst12|my_memory~6827            ; 16      ;
+; data_ram:inst12|my_memory~6826            ; 16      ;
+; data_ram:inst12|my_memory~6825            ; 16      ;
+; data_ram:inst12|my_memory~6824            ; 16      ;
+; data_ram:inst12|my_memory~6823            ; 16      ;
+; data_ram:inst12|my_memory~6822            ; 16      ;
+; data_ram:inst12|my_memory~6821            ; 16      ;
+; data_ram:inst12|my_memory~6820            ; 16      ;
+; data_ram:inst12|my_memory~6819            ; 16      ;
+; data_ram:inst12|my_memory~6818            ; 16      ;
+; data_ram:inst12|my_memory~6817            ; 16      ;
+; data_ram:inst12|my_memory~6816            ; 16      ;
+; register_file:register_file|reg3[15]~0    ; 16      ;
+; register_file:register_file|reg5[15]~1    ; 16      ;
+; register_file:register_file|reg0[15]~0    ; 16      ;
+; register_file:register_file|reg4[15]~0    ; 16      ;
+; register_file:register_file|reg2[15]~0    ; 16      ;
+; register_file:register_file|reg7[15]~0    ; 16      ;
+; register_file:register_file|res[15]~16    ; 16      ;
+; register_ex:inst11|out_ctrl_cpin          ; 16      ;
+; register_file:register_file|reg6[15]~1    ; 16      ;
+; next_pc_logic:inst3|temp_out[1]           ; 14      ;
+; instr_rom_2:inst6|Equal2~1                ; 9       ;
+; instr_rom_2:inst6|Equal1~3                ; 9       ;
+; register_id:inst9|out_immediate[6]        ; 9       ;
+; register_id:inst9|out_immediate[4]        ; 8       ;
+; register_file:register_file|reg6~16       ; 8       ;
+; register_file:register_file|reg6~15       ; 8       ;
+; register_file:register_file|reg6~14       ; 8       ;
+; register_file:register_file|reg6~13       ; 8       ;
+; register_file:register_file|reg6~12       ; 8       ;
+; register_file:register_file|reg6~11       ; 8       ;
+; register_file:register_file|reg6~10       ; 8       ;
+; register_file:register_file|reg6~9        ; 8       ;
+; register_file:register_file|reg6~8        ; 8       ;
+; register_file:register_file|reg6~7        ; 8       ;
+; register_file:register_file|reg6~6        ; 8       ;
+; register_file:register_file|reg6~5        ; 8       ;
+; register_file:register_file|reg6~4        ; 8       ;
+; register_file:register_file|reg6~3        ; 8       ;
+; register_file:register_file|reg6~2        ; 8       ;
+; register_file:register_file|reg6~0        ; 8       ;
+; next_pc_logic:inst3|temp_out[4]           ; 8       ;
+; instr_rom_2:inst6|Equal16~3               ; 7       ;
+; register_id:inst9|out_immediate[7]        ; 7       ;
+; instr_rom_2:inst6|Equal4~0                ; 6       ;
+; instr_rom_2:inst6|Equal11~0               ; 6       ;
+; instr_rom_2:inst6|Equal36~0               ; 6       ;
+; instr_rom_2:inst6|WideNor0~5              ; 6       ;
+; instr_rom_2:inst6|Equal2~0                ; 6       ;
+; register_id:inst9|out_immediate[5]        ; 6       ;
+; mux2:inst7|out[8]~7                       ; 6       ;
+; mux2:inst7|out[9]~6                       ; 6       ;
+; mux2:inst7|out[10]~5                      ; 6       ;
+; mux2:inst7|out[11]~4                      ; 6       ;
+; mux2:inst7|out[12]~3                      ; 6       ;
+; mux2:inst7|out[13]~2                      ; 6       ;
+; mux2:inst7|out[14]~1                      ; 6       ;
+; mux2:inst7|out[15]~0                      ; 6       ;
+; instr_rom_2:inst6|Equal38~0               ; 5       ;
+; instr_rom_2:inst6|Equal31~2               ; 4       ;
+; instr_rom_2:inst6|Equal29~2               ; 4       ;
+; instr_rom_2:inst6|WideOr1~9               ; 4       ;
+; instr_rom_2:inst6|Equal2~2                ; 4       ;
+; instr_rom_2:inst6|Equal14~0               ; 4       ;
+; instr_rom_2:inst6|WideNor0~4              ; 4       ;
+; register_ex:inst11|ctrl_memRead~0         ; 4       ;
+; register_id:inst9|out_format              ; 4       ;
+; register_file:register_file|reg1[15]~2    ; 4       ;
+; register_file:register_file|reg5[15]~0    ; 4       ;
+; register_ex:inst11|out_extended[7]        ; 4       ;
+; register_ex:inst11|out_extended[5]        ; 4       ;
+; register_file:register_file|res[0]        ; 4       ;
+; register_file:register_file|res[1]        ; 4       ;
+; register_file:register_file|res[2]        ; 4       ;
+; register_file:register_file|res[3]~3      ; 4       ;
+; register_file:register_file|res[3]        ; 4       ;
+; register_file:register_file|res[4]~4      ; 4       ;
+; register_file:register_file|res[4]        ; 4       ;
+; register_file:register_file|res[5]~5      ; 4       ;
+; register_file:register_file|res[5]        ; 4       ;
+; register_file:register_file|res[6]~6      ; 4       ;
+; register_file:register_file|res[6]        ; 4       ;
+; register_file:register_file|res[7]~7      ; 4       ;
+; register_file:register_file|res[7]        ; 4       ;
+; register_file:register_file|res[8]~8      ; 4       ;
+; register_file:register_file|res[8]        ; 4       ;
+; register_file:register_file|res[9]~9      ; 4       ;
+; register_file:register_file|res[9]        ; 4       ;
+; register_file:register_file|res[10]~10    ; 4       ;
+; register_file:register_file|res[10]       ; 4       ;
+; register_file:register_file|res[11]~11    ; 4       ;
+; register_file:register_file|res[11]       ; 4       ;
+; register_file:register_file|res[12]~12    ; 4       ;
+; register_file:register_file|res[12]       ; 4       ;
+; register_file:register_file|res[13]~13    ; 4       ;
+; register_file:register_file|res[13]       ; 4       ;
+; register_file:register_file|res[14]~14    ; 4       ;
+; register_file:register_file|res[14]       ; 4       ;
+; register_file:register_file|res[15]~15    ; 4       ;
+; register_file:register_file|res[15]       ; 4       ;
+; instr_rom_2:inst6|Equal24~3               ; 3       ;
+; instr_rom_2:inst6|WideOr1~10              ; 3       ;
+; instr_rom_2:inst6|WideOr8~0               ; 3       ;
+; instr_rom_2:inst6|Equal30~0               ; 3       ;
+; instr_rom_2:inst6|Equal1~5                ; 3       ;
+; instr_rom_2:inst6|Equal8~0                ; 3       ;
+; instr_rom_2:inst6|Equal34~0               ; 3       ;
+; instr_rom_2:inst6|Equal22~0               ; 3       ;
+; instr_rom_2:inst6|Equal6~0                ; 3       ;
+; register_ex:inst11|ctrl_jump~1            ; 3       ;
+; register_id:inst9|out_immediate[3]        ; 3       ;
+; register_ex:inst11|out_ctrl_memRead       ; 3       ;
+; register_ex:inst11|out_ctrl_regWrite      ; 3       ;
+; ALU:inst2|compres~1                       ; 3       ;
+; register_file:register_file|reg7[0]       ; 3       ;
+; register_file:register_file|reg7[1]       ; 3       ;
+; register_file:register_file|reg7[2]       ; 3       ;
+; register_file:register_file|reg7[3]       ; 3       ;
+; register_file:register_file|reg7[4]       ; 3       ;
+; register_file:register_file|reg7[5]       ; 3       ;
+; register_file:register_file|reg7[6]       ; 3       ;
+; register_file:register_file|reg7[7]       ; 3       ;
+; register_file:register_file|reg7[8]       ; 3       ;
+; register_file:register_file|reg7[9]       ; 3       ;
+; register_file:register_file|reg7[10]      ; 3       ;
+; register_file:register_file|reg7[11]      ; 3       ;
+; register_file:register_file|reg7[12]      ; 3       ;
+; register_file:register_file|reg7[13]      ; 3       ;
+; register_file:register_file|reg7[14]      ; 3       ;
+; register_file:register_file|reg7[15]      ; 3       ;
+; register_file:register_file|res[0]~0      ; 3       ;
+; register_file:register_file|res[1]~1      ; 3       ;
+; register_file:register_file|res[2]~2      ; 3       ;
+; instr_rom_2:inst6|instr_out[3]            ; 2       ;
+; instr_rom_2:inst6|instr_out[1]            ; 2       ;
+; instr_rom_2:inst6|instr_out[0]            ; 2       ;
+; instr_rom_2:inst6|instr_out[7]            ; 2       ;
+; instr_rom_2:inst6|instr_out[5]            ; 2       ;
+; instr_rom_2:inst6|instr_out[8]            ; 2       ;
+; instr_rom_2:inst6|instr_out[6]            ; 2       ;
+; instr_rom_2:inst6|instr_out[4]            ; 2       ;
+; instr_rom_2:inst6|instr_out[2]            ; 2       ;
+; ALU:inst2|out[0]                          ; 2       ;
+; ALU:inst2|out[1]                          ; 2       ;
+; ALU:inst2|out[2]                          ; 2       ;
+; ALU:inst2|out[3]                          ; 2       ;
+; ALU:inst2|out[4]                          ; 2       ;
+; ALU:inst2|out[5]                          ; 2       ;
+; ALU:inst2|out[6]                          ; 2       ;
+; ALU:inst2|out[7]                          ; 2       ;
+; ALU:inst2|out[8]                          ; 2       ;
+; ALU:inst2|out[9]                          ; 2       ;
+; ALU:inst2|out[10]                         ; 2       ;
+; ALU:inst2|out[11]                         ; 2       ;
+; ALU:inst2|out[12]                         ; 2       ;
+; ALU:inst2|out[13]                         ; 2       ;
+; ALU:inst2|out[14]                         ; 2       ;
+; ALU:inst2|out[15]                         ; 2       ;
+; instr_rom_2:inst6|WideOr12~15             ; 2       ;
+; instr_rom_2:inst6|WideOr6~4               ; 2       ;
+; instr_rom_2:inst6|WideOr14~7              ; 2       ;
+; instr_rom_2:inst6|Equal18~2               ; 2       ;
+; instr_rom_2:inst6|Equal14~1               ; 2       ;
+; instr_rom_2:inst6|WideNor0~11             ; 2       ;
+; instr_rom_2:inst6|WideOr1~6               ; 2       ;
+; instr_rom_2:inst6|WideOr1~5               ; 2       ;
+; instr_rom_2:inst6|WideOr1~4               ; 2       ;
+; instr_rom_2:inst6|Equal17~0               ; 2       ;
+; instr_rom_2:inst6|Equal41~0               ; 2       ;
+; instr_rom_2:inst6|WideOr12~14             ; 2       ;
+; instr_rom_2:inst6|Equal16~2               ; 2       ;
+; instr_rom_2:inst6|WideOr14~3              ; 2       ;
+; instr_rom_2:inst6|WideOr12~12             ; 2       ;
+; instr_rom_2:inst6|Equal25~0               ; 2       ;
+; instr_rom_2:inst6|WideOr14~2              ; 2       ;
+; instr_rom_2:inst6|WideOr12~8              ; 2       ;
+; instr_rom_2:inst6|WideOr1~3               ; 2       ;
+; instr_rom_2:inst6|WideOr6~3               ; 2       ;
+; instr_rom_2:inst6|Equal48~1               ; 2       ;
+; instr_rom_2:inst6|Equal50~0               ; 2       ;
+; instr_rom_2:inst6|Equal48~0               ; 2       ;
+; instr_rom_2:inst6|WideOr1~2               ; 2       ;
+; instr_rom_2:inst6|Equal10~0               ; 2       ;
+; instr_rom_2:inst6|Equal24~2               ; 2       ;
+; register_ex:inst11|ctrl_memRead~2         ; 2       ;
+; mux4:mux4|out[0]~31                       ; 2       ;
+; mux4:mux4|out[1]~29                       ; 2       ;
+; mux4:mux4|out[2]~27                       ; 2       ;
+; mux4:mux4|out[3]~25                       ; 2       ;
+; mux4:mux4|out[4]~23                       ; 2       ;
+; mux4:mux4|out[5]~21                       ; 2       ;
+; mux4:mux4|out[6]~19                       ; 2       ;
+; mux4:mux4|out[7]~17                       ; 2       ;
+; mux4:mux4|out[8]~15                       ; 2       ;
+; mux4:mux4|out[9]~13                       ; 2       ;
+; mux4:mux4|out[10]~11                      ; 2       ;
+; mux4:mux4|out[11]~9                       ; 2       ;
+; mux4:mux4|out[12]~7                       ; 2       ;
+; mux4:mux4|out[13]~5                       ; 2       ;
+; mux4:mux4|out[14]~3                       ; 2       ;
+; mux4:mux4|out[15]~1                       ; 2       ;
+; register_file:register_file|reg_val[0]~63 ; 2       ;
+; register_file:register_file|reg_val[0]~61 ; 2       ;
+; register_file:register_file|reg6[0]       ; 2       ;
+; register_file:register_file|reg_val[1]~59 ; 2       ;
+; register_file:register_file|reg_val[1]~57 ; 2       ;
+; register_file:register_file|reg6[1]       ; 2       ;
+; register_file:register_file|reg_val[2]~55 ; 2       ;
+; register_file:register_file|reg_val[2]~53 ; 2       ;
+; register_file:register_file|reg6[2]       ; 2       ;
+; register_file:register_file|reg6[3]       ; 2       ;
+; register_file:register_file|reg6[4]       ; 2       ;
+; register_file:register_file|reg6[5]       ; 2       ;
+; register_file:register_file|reg6[6]       ; 2       ;
+; register_file:register_file|reg6[7]       ; 2       ;
+; register_file:register_file|reg6[8]       ; 2       ;
+; register_file:register_file|reg6[9]       ; 2       ;
+; register_file:register_file|reg6[10]      ; 2       ;
+; register_file:register_file|reg6[11]      ; 2       ;
+; register_file:register_file|reg6[12]      ; 2       ;
+; register_file:register_file|reg6[13]      ; 2       ;
+; register_file:register_file|reg6[14]      ; 2       ;
+; register_file:register_file|reg6[15]      ; 2       ;
+; register_ex:inst11|out_format             ; 2       ;
+; next_pc_logic:inst3|temp_out[15]          ; 2       ;
+; next_pc_logic:inst3|temp_out[14]          ; 2       ;
+; next_pc_logic:inst3|temp_out[13]          ; 2       ;
+; next_pc_logic:inst3|temp_out[12]          ; 2       ;
+; next_pc_logic:inst3|temp_out[11]          ; 2       ;
+; next_pc_logic:inst3|temp_out[10]          ; 2       ;
+; next_pc_logic:inst3|temp_out[9]           ; 2       ;
+; next_pc_logic:inst3|temp_out[8]           ; 2       ;
+; next_pc_logic:inst3|temp_out[7]           ; 2       ;
+; next_pc_logic:inst3|temp_out[6]           ; 2       ;
+; adder:inst4|out[0]~45                     ; 1       ;
+; data_ram:inst12|my_memory~7699            ; 1       ;
+; data_ram:inst12|my_memory~7698            ; 1       ;
+; data_ram:inst12|my_memory~7697            ; 1       ;
+; data_ram:inst12|my_memory~7696            ; 1       ;
+; data_ram:inst12|my_memory~7695            ; 1       ;
+; data_ram:inst12|my_memory~7694            ; 1       ;
+; data_ram:inst12|my_memory~7693            ; 1       ;
+; data_ram:inst12|my_memory~7692            ; 1       ;
+; data_ram:inst12|my_memory~7691            ; 1       ;
+; data_ram:inst12|my_memory~7690            ; 1       ;
+; data_ram:inst12|my_memory~7689            ; 1       ;
+; data_ram:inst12|my_memory~7688            ; 1       ;
+; data_ram:inst12|my_memory~7687            ; 1       ;
+; data_ram:inst12|my_memory~7686            ; 1       ;
+; data_ram:inst12|my_memory~7685            ; 1       ;
+; data_ram:inst12|my_memory~7684            ; 1       ;
+; data_ram:inst12|my_memory~7683            ; 1       ;
+; data_ram:inst12|my_memory~7682            ; 1       ;
+; data_ram:inst12|my_memory~7681            ; 1       ;
+; data_ram:inst12|my_memory~7680            ; 1       ;
+; data_ram:inst12|my_memory~7679            ; 1       ;
+; data_ram:inst12|my_memory~7678            ; 1       ;
+; data_ram:inst12|my_memory~7677            ; 1       ;
+; data_ram:inst12|my_memory~7676            ; 1       ;
+; data_ram:inst12|my_memory~7675            ; 1       ;
+; data_ram:inst12|my_memory~7674            ; 1       ;
+; data_ram:inst12|my_memory~7673            ; 1       ;
+; data_ram:inst12|my_memory~7672            ; 1       ;
+; data_ram:inst12|my_memory~7671            ; 1       ;
+; data_ram:inst12|my_memory~7670            ; 1       ;
+; data_ram:inst12|my_memory~7669            ; 1       ;
+; data_ram:inst12|my_memory~7668            ; 1       ;
+; data_ram:inst12|my_memory~7667            ; 1       ;
+; data_ram:inst12|my_memory~7666            ; 1       ;
+; data_ram:inst12|my_memory~7665            ; 1       ;
+; data_ram:inst12|my_memory~7664            ; 1       ;
+; data_ram:inst12|my_memory~7663            ; 1       ;
+; data_ram:inst12|my_memory~7662            ; 1       ;
+; data_ram:inst12|my_memory~7661            ; 1       ;
+; data_ram:inst12|my_memory~7660            ; 1       ;
+; data_ram:inst12|my_memory~7659            ; 1       ;
+; data_ram:inst12|my_memory~7658            ; 1       ;
+; data_ram:inst12|my_memory~7657            ; 1       ;
+; data_ram:inst12|my_memory~7656            ; 1       ;
+; data_ram:inst12|my_memory~7655            ; 1       ;
+; data_ram:inst12|my_memory~7654            ; 1       ;
+; data_ram:inst12|my_memory~7653            ; 1       ;
+; data_ram:inst12|my_memory~7652            ; 1       ;
+; data_ram:inst12|my_memory~7651            ; 1       ;
+; data_ram:inst12|my_memory~7650            ; 1       ;
+; data_ram:inst12|my_memory~7649            ; 1       ;
+; data_ram:inst12|my_memory~7648            ; 1       ;
+; data_ram:inst12|my_memory~7647            ; 1       ;
+; data_ram:inst12|my_memory~7646            ; 1       ;
+; data_ram:inst12|my_memory~7645            ; 1       ;
+; data_ram:inst12|my_memory~7644            ; 1       ;
+; data_ram:inst12|my_memory~7643            ; 1       ;
+; data_ram:inst12|my_memory~7642            ; 1       ;
+; data_ram:inst12|my_memory~7641            ; 1       ;
+; data_ram:inst12|my_memory~7640            ; 1       ;
+; data_ram:inst12|my_memory~7639            ; 1       ;
+; data_ram:inst12|my_memory~7638            ; 1       ;
+; data_ram:inst12|my_memory~7637            ; 1       ;
+; data_ram:inst12|my_memory~7636            ; 1       ;
+; data_ram:inst12|my_memory~7635            ; 1       ;
+; data_ram:inst12|my_memory~7634            ; 1       ;
+; data_ram:inst12|my_memory~7633            ; 1       ;
+; data_ram:inst12|my_memory~7632            ; 1       ;
+; data_ram:inst12|my_memory~7631            ; 1       ;
+; data_ram:inst12|my_memory~7630            ; 1       ;
+; data_ram:inst12|my_memory~7629            ; 1       ;
+; data_ram:inst12|my_memory~7628            ; 1       ;
+; data_ram:inst12|my_memory~7627            ; 1       ;
+; data_ram:inst12|my_memory~7626            ; 1       ;
+; data_ram:inst12|my_memory~7625            ; 1       ;
+; data_ram:inst12|my_memory~7624            ; 1       ;
+; data_ram:inst12|my_memory~7623            ; 1       ;
+; data_ram:inst12|my_memory~7622            ; 1       ;
+; data_ram:inst12|my_memory~7621            ; 1       ;
+; data_ram:inst12|my_memory~7620            ; 1       ;
+; data_ram:inst12|my_memory~7619            ; 1       ;
+; data_ram:inst12|my_memory~7618            ; 1       ;
+; data_ram:inst12|my_memory~7617            ; 1       ;
+; data_ram:inst12|my_memory~7616            ; 1       ;
+; data_ram:inst12|my_memory~7615            ; 1       ;
+; data_ram:inst12|my_memory~7614            ; 1       ;
+; data_ram:inst12|my_memory~7613            ; 1       ;
+; data_ram:inst12|my_memory~7612            ; 1       ;
+; data_ram:inst12|my_memory~7611            ; 1       ;
+; data_ram:inst12|my_memory~7610            ; 1       ;
+; data_ram:inst12|my_memory~7609            ; 1       ;
+; data_ram:inst12|my_memory~7608            ; 1       ;
+; data_ram:inst12|my_memory~7607            ; 1       ;
+; data_ram:inst12|my_memory~7606            ; 1       ;
+; data_ram:inst12|my_memory~7605            ; 1       ;
+; data_ram:inst12|my_memory~7604            ; 1       ;
+; data_ram:inst12|my_memory~7603            ; 1       ;
+; data_ram:inst12|my_memory~7602            ; 1       ;
+; data_ram:inst12|my_memory~7601            ; 1       ;
+; data_ram:inst12|my_memory~7600            ; 1       ;
+; data_ram:inst12|my_memory~7599            ; 1       ;
+; data_ram:inst12|my_memory~7598            ; 1       ;
+; data_ram:inst12|my_memory~7597            ; 1       ;
+; data_ram:inst12|my_memory~7596            ; 1       ;
+; data_ram:inst12|my_memory~7595            ; 1       ;
+; data_ram:inst12|my_memory~7594            ; 1       ;
+; data_ram:inst12|my_memory~7593            ; 1       ;
+; data_ram:inst12|my_memory~7592            ; 1       ;
+; data_ram:inst12|my_memory~7591            ; 1       ;
+; data_ram:inst12|my_memory~7590            ; 1       ;
+; data_ram:inst12|my_memory~7589            ; 1       ;
+; data_ram:inst12|my_memory~7588            ; 1       ;
+; data_ram:inst12|my_memory~7587            ; 1       ;
+; data_ram:inst12|my_memory~7586            ; 1       ;
+; data_ram:inst12|my_memory~7585            ; 1       ;
+; data_ram:inst12|my_memory~7584            ; 1       ;
+; data_ram:inst12|my_memory~7583            ; 1       ;
+; data_ram:inst12|my_memory~7582            ; 1       ;
+; data_ram:inst12|my_memory~7581            ; 1       ;
+; data_ram:inst12|my_memory~7580            ; 1       ;
+; data_ram:inst12|my_memory~7579            ; 1       ;
+; data_ram:inst12|my_memory~7578            ; 1       ;
+; data_ram:inst12|my_memory~7577            ; 1       ;
+; data_ram:inst12|my_memory~7576            ; 1       ;
+; data_ram:inst12|my_memory~7575            ; 1       ;
+; data_ram:inst12|my_memory~7574            ; 1       ;
+; data_ram:inst12|my_memory~7573            ; 1       ;
+; data_ram:inst12|my_memory~7572            ; 1       ;
+; data_ram:inst12|my_memory~7571            ; 1       ;
+; data_ram:inst12|my_memory~7570            ; 1       ;
+; data_ram:inst12|my_memory~7569            ; 1       ;
+; data_ram:inst12|my_memory~7568            ; 1       ;
+; data_ram:inst12|my_memory~7567            ; 1       ;
+; data_ram:inst12|my_memory~7566            ; 1       ;
+; data_ram:inst12|my_memory~7565            ; 1       ;
+; data_ram:inst12|my_memory~7564            ; 1       ;
+; data_ram:inst12|my_memory~7563            ; 1       ;
+; data_ram:inst12|my_memory~7562            ; 1       ;
+; data_ram:inst12|my_memory~7561            ; 1       ;
+; data_ram:inst12|my_memory~7560            ; 1       ;
+; data_ram:inst12|my_memory~7559            ; 1       ;
+; data_ram:inst12|my_memory~7558            ; 1       ;
+; data_ram:inst12|my_memory~7557            ; 1       ;
+; data_ram:inst12|my_memory~7556            ; 1       ;
+; data_ram:inst12|my_memory~7555            ; 1       ;
+; data_ram:inst12|my_memory~7554            ; 1       ;
+; data_ram:inst12|my_memory~7553            ; 1       ;
+; data_ram:inst12|my_memory~7552            ; 1       ;
+; data_ram:inst12|my_memory~7551            ; 1       ;
+; data_ram:inst12|my_memory~7550            ; 1       ;
+; data_ram:inst12|my_memory~7549            ; 1       ;
+; data_ram:inst12|my_memory~7548            ; 1       ;
+; data_ram:inst12|my_memory~7547            ; 1       ;
+; data_ram:inst12|my_memory~7546            ; 1       ;
+; data_ram:inst12|my_memory~7545            ; 1       ;
+; data_ram:inst12|my_memory~7544            ; 1       ;
+; data_ram:inst12|my_memory~7543            ; 1       ;
+; data_ram:inst12|my_memory~7542            ; 1       ;
+; data_ram:inst12|my_memory~7541            ; 1       ;
+; data_ram:inst12|my_memory~7540            ; 1       ;
+; data_ram:inst12|my_memory~7539            ; 1       ;
+; data_ram:inst12|my_memory~7538            ; 1       ;
+; data_ram:inst12|my_memory~7537            ; 1       ;
+; data_ram:inst12|my_memory~7536            ; 1       ;
+; data_ram:inst12|my_memory~7535            ; 1       ;
+; data_ram:inst12|my_memory~7534            ; 1       ;
+; data_ram:inst12|my_memory~7533            ; 1       ;
+; data_ram:inst12|my_memory~7532            ; 1       ;
+; data_ram:inst12|my_memory~7531            ; 1       ;
+; data_ram:inst12|my_memory~7530            ; 1       ;
+; data_ram:inst12|my_memory~7529            ; 1       ;
+; data_ram:inst12|my_memory~7528            ; 1       ;
+; data_ram:inst12|my_memory~7527            ; 1       ;
+; data_ram:inst12|my_memory~7526            ; 1       ;
+; data_ram:inst12|my_memory~7525            ; 1       ;
+; data_ram:inst12|my_memory~7524            ; 1       ;
+; data_ram:inst12|my_memory~7523            ; 1       ;
+; data_ram:inst12|my_memory~7522            ; 1       ;
+; data_ram:inst12|my_memory~7521            ; 1       ;
+; data_ram:inst12|my_memory~7520            ; 1       ;
+; data_ram:inst12|my_memory~7519            ; 1       ;
+; data_ram:inst12|my_memory~7518            ; 1       ;
+; data_ram:inst12|my_memory~7517            ; 1       ;
+; data_ram:inst12|my_memory~7516            ; 1       ;
+; data_ram:inst12|my_memory~7515            ; 1       ;
+; data_ram:inst12|my_memory~7514            ; 1       ;
+; data_ram:inst12|my_memory~7513            ; 1       ;
+; data_ram:inst12|my_memory~7512            ; 1       ;
+; data_ram:inst12|my_memory~7511            ; 1       ;
+; data_ram:inst12|my_memory~7510            ; 1       ;
+; data_ram:inst12|my_memory~7509            ; 1       ;
+; data_ram:inst12|my_memory~7508            ; 1       ;
+; data_ram:inst12|my_memory~7507            ; 1       ;
+; data_ram:inst12|my_memory~7506            ; 1       ;
+; data_ram:inst12|my_memory~7505            ; 1       ;
+; data_ram:inst12|my_memory~7504            ; 1       ;
+; data_ram:inst12|my_memory~7503            ; 1       ;
+; data_ram:inst12|my_memory~7502            ; 1       ;
+; data_ram:inst12|my_memory~7501            ; 1       ;
+; data_ram:inst12|my_memory~7500            ; 1       ;
+; data_ram:inst12|my_memory~7499            ; 1       ;
+; data_ram:inst12|my_memory~7498            ; 1       ;
+; data_ram:inst12|my_memory~7497            ; 1       ;
+; data_ram:inst12|my_memory~7496            ; 1       ;
+; data_ram:inst12|my_memory~7495            ; 1       ;
+; data_ram:inst12|my_memory~7494            ; 1       ;
+; data_ram:inst12|my_memory~7493            ; 1       ;
+; data_ram:inst12|my_memory~7492            ; 1       ;
+; data_ram:inst12|my_memory~7491            ; 1       ;
+; data_ram:inst12|my_memory~7490            ; 1       ;
+; data_ram:inst12|my_memory~7489            ; 1       ;
+; data_ram:inst12|my_memory~7488            ; 1       ;
+; data_ram:inst12|my_memory~7487            ; 1       ;
+; data_ram:inst12|my_memory~7486            ; 1       ;
+; data_ram:inst12|my_memory~7485            ; 1       ;
+; data_ram:inst12|my_memory~7484            ; 1       ;
+; data_ram:inst12|my_memory~7483            ; 1       ;
+; data_ram:inst12|my_memory~7482            ; 1       ;
+; data_ram:inst12|my_memory~7481            ; 1       ;
+; data_ram:inst12|my_memory~7480            ; 1       ;
+; data_ram:inst12|my_memory~7479            ; 1       ;
+; data_ram:inst12|my_memory~7478            ; 1       ;
+; data_ram:inst12|my_memory~7477            ; 1       ;
+; data_ram:inst12|my_memory~7476            ; 1       ;
+; data_ram:inst12|my_memory~7475            ; 1       ;
+; data_ram:inst12|my_memory~7474            ; 1       ;
+; data_ram:inst12|my_memory~7473            ; 1       ;
+; data_ram:inst12|my_memory~7472            ; 1       ;
+; data_ram:inst12|my_memory~7471            ; 1       ;
+; data_ram:inst12|my_memory~7470            ; 1       ;
+; data_ram:inst12|my_memory~7469            ; 1       ;
+; data_ram:inst12|my_memory~7468            ; 1       ;
+; data_ram:inst12|my_memory~7467            ; 1       ;
+; data_ram:inst12|my_memory~7466            ; 1       ;
+; data_ram:inst12|my_memory~7465            ; 1       ;
+; data_ram:inst12|my_memory~7464            ; 1       ;
+; data_ram:inst12|my_memory~7463            ; 1       ;
+; data_ram:inst12|my_memory~7462            ; 1       ;
+; data_ram:inst12|my_memory~7461            ; 1       ;
+; data_ram:inst12|my_memory~7460            ; 1       ;
+; data_ram:inst12|my_memory~7459            ; 1       ;
+; data_ram:inst12|my_memory~7458            ; 1       ;
+; data_ram:inst12|my_memory~7457            ; 1       ;
+; data_ram:inst12|my_memory~7456            ; 1       ;
+; data_ram:inst12|my_memory~7455            ; 1       ;
+; data_ram:inst12|my_memory~7454            ; 1       ;
+; data_ram:inst12|my_memory~7453            ; 1       ;
+; data_ram:inst12|my_memory~7452            ; 1       ;
+; data_ram:inst12|my_memory~7451            ; 1       ;
+; data_ram:inst12|my_memory~7450            ; 1       ;
+; data_ram:inst12|my_memory~7449            ; 1       ;
+; data_ram:inst12|my_memory~7448            ; 1       ;
+; data_ram:inst12|my_memory~7447            ; 1       ;
+; data_ram:inst12|my_memory~7446            ; 1       ;
+; data_ram:inst12|my_memory~7445            ; 1       ;
+; data_ram:inst12|my_memory~7444            ; 1       ;
+; data_ram:inst12|my_memory~7443            ; 1       ;
+; data_ram:inst12|my_memory~7442            ; 1       ;
+; data_ram:inst12|my_memory~7441            ; 1       ;
+; data_ram:inst12|my_memory~7440            ; 1       ;
+; data_ram:inst12|my_memory~7439            ; 1       ;
+; data_ram:inst12|my_memory~7438            ; 1       ;
+; data_ram:inst12|my_memory~7437            ; 1       ;
+; data_ram:inst12|my_memory~7436            ; 1       ;
+; data_ram:inst12|my_memory~7435            ; 1       ;
+; data_ram:inst12|my_memory~7434            ; 1       ;
+; data_ram:inst12|my_memory~7433            ; 1       ;
+; data_ram:inst12|my_memory~7432            ; 1       ;
+; data_ram:inst12|my_memory~7431            ; 1       ;
+; data_ram:inst12|my_memory~7430            ; 1       ;
+; data_ram:inst12|my_memory~7429            ; 1       ;
+; data_ram:inst12|my_memory~7428            ; 1       ;
+; data_ram:inst12|my_memory~7427            ; 1       ;
+; data_ram:inst12|my_memory~7426            ; 1       ;
+; data_ram:inst12|my_memory~7425            ; 1       ;
+; data_ram:inst12|my_memory~7424            ; 1       ;
+; data_ram:inst12|my_memory~7423            ; 1       ;
+; data_ram:inst12|my_memory~7422            ; 1       ;
+; data_ram:inst12|my_memory~7421            ; 1       ;
+; data_ram:inst12|my_memory~7420            ; 1       ;
+; data_ram:inst12|my_memory~7419            ; 1       ;
+; data_ram:inst12|my_memory~7418            ; 1       ;
+; data_ram:inst12|my_memory~7417            ; 1       ;
+; data_ram:inst12|my_memory~7416            ; 1       ;
+; data_ram:inst12|my_memory~7415            ; 1       ;
+; data_ram:inst12|my_memory~7414            ; 1       ;
+; data_ram:inst12|my_memory~7413            ; 1       ;
+; data_ram:inst12|my_memory~7412            ; 1       ;
+; data_ram:inst12|my_memory~7411            ; 1       ;
+; data_ram:inst12|my_memory~7410            ; 1       ;
+; data_ram:inst12|my_memory~7409            ; 1       ;
+; data_ram:inst12|my_memory~7408            ; 1       ;
+; data_ram:inst12|my_memory~7407            ; 1       ;
+; data_ram:inst12|my_memory~7406            ; 1       ;
+; data_ram:inst12|my_memory~7405            ; 1       ;
+; data_ram:inst12|my_memory~7404            ; 1       ;
+; data_ram:inst12|my_memory~7403            ; 1       ;
+; data_ram:inst12|my_memory~7402            ; 1       ;
+; data_ram:inst12|my_memory~7401            ; 1       ;
+; data_ram:inst12|my_memory~7400            ; 1       ;
+; data_ram:inst12|my_memory~7399            ; 1       ;
+; data_ram:inst12|my_memory~7398            ; 1       ;
+; data_ram:inst12|my_memory~7397            ; 1       ;
+; data_ram:inst12|my_memory~7396            ; 1       ;
+; data_ram:inst12|my_memory~7395            ; 1       ;
+; data_ram:inst12|my_memory~7394            ; 1       ;
+; data_ram:inst12|my_memory~7393            ; 1       ;
+; data_ram:inst12|my_memory~7392            ; 1       ;
+; data_ram:inst12|my_memory~7391            ; 1       ;
+; data_ram:inst12|my_memory~7390            ; 1       ;
+; data_ram:inst12|my_memory~7389            ; 1       ;
+; data_ram:inst12|my_memory~7388            ; 1       ;
+; data_ram:inst12|my_memory~7387            ; 1       ;
+; data_ram:inst12|my_memory~7386            ; 1       ;
+; data_ram:inst12|my_memory~7385            ; 1       ;
+; data_ram:inst12|my_memory~7384            ; 1       ;
+; data_ram:inst12|my_memory~7383            ; 1       ;
+; data_ram:inst12|my_memory~7382            ; 1       ;
+; data_ram:inst12|my_memory~7381            ; 1       ;
+; data_ram:inst12|my_memory~7380            ; 1       ;
+; data_ram:inst12|my_memory~7379            ; 1       ;
+; data_ram:inst12|my_memory~7378            ; 1       ;
+; data_ram:inst12|my_memory~7377            ; 1       ;
+; data_ram:inst12|my_memory~7376            ; 1       ;
+; data_ram:inst12|my_memory~7375            ; 1       ;
+; data_ram:inst12|my_memory~7374            ; 1       ;
+; data_ram:inst12|my_memory~7373            ; 1       ;
+; data_ram:inst12|my_memory~7372            ; 1       ;
+; data_ram:inst12|my_memory~7371            ; 1       ;
+; data_ram:inst12|my_memory~7370            ; 1       ;
+; data_ram:inst12|my_memory~7369            ; 1       ;
+; data_ram:inst12|my_memory~7368            ; 1       ;
+; data_ram:inst12|my_memory~7367            ; 1       ;
+; data_ram:inst12|my_memory~7366            ; 1       ;
+; data_ram:inst12|my_memory~7365            ; 1       ;
+; data_ram:inst12|my_memory~7364            ; 1       ;
+; data_ram:inst12|my_memory~7363            ; 1       ;
+; data_ram:inst12|my_memory~7362            ; 1       ;
+; data_ram:inst12|my_memory~7361            ; 1       ;
+; data_ram:inst12|my_memory~7360            ; 1       ;
+; data_ram:inst12|my_memory~7359            ; 1       ;
+; data_ram:inst12|my_memory~7358            ; 1       ;
+; data_ram:inst12|my_memory~7357            ; 1       ;
+; data_ram:inst12|my_memory~7356            ; 1       ;
+; data_ram:inst12|my_memory~7355            ; 1       ;
+; data_ram:inst12|my_memory~7354            ; 1       ;
+; data_ram:inst12|my_memory~7353            ; 1       ;
+; data_ram:inst12|my_memory~7352            ; 1       ;
+; data_ram:inst12|my_memory~7351            ; 1       ;
+; data_ram:inst12|my_memory~7350            ; 1       ;
+; data_ram:inst12|my_memory~7349            ; 1       ;
+; data_ram:inst12|my_memory~7348            ; 1       ;
+; data_ram:inst12|my_memory~7347            ; 1       ;
+; data_ram:inst12|my_memory~7346            ; 1       ;
+; data_ram:inst12|my_memory~7345            ; 1       ;
+; data_ram:inst12|my_memory~7344            ; 1       ;
+; data_ram:inst12|my_memory~7343            ; 1       ;
+; data_ram:inst12|my_memory~7342            ; 1       ;
+; data_ram:inst12|my_memory~7341            ; 1       ;
+; data_ram:inst12|my_memory~7340            ; 1       ;
+; data_ram:inst12|my_memory~7339            ; 1       ;
+; data_ram:inst12|my_memory~7338            ; 1       ;
+; data_ram:inst12|my_memory~7337            ; 1       ;
+; data_ram:inst12|my_memory~7336            ; 1       ;
+; data_ram:inst12|my_memory~7335            ; 1       ;
+; data_ram:inst12|my_memory~7334            ; 1       ;
+; data_ram:inst12|my_memory~7333            ; 1       ;
+; data_ram:inst12|my_memory~7332            ; 1       ;
+; data_ram:inst12|my_memory~7331            ; 1       ;
+; data_ram:inst12|my_memory~7330            ; 1       ;
+; data_ram:inst12|my_memory~7329            ; 1       ;
+; data_ram:inst12|my_memory~7328            ; 1       ;
+; data_ram:inst12|my_memory~7327            ; 1       ;
+; data_ram:inst12|my_memory~7326            ; 1       ;
+; data_ram:inst12|my_memory~7325            ; 1       ;
+; data_ram:inst12|my_memory~7324            ; 1       ;
+; data_ram:inst12|my_memory~7323            ; 1       ;
+; data_ram:inst12|my_memory~7322            ; 1       ;
+; data_ram:inst12|my_memory~7321            ; 1       ;
+; data_ram:inst12|my_memory~7320            ; 1       ;
+; data_ram:inst12|my_memory~7319            ; 1       ;
+; data_ram:inst12|my_memory~7318            ; 1       ;
+; data_ram:inst12|my_memory~7317            ; 1       ;
+; data_ram:inst12|my_memory~7316            ; 1       ;
+; data_ram:inst12|my_memory~7315            ; 1       ;
+; data_ram:inst12|my_memory~7314            ; 1       ;
+; data_ram:inst12|my_memory~7313            ; 1       ;
+; data_ram:inst12|my_memory~7312            ; 1       ;
+; data_ram:inst12|my_memory~7311            ; 1       ;
+; data_ram:inst12|my_memory~7310            ; 1       ;
+; data_ram:inst12|my_memory~7309            ; 1       ;
+; data_ram:inst12|my_memory~7308            ; 1       ;
+; data_ram:inst12|my_memory~7307            ; 1       ;
+; data_ram:inst12|my_memory~7306            ; 1       ;
+; data_ram:inst12|my_memory~7305            ; 1       ;
+; data_ram:inst12|my_memory~7304            ; 1       ;
+; data_ram:inst12|my_memory~7303            ; 1       ;
+; data_ram:inst12|my_memory~7302            ; 1       ;
+; data_ram:inst12|my_memory~7301            ; 1       ;
+; data_ram:inst12|my_memory~7300            ; 1       ;
+; data_ram:inst12|my_memory~7299            ; 1       ;
+; data_ram:inst12|my_memory~7298            ; 1       ;
+; data_ram:inst12|my_memory~7297            ; 1       ;
+; data_ram:inst12|my_memory~7296            ; 1       ;
+; data_ram:inst12|my_memory~7295            ; 1       ;
+; data_ram:inst12|my_memory~7294            ; 1       ;
+; data_ram:inst12|my_memory~7293            ; 1       ;
+; data_ram:inst12|my_memory~7292            ; 1       ;
+; data_ram:inst12|my_memory~7291            ; 1       ;
+; data_ram:inst12|my_memory~7290            ; 1       ;
+; data_ram:inst12|my_memory~7289            ; 1       ;
+; data_ram:inst12|my_memory~7288            ; 1       ;
+; data_ram:inst12|my_memory~7287            ; 1       ;
+; data_ram:inst12|my_memory~7286            ; 1       ;
+; data_ram:inst12|my_memory~7285            ; 1       ;
+; data_ram:inst12|my_memory~7284            ; 1       ;
+; data_ram:inst12|my_memory~7283            ; 1       ;
+; data_ram:inst12|my_memory~7282            ; 1       ;
+; data_ram:inst12|my_memory~7281            ; 1       ;
+; data_ram:inst12|my_memory~7280            ; 1       ;
+; data_ram:inst12|my_memory~7279            ; 1       ;
+; data_ram:inst12|my_memory~7278            ; 1       ;
+; data_ram:inst12|my_memory~7277            ; 1       ;
+; data_ram:inst12|my_memory~7276            ; 1       ;
+; data_ram:inst12|my_memory~7275            ; 1       ;
+; data_ram:inst12|my_memory~7274            ; 1       ;
+; data_ram:inst12|my_memory~7273            ; 1       ;
+; data_ram:inst12|my_memory~7272            ; 1       ;
+; data_ram:inst12|my_memory~7271            ; 1       ;
+; data_ram:inst12|my_memory~7270            ; 1       ;
+; data_ram:inst12|my_memory~7269            ; 1       ;
+; data_ram:inst12|my_memory~7268            ; 1       ;
+; data_ram:inst12|my_memory~7267            ; 1       ;
+; data_ram:inst12|my_memory~7266            ; 1       ;
+; data_ram:inst12|my_memory~7265            ; 1       ;
+; data_ram:inst12|my_memory~7264            ; 1       ;
+; data_ram:inst12|my_memory~7263            ; 1       ;
+; data_ram:inst12|my_memory~7262            ; 1       ;
+; data_ram:inst12|my_memory~7261            ; 1       ;
+; data_ram:inst12|my_memory~7260            ; 1       ;
+; data_ram:inst12|my_memory~7259            ; 1       ;
++-------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Interconnect Usage Summary                            ;
++----------------------------+--------------------------+
+; Interconnect Resource Type ; Usage                    ;
++----------------------------+--------------------------+
+; Block interconnects        ; 10,833 / 94,460 ( 11 % ) ;
+; C16 interconnects          ; 345 / 3,315 ( 10 % )     ;
+; C4 interconnects           ; 9,075 / 60,840 ( 15 % )  ;
+; Direct links               ; 302 / 94,460 ( < 1 % )   ;
+; Global clocks              ; 3 / 16 ( 19 % )          ;
+; Local interconnects        ; 1,436 / 33,216 ( 4 % )   ;
+; R24 interconnects          ; 399 / 3,091 ( 13 % )     ;
+; R4 interconnects           ; 11,348 / 81,294 ( 14 % ) ;
++----------------------------+--------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 14.14) ; Number of LABs  (Total = 401) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 8                             ;
+; 2                                           ; 2                             ;
+; 3                                           ; 6                             ;
+; 4                                           ; 8                             ;
+; 5                                           ; 1                             ;
+; 6                                           ; 7                             ;
+; 7                                           ; 2                             ;
+; 8                                           ; 3                             ;
+; 9                                           ; 3                             ;
+; 10                                          ; 6                             ;
+; 11                                          ; 9                             ;
+; 12                                          ; 17                            ;
+; 13                                          ; 19                            ;
+; 14                                          ; 23                            ;
+; 15                                          ; 29                            ;
+; 16                                          ; 258                           ;
++---------------------------------------------+-------------------------------+
+
+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 1.88) ; Number of LABs  (Total = 401) ;
++------------------------------------+-------------------------------+
+; 1 Clock                            ; 389                           ;
+; 1 Clock enable                     ; 35                            ;
+; 1 Sync. clear                      ; 4                             ;
+; 1 Sync. load                       ; 9                             ;
+; 2 Clock enables                    ; 314                           ;
+; 2 Clocks                           ; 4                             ;
++------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 22.66) ; Number of LABs  (Total = 401) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 6                             ;
+; 2                                            ; 4                             ;
+; 3                                            ; 2                             ;
+; 4                                            ; 2                             ;
+; 5                                            ; 5                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 1                             ;
+; 8                                            ; 3                             ;
+; 9                                            ; 0                             ;
+; 10                                           ; 3                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 6                             ;
+; 17                                           ; 12                            ;
+; 18                                           ; 21                            ;
+; 19                                           ; 12                            ;
+; 20                                           ; 22                            ;
+; 21                                           ; 16                            ;
+; 22                                           ; 20                            ;
+; 23                                           ; 15                            ;
+; 24                                           ; 24                            ;
+; 25                                           ; 29                            ;
+; 26                                           ; 31                            ;
+; 27                                           ; 51                            ;
+; 28                                           ; 34                            ;
+; 29                                           ; 30                            ;
+; 30                                           ; 15                            ;
+; 31                                           ; 9                             ;
+; 32                                           ; 7                             ;
++----------------------------------------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                          ;
++--------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 10.92) ; Number of LABs  (Total = 401) ;
++--------------------------------------------------+-------------------------------+
+; 0                                                ; 0                             ;
+; 1                                                ; 10                            ;
+; 2                                                ; 7                             ;
+; 3                                                ; 10                            ;
+; 4                                                ; 16                            ;
+; 5                                                ; 11                            ;
+; 6                                                ; 9                             ;
+; 7                                                ; 14                            ;
+; 8                                                ; 17                            ;
+; 9                                                ; 23                            ;
+; 10                                               ; 32                            ;
+; 11                                               ; 30                            ;
+; 12                                               ; 43                            ;
+; 13                                               ; 59                            ;
+; 14                                               ; 49                            ;
+; 15                                               ; 52                            ;
+; 16                                               ; 14                            ;
+; 17                                               ; 2                             ;
+; 18                                               ; 2                             ;
+; 19                                               ; 1                             ;
++--------------------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 26.27) ; Number of LABs  (Total = 401) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 0                             ;
+; 2                                            ; 5                             ;
+; 3                                            ; 2                             ;
+; 4                                            ; 3                             ;
+; 5                                            ; 5                             ;
+; 6                                            ; 2                             ;
+; 7                                            ; 2                             ;
+; 8                                            ; 0                             ;
+; 9                                            ; 3                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 2                             ;
+; 12                                           ; 1                             ;
+; 13                                           ; 5                             ;
+; 14                                           ; 4                             ;
+; 15                                           ; 2                             ;
+; 16                                           ; 1                             ;
+; 17                                           ; 7                             ;
+; 18                                           ; 2                             ;
+; 19                                           ; 6                             ;
+; 20                                           ; 7                             ;
+; 21                                           ; 5                             ;
+; 22                                           ; 10                            ;
+; 23                                           ; 12                            ;
+; 24                                           ; 12                            ;
+; 25                                           ; 12                            ;
+; 26                                           ; 11                            ;
+; 27                                           ; 20                            ;
+; 28                                           ; 25                            ;
+; 29                                           ; 29                            ;
+; 30                                           ; 40                            ;
+; 31                                           ; 160                           ;
+; 32                                           ; 2                             ;
++----------------------------------------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1127,7 +2601,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 09 22:05:08 2013
+    Info: Processing started: Mon Mar 11 23:16:52 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off 141L -c 141L
 Warning: Parallel compilation is not licensed and has been disabled
 Info: Selected device EP2C35F672C6 for design "141L"
@@ -1143,16 +2617,62 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~nCSO~ is reserved at location D3
     Info: Pin ~LVDS150p/nCEO~ is reserved at location AE24
 Critical Warning: No exact pin location assignment(s) for 4 pins of 4 total pins
-    Info: Pin restart not assigned to an exact location on the device
-    Info: Pin init not assigned to an exact location on the device
-    Info: Pin clock not assigned to an exact location on the device
     Info: Pin done not assigned to an exact location on the device
+    Info: Pin restart not assigned to an exact location on the device
+    Info: Pin clock not assigned to an exact location on the device
+    Info: Pin init not assigned to an exact location on the device
 Info: Timing-driven compilation is using the TimeQuest Timing Analyzer
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "inst2|out[15]|combout" is a latch
+    Warning: Node "inst2|out[7]|combout" is a latch
+    Warning: Node "inst2|out[3]|combout" is a latch
+    Warning: Node "inst2|out[6]|combout" is a latch
+    Warning: Node "inst2|out[4]|combout" is a latch
+    Warning: Node "inst6|instr_out[3]|combout" is a latch
+    Warning: Node "inst6|instr_out[6]|combout" is a latch
+    Warning: Node "inst6|instr_out[0]|combout" is a latch
+    Warning: Node "inst2|out[2]|combout" is a latch
+    Warning: Node "inst2|out[0]|combout" is a latch
+    Warning: Node "inst2|out[1]|combout" is a latch
+    Warning: Node "inst2|out[5]|combout" is a latch
+    Warning: Node "inst6|instr_out[4]|combout" is a latch
+    Warning: Node "inst6|instr_out[7]|combout" is a latch
+    Warning: Node "inst6|instr_out[5]|combout" is a latch
+    Warning: Node "inst6|instr_out[1]|combout" is a latch
+    Warning: Node "inst6|instr_out[2]|combout" is a latch
+    Warning: Node "inst6|instr_out[8]|combout" is a latch
+    Warning: Node "inst2|out[14]|combout" is a latch
+    Warning: Node "inst2|out[13]|combout" is a latch
+    Warning: Node "inst2|out[8]|combout" is a latch
+    Warning: Node "inst2|out[9]|combout" is a latch
+    Warning: Node "inst2|out[10]|combout" is a latch
+    Warning: Node "inst2|out[11]|combout" is a latch
+    Warning: Node "inst2|out[12]|combout" is a latch
 Critical Warning: Synopsys Design Constraints File file not found: '141L.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info: No user constrained base clocks found in the design
-Info: The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning: No clocks defined in design.
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: Cell: inst6|WideOr12~10  from: dataa  to: combout
+    Info: Cell: inst6|WideOr12~15  from: dataa  to: combout
+    Info: Cell: inst6|WideOr14~2  from: dataa  to: combout
 Info: Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info: Automatically promoted node clock (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node next_pc_logic:inst3|temp_out[1]
+        Info: Destination node next_pc_logic:inst3|temp_out[2]
+        Info: Destination node next_pc_logic:inst3|temp_out[3]
+        Info: Destination node next_pc_logic:inst3|temp_out[4]
+        Info: Destination node next_pc_logic:inst3|temp_out[5]
+        Info: Destination node next_pc_logic:inst3|temp_out[6]
+        Info: Destination node next_pc_logic:inst3|temp_out[7]
+        Info: Destination node next_pc_logic:inst3|temp_out[8]
+        Info: Destination node next_pc_logic:inst3|temp_out[9]
+        Info: Destination node next_pc_logic:inst3|temp_out[10]
+        Info: Non-global destination nodes limited to 10 nodes
+Info: Automatically promoted node ALU:inst2|out[15]~0 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+Info: Automatically promoted node instr_rom_2:inst6|WideNor0~13 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -1163,11 +2683,11 @@ Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 3 input, 1 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 3 (unused VREF, 3.3V VCCIO, 2 input, 1 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
-        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  64 pins available
+        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  63 pins available
         Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
         Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
         Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
@@ -1175,16 +2695,16 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter preparation operations ending: elapsed time is 00:00:03
 Info: Fitter placement preparation operations beginning
-Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations ending: elapsed time is 00:00:03
 Info: Fitter routing operations beginning
-Info: Router estimated average interconnect usage is 0% of the available device resources
-    Info: Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y24 to location X10_Y36
-Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Router estimated average interconnect usage is 11% of the available device resources
+    Info: Router estimated peak interconnect usage is 75% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
+Info: Fitter routing operations ending: elapsed time is 00:00:15
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
@@ -1195,10 +2715,10 @@ Info: Delay annotation completed successfully
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Quartus II Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 357 megabytes
-    Info: Processing ended: Sat Mar 09 22:05:12 2013
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II Fitter was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 409 megabytes
+    Info: Processing ended: Mon Mar 11 23:17:26 2013
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:33
 
 

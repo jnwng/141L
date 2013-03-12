@@ -67,6 +67,7 @@ module instr_rom_2
 			50: begin instr_out = 9'b101111101; end
 			51: begin instr_out = 9'b100110101; end
         endcase
+		  $display("The instruction: %d", pc_in);
 	end
 
 	assign format = instr_out[8];

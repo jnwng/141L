@@ -2,4 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'clock'
+Slack : -14.406
+TNS   : -34248.225
+
+Type  : Slow Model Setup 'next_pc_logic:inst3|temp_out[0]'
+Slack : -5.870
+TNS   : -48.777
+
+Type  : Slow Model Setup 'register_ex:inst11|out_extended[4]'
+Slack : -5.757
+TNS   : -80.238
+
+Type  : Slow Model Hold 'next_pc_logic:inst3|temp_out[0]'
+Slack : -8.523
+TNS   : -70.940
+
+Type  : Slow Model Hold 'register_ex:inst11|out_extended[4]'
+Slack : -5.040
+TNS   : -54.764
+
+Type  : Slow Model Hold 'clock'
+Slack : -1.406
+TNS   : -21.968
+
+Type  : Slow Model Minimum Pulse Width 'next_pc_logic:inst3|temp_out[0]'
+Slack : -4.917
+TNS   : -457.350
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.380
+TNS   : -4329.380
+
+Type  : Slow Model Minimum Pulse Width 'register_ex:inst11|out_extended[4]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clock'
+Slack : -6.215
+TNS   : -14703.290
+
+Type  : Fast Model Setup 'next_pc_logic:inst3|temp_out[0]'
+Slack : -2.417
+TNS   : -19.482
+
+Type  : Fast Model Setup 'register_ex:inst11|out_extended[4]'
+Slack : -2.214
+TNS   : -29.054
+
+Type  : Fast Model Hold 'next_pc_logic:inst3|temp_out[0]'
+Slack : -4.168
+TNS   : -34.976
+
+Type  : Fast Model Hold 'register_ex:inst11|out_extended[4]'
+Slack : -2.658
+TNS   : -30.309
+
+Type  : Fast Model Hold 'clock'
+Slack : -1.108
+TNS   : -34.721
+
+Type  : Fast Model Minimum Pulse Width 'next_pc_logic:inst3|temp_out[0]'
+Slack : -1.998
+TNS   : -165.542
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.380
+TNS   : -4329.380
+
+Type  : Fast Model Minimum Pulse Width 'register_ex:inst11|out_extended[4]'
+Slack : 0.500
+TNS   : 0.000
+
 ------------------------------------------------------------
