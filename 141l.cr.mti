@@ -1,0 +1,184 @@
+D:/Users/Jon/Documents/Homework/141L/pc.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/pc.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/mux2.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/mux2.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/mux3.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/mux3.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/next_pc_logic.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/next_pc_logic.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module next_pc_logic
+
+Top level modules:
+	next_pc_logic
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/mux4.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/mux4.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/cycle_counter.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/cycle_counter.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module cycle_counter
+
+Top level modules:
+	cycle_counter
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_1.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module program_runner_1
+
+Top level modules:
+	program_runner_1
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/processor_1.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/processor_1.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module processor_1
+
+Top level modules:
+	processor_1
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/control.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/control.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/processor_2.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/processor_2.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module processor_2
+
+Top level modules:
+	processor_2
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/data_ram.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/data_ram.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module data_ram
+
+Top level modules:
+	data_ram
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_2.v {1 {vlog -work work {D:\Users\Jon\Documents\Homework\141L\testbench\program_runner_2.v}
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module program_runner_2
+
+Top level modules:
+	program_runner_2
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/fetch_unit.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/fetch_unit.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module fetch_unit
+-- Compiling module mux_0
+
+Top level modules:
+	fetch_unit
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/testbench/program_runner_3.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module program_runner_3
+
+Top level modules:
+	program_runner_3
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/ALU.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/ALU.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/processor_3.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/processor_3.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module processor_3
+
+Top level modules:
+	processor_3
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/register_file.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/register_file.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/instr_rom_1.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/instr_rom_1.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module instr_rom_1
+
+Top level modules:
+	instr_rom_1
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/instr_rom_2.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/instr_rom_2.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module instr_rom_2
+
+Top level modules:
+	instr_rom_2
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/sign_extender.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/sign_extender.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module sign_extender
+
+Top level modules:
+	sign_extender
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/instr_rom_3.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/instr_rom_3.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module instr_rom_3
+
+Top level modules:
+	instr_rom_3
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/processor.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/processor.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module processor
+
+Top level modules:
+	processor
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/adder.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/adder.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/mux_0.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/mux_0.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module mux_0
+
+Top level modules:
+	mux_0
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/register_ex.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/register_ex.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module register_ex
+
+Top level modules:
+	register_ex
+
+} {} {}} D:/Users/Jon/Documents/Homework/141L/mux_1.v {1 {vlog -work work D:/Users/Jon/Documents/Homework/141L/mux_1.v
+Model Technology ModelSim PE Student Edition vlog 10.2 Compiler 2013.02 Feb  2 2013
+-- Compiling module mux_1
+
+Top level modules:
+	mux_1
+
+} {} {}}
